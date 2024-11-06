@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer";
+import puppeteer, { Browser, ElementHandle, Page } from "puppeteer";
 import fs from "fs";
 import pLimit from "p-limit";
 import sharp from "sharp";
@@ -8,407 +8,743 @@ import https from "https";
 import { Item } from "../types";
 import itemsJSON from "../data/items.json";
 import { sortByKey } from "../utils";
+import axios from "axios";
 
-const items: Item[] = itemsJSON;
-let names = items.map((item) => item.name);
-const limit = pLimit(6);
+// Constants
+const ITEMS_JSON_PATH = "data/items.json";
+const ITEMS_IMAGE_PATH = "../public/items/";
+const DATA_VALUES_URL = "https://minecraft.wiki/w/Java_Edition_data_values";
+const EXCLUDED_ITEMS = [
+  "Lingering Potion",
+  "Potion",
+  "Splash Potion",
+  "Tipped Arrow",
+  "Music Disc",
+  "Chorus Plant",
+];
 
-const writeItems = (items: Item[]) => {
+// Initialize items and names arrays
+let items: Item[] = itemsJSON;
+let names: string[] = items.map((item) => item.name);
+
+// Limit concurrent operations
+const limit = pLimit(5);
+
+/**
+ * Writes the items array to a JSON file after sorting.
+ */
+function writeItems(items: Item[]): void {
   sortByKey(items, "name");
-  fs.writeFileSync("data/items.json", JSON.stringify(items, null, 2));
-};
+  fs.writeFileSync(ITEMS_JSON_PATH, JSON.stringify(items, null, 2));
+}
 
-(async () => {
-  const browser = await puppeteer.launch({
+/**
+ * Launches the Puppeteer browser.
+ */
+async function initBrowser(): Promise<Browser> {
+  return puppeteer.launch({
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     headless: true,
   });
-  const dataPage = await browser.newPage();
+}
+
+/**
+ * Opens the data page and loads item and block tables.
+ */
+async function openDataPage(browser: Browser): Promise<Page> {
+  const page = await browser.newPage();
   console.log("Opening data page...");
-  dataPage.goto("https://minecraft.fandom.com/wiki/Java_Edition_data_values", {
-    timeout: 0,
-  });
-  await dataPage.waitForSelector("div[data-page='Java Edition data values/Items'] .jslink");
-  console.log("Data page loaded");
-  await dataPage.click("div[data-page='Java Edition data values/Items'] .jslink");
-  await dataPage.click("div[data-page='Java Edition data values/Blocks'] .jslink");
-  await dataPage.waitForSelector("a[title='Acacia Boat']");
-  await dataPage.waitForSelector("a[title='Acacia Button']");
-  console.log("Block and item tables loaded");
-  const allItems = await sharp("all-items.png");
-  const writeImage = (name: string, x: number, y: number) =>
-    allItems
-      .clone()
-      .extract({
-        left: x,
-        top: y,
-        width: 32,
-        height: 32,
-      })
-      .toFile(`../public/items/${name}.png`);
-  await Promise.all(
-    (
-      await dataPage.$$(
-        "div[data-page='Java Edition data values/Items'] .stikitable tbody tr, div[data-page='Java Edition data values/Blocks'] .stikitable tbody tr"
-      )
-    ).map(async (row) => {
-      return limit(async () => {
-        let name = (
-          await dataPage.evaluate(
-            (element) =>
-              element.querySelector("td:last-child[style]")
-                ? ""
-                : element.querySelector("a[title]").title,
-            row
-          )
-        ).trim();
-        if (name === "Banner Pattern") {
-          name = await dataPage.evaluate(
-            (element) => element.querySelector("td").innerText.trim(),
-            row
-          );
-        }
-        if (name === "Pufferfish (item)") name = "Pufferfish";
-        else if (name === "Light Block") name = "Light";
-        const excludedItems = [
-          "Lingering Potion",
-          "Potion",
-          "Splash Potion",
-          "Tipped Arrow",
-          "Music Disc",
-          "Chorus Plant",
-        ];
-        if (name.length === 0 || names.includes(name) || excludedItems.includes(name)) {
-          return;
-        }
-        try {
-          const namespacedId = await dataPage.evaluate(
-            (element) => element.textContent,
-            await row.$("code")
-          );
-          const url: string =
-            name === "Tropical Fish"
-              ? "https://minecraft.fandom.com/wiki/Tropical_Fish_(item)"
-              : await (await (await row.$("a[title]")).getProperty("href")).jsonValue();
-          const itemPage = await browser.newPage();
-          await itemPage.goto(url, { timeout: 0 });
-          await itemPage.waitForSelector(".invslot-item");
-          const imageName = name.startsWith("Banner Pattern") ? "banner_pattern" : namespacedId;
-          let image = `https://minecraft-api.vercel.app/items/${imageName}.png`;
+  await page.goto(DATA_VALUES_URL, { timeout: 0 });
 
-          try {
-            const imageDetails = await itemPage.evaluate(
-              (itemName) => {
-                const spans = (
-                  [...document.querySelectorAll(`.invslot-item .sprite`)] as HTMLSpanElement[]
-                ).filter(
-                  (span) =>
-                    span.title === itemName ||
-                    span.parentElement.getAttribute("data-minetip-title")?.replace("&d", "") ===
-                      itemName
-                );
-                if (spans.length > 0) {
-                  const style = spans[0].style;
-                  const position = style.backgroundPosition
-                    .split(" ")
-                    .map((position) => Math.abs(parseInt(position.replace("px", ""))));
-                  return {
-                    x: position[0],
-                    y: position[1],
-                  };
-                }
-              },
-              name.startsWith("Banner Pattern") ? "Banner Pattern" : name
-            );
-            if (imageDetails) {
-              await writeImage(imageName, imageDetails.x, imageDetails.y);
-            } else {
-              // item image is a gif
-              const gifURL = await itemPage.evaluate((itemName) => {
-                const img = (
-                  [...document.querySelectorAll(".invslot-item img")] as HTMLImageElement[]
-                ).filter((img) => img.alt === itemName)[0];
-                return img.getAttribute("data-src") ?? img.src;
-              }, name);
-              await new Promise((resolve) => {
-                https.get(gifURL, (res) =>
-                  res
-                    .pipe(fs.createWriteStream(`../public/items/${imageName}.gif`))
-                    .on("finish", resolve)
-                );
-              });
-              image = image.replace("png", "gif");
-            }
-          } catch (e) {
-            console.log(chalk.red("Error creating image for: " + name));
-            await itemPage.close();
-            return;
-          }
-          const stackSize = await itemPage.evaluate(() => {
-            const stackSizeRow = [...document.querySelectorAll(".infobox-rows tr")].filter((row) =>
-              row.textContent.includes("Stackable")
-            )[0];
-            if (!stackSizeRow) {
-              return;
-            }
-            const text = stackSizeRow.querySelector("p").innerText;
-            return text === "No" || text.includes("JE: No")
-              ? 1
-              : /Yes\s*\(.+\)/.test(text)
-              ? parseInt(/\((.+)\)/.exec(text)[1])
-              : null;
-          });
-          if (!stackSize) {
-            console.log(chalk.red("Error on getting stack size: " + name));
-            await itemPage.close();
-            return;
-          }
-          let renewable;
-          if (["Slab", "Stairs", "Wall"].some((variant) => name.endsWith(variant))) {
-            renewable = !name.includes("Deepslate");
-          } else if (name.startsWith("Banner Pattern")) {
-            renewable = !["(Snout)", "(Thing)"].some((pattern) => name.endsWith(pattern));
-          } else if (
-            [
-              "Pickaxe",
-              "Hoe",
-              "Axe",
-              "Shovel",
-              "Sword",
-              "Helmet",
-              "Chestplate",
-              "Leggings",
-              "Boots",
-            ].some((ending) => name.endsWith(ending))
-          ) {
-            renewable = !name.startsWith("Netherite");
-          } else if (name.endsWith("Horse Armor")) {
-            renewable = name.startsWith("Leather");
-          } else if (
-            ["Dirt Path", "Dragon Head", "Player Head", "Tall Grass", "Large Fern"].includes(
-              name
-            ) ||
-            name.endsWith("Nylium") ||
-            name.startsWith("Infested")
-          ) {
-            renewable = false;
-          } else if (name.endsWith("Terracotta")) {
-            renewable = name === "Terracotta";
-          } else if (
-            [
-              "Arrow",
-              "Spectral Arrow",
-              "Bundle",
-              "Clay",
-              "Skeleton Skull",
-              "Wither Skeleton Skull",
-              "Zombie Head",
-              "Creeper Head",
-              "Grass",
-              "Fern",
-              "Leather Cap",
-              "Leather Tunic",
-              "Leather Pants",
-              "Turtle Shell",
-              "Firework Star",
-              "Firework Rocket",
-              "Shulker Shell",
-              "Clay Ball",
-            ].includes(name) ||
-            name.endsWith("Shulker Box")
-          ) {
-            renewable = true;
-          } else {
-            renewable = await itemPage.evaluate(() => {
-              const renewableRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
-                (row) => row.textContent.includes("Renewable")
-              )[0];
-              if (!renewableRow) {
-                return;
-              }
-              const text = renewableRow.querySelector("p").innerText;
-              return text === "Yes" || (text === "No" ? false : null);
-            });
-            if (renewable === null) {
-              console.log(chalk.red("Error on getting renewable: " + name));
-              await itemPage.close();
-              return;
-            }
-          }
-          const description = (
-            await itemPage.evaluate(
-              (element) => element.textContent,
-              await itemPage.$(".mw-parser-output > p")
-            )
-          )
-            .replace(/\[a\]|\n$/g, "")
-            .trim();
-          const item = {
-            name,
-            namespacedId,
-            description,
-            image,
-            renewable,
-            stackSize,
-          };
-          items.push(item);
-          writeItems(items);
-          await itemPage.close();
-          console.log("Successfully added item: " + name);
-        } catch (e) {
-          console.log(chalk.red("Uncaught error when getting item: " + name));
-          console.log(e);
-        }
-      });
-    })
+  // Expand item and block sections
+  await page.waitForSelector("div[data-page='Java Edition data values/Items'] .jslink");
+  await page.click("div[data-page='Java Edition data values/Items'] .jslink");
+  await page.waitForSelector("a[title='Spawn Egg']");
+
+  await page.waitForSelector("div[data-page='Java Edition data values/Blocks'] .jslink");
+  await page.click("div[data-page='Java Edition data values/Blocks'] .jslink");
+  await page.waitForSelector("a[href='/w/File:Acacia_Leaves.png']");
+  return page;
+}
+
+async function populateItemsJson(
+  dataPage: Page,
+  row: ElementHandle<Element>,
+  name: string,
+  browser: Browser
+) {
+  try {
+    const namespacedId: string = await getNamespacedId(dataPage, row);
+    console.log("namespacedId", namespacedId);
+    console.log(`Processing item: ${name}`);
+    const url: string = await getItemPageUrl(dataPage, row, name);
+    const itemData: Item | null = await getItemDetails(browser, url, name, namespacedId);
+
+    if (itemData) {
+      items.push(itemData);
+      writeItems(items);
+      console.log(`Successfully added item: ${name}`);
+    }
+  } catch (error) {
+    console.error(chalk.red(`Error processing item: ${name}`), error);
+  }
+}
+
+/**
+ * Processes regular items from the data page.
+ */
+async function processRegularItems(browser: Browser, dataPage: Page): Promise<void> {
+  // Select all item rows
+  const itemRows: ElementHandle<Element>[] = await dataPage.$$(
+    "div[data-page='Java Edition data values/Items'] .stikitable tbody tr, " +
+      "div[data-page='Java Edition data values/Blocks'] .stikitable tbody tr"
   );
-  console.log(chalk.blue("Finished getting regular items"));
 
-  // handle Regular/Splash/Lingering Potions, Tipped Arrows, and Music Discs separately
+  // Process each item row
+  await Promise.all(
+    itemRows.map((row) =>
+      limit(async () => {
+        let name: string = await getItemName(dataPage, row);
+        if (!shouldProcessItem(name)) return;
+        await populateItemsJson(dataPage, row, name, browser);
+      })
+    )
+  );
+  console.log(chalk.blue("Finished processing regular items"));
+}
 
-  const notDecay = (title: string) => !title.includes("Decay");
-  const renewablePotion = (title: string) =>
-    !["Uncraftable", "Luck"].some((type) => title.endsWith(type));
-  const pages: {
-    page: string;
-    namespacedId: string;
-    stackSize: number;
-    renewable: (title: string) => boolean;
-    filter: (title: string, i: number) => boolean;
-  }[] = [
+/**
+ * Checks if an item should be processed.
+ */
+function shouldProcessItem(name: string): boolean {
+  return name && !names.includes(name) && !EXCLUDED_ITEMS.includes(name);
+}
+
+/**
+ * Retrieves the item name from a row element.
+ */
+async function getItemName(page: Page, row: ElementHandle<Element>): Promise<string> {
+  let name: string = await page.evaluate((element) => {
+    const isStyled = element.querySelector("td:last-child[style]");
+    if (isStyled) return "";
+    return element.querySelector("a")!.innerText.trim();
+  }, row);
+
+  // Handle special cases
+  if (name.startsWith("Banner Pattern")) {
+    const text: string = await page.evaluate((element) => {
+      const td = element.querySelector("td");
+      const bannerName = td?.innerText.split(" (")[1].replace(")", "");
+      return td ? `${bannerName} Banner Pattern` : "";
+    }, row);
+    name = text;
+  } else if (name === "Pufferfish (item)") {
+    name = "Pufferfish";
+  } else if (name === "Light Block") {
+    name = "Light";
+  }
+
+  return name;
+}
+
+/**
+ * Retrieves the namespaced ID from a row element.
+ */
+async function getNamespacedId(page: Page, row: ElementHandle<Element>): Promise<string> {
+  const codeElement = await row.$("code");
+  if (codeElement) {
+    const textContent = await page.evaluate((element) => element.textContent, codeElement);
+    return textContent ? textContent.trim() : "";
+  }
+  return "";
+}
+
+/**
+ * Retrieves the item page URL.
+ */
+async function getItemPageUrl(
+  page: Page,
+  row: ElementHandle<Element>,
+  name: string
+): Promise<string> {
+  if (name === "Tropical Fish") {
+    return "https://minecraft.wiki/w/Tropical_Fish";
+  } else {
+    const hrefHandle = await (await row.$("a")).evaluate((element) => element.getAttribute("href"));
+    return `https://minecraft.wiki${hrefHandle}`;
+  }
+}
+
+async function downloadImagePNG(url: string, namespaceId: string): Promise<void> {
+  // Fetch the image using Axios
+  const response = await axios.get(url, { responseType: "arraybuffer" });
+
+  if (response.status !== 200) {
+    throw new Error(`Failed to fetch image. Status code: ${response.status}`);
+  }
+
+  const imageBuffer = Buffer.from(response.data, "binary");
+
+  // Process the image with Sharp
+  const resizedImageBuffer = await sharp(imageBuffer)
+    .resize(32, 32, {
+      fit: "inside",
+      withoutEnlargement: false,
+    })
+    .png()
+    .toBuffer();
+
+  // Ensure the directory exists
+  const outputPath = `public/items/${namespaceId}.png`;
+  await fs.promises.mkdir("public/items", { recursive: true });
+
+  // Write the resized image
+  await fs.promises.writeFile(outputPath, resizedImageBuffer);
+  console.log(`Image saved to ${outputPath}`);
+}
+
+/**
+ * Downloads a GIF image from the specified URL and saves it to the designated path.
+ *
+ * @param url - The URL of the GIF image to download.
+ * @param outputPath - The file path where the GIF should be saved.
+ */
+async function downloadGifImage(url: string, outputPath: string): Promise<void> {
+  try {
+    // Fetch the GIF image using Axios with responseType 'arraybuffer'
+    const response = await axios.get(url, { responseType: "arraybuffer" });
+
+    if (response.status !== 200) {
+      throw new Error(`Failed to fetch GIF image. Status code: ${response.status}`);
+    }
+
+    const imageBuffer = Buffer.from(response.data, "binary");
+
+    // Ensure the directory exists
+    const directory = outputPath.substring(0, outputPath.lastIndexOf("/"));
+    await fs.promises.mkdir(directory, { recursive: true });
+
+    // Write the GIF image to the specified path
+    await fs.promises.writeFile(outputPath, imageBuffer);
+    console.log(`GIF image saved to ${outputPath}`);
+  } catch (error) {
+    console.error(chalk.red(`Error downloading GIF image from ${url}`), error);
+    throw error; // Re-throw the error to handle it upstream if necessary
+  }
+}
+
+/**
+ * Retrieves detailed information about an item.
+ */
+async function getItemDetails(
+  browser: Browser,
+  url: string,
+  name: string,
+  namespacedId: string
+): Promise<Item | null> {
+  const itemPage: Page = await browser.newPage();
+  try {
+    await itemPage.goto(url.trim(), { timeout: 0, waitUntil: "networkidle2" });
+    await itemPage.waitForSelector(".invslot-item");
+    const imageName: string = name.startsWith("Banner Pattern") ? "banner_pattern" : namespacedId;
+    let image: string = `https://mc.geertvandrunen.nl/_new/items/${imageName}.png`;
+
+    const imageUrl = await getImageUrl(itemPage, namespacedId, name);
+
+    if (imageUrl) {
+      console.log("Processing image from URL:", imageUrl);
+      await downloadImagePNG(imageUrl, namespacedId);
+
+      // Update the image URL to point to the local image
+      image = `https://mc.geertvandrunen.nl/_new/items/${namespacedId}.png`;
+    } else {
+      console.log("Image URL not found. Handling GIF images.");
+      // Handle GIF images
+      const gifURL: string | null = await getGifURL(itemPage, name);
+      if (gifURL) {
+        await downloadGifImage(gifURL, `${ITEMS_IMAGE_PATH}${imageName}.gif`);
+        image = image.replace("png", "gif");
+      } else {
+        throw new Error("Image details and GIF URL not found.");
+      }
+    }
+
+    const stackSize: number | null = await getStackSize(itemPage, name);
+    if (stackSize === null) {
+      console.error(chalk.red(`Error getting stack size for item: ${name}`));
+      return null;
+    }
+
+    const renewable: boolean | null = await getRenewableStatus(itemPage, name);
+    if (renewable === null) {
+      console.error(chalk.red(`Error getting renewable status for item: ${name}`));
+      return null;
+    }
+
+    const description: string = await getDescription(itemPage);
+
+    return {
+      name,
+      namespacedId,
+      description,
+      image,
+      renewable,
+      stackSize,
+    };
+  } catch (error) {
+    console.error(chalk.red(`Error processing item page for item: ${name}`), error);
+    return null;
+  } finally {
+    await itemPage.close();
+  }
+}
+
+/**
+ * Retrieves image details from the item page.
+ */
+async function getImageUrl(page: Page, namespaceId: string, name: string): Promise<string | null> {
+  try {
+    return await page.evaluate((name: string) => {
+      const invImages = Array.from(
+        document.querySelectorAll(`.infobox-imagearea .invslot-item-image img`)
+      );
+      let foundImage;
+
+      if (invImages.length === 1) {
+        foundImage = invImages[0];
+      } else {
+        foundImage = invImages.find((img) => {
+          return (img as HTMLImageElement).alt.toLowerCase().includes(name.toLowerCase());
+        });
+      }
+
+      if (!foundImage && name.startsWith("Banner Pattern")) {
+        //Banner Pattern (Creeper Charge) -> Creeper Charge
+        const variant = name.replace("Banner Pattern (", "").replace(")", "");
+        foundImage = invImages.find((img) => {
+          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
+        });
+      }
+
+      if (!foundImage && name.startsWith("Smithing Template")) {
+        const variant = name.replace("Smithing Template (", "").replace(")", "");
+        foundImage = invImages.find((img) => {
+          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
+        });
+      }
+
+      if (!foundImage && name.startsWith("Music Disc")) {
+        const variant = name.replace("Music Disc (", "").replace(")", "");
+        foundImage = invImages.find((img) => {
+          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
+        });
+      }
+
+      if (!foundImage && name.includes("Music Box version")) {
+        const variant = "Creator";
+        foundImage = invImages.find((img) => {
+          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
+        });
+      }
+
+      if (!foundImage && name.includes("Boat with Chest")) {
+        const variant = name.split(" ")[0];
+        foundImage = invImages.find((img) => {
+          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
+        });
+      }
+
+      if (foundImage) {
+        return `https://minecraft.wiki${foundImage.getAttribute("src")}`;
+      }
+
+      return null;
+    }, name);
+  } catch {
+    chalk.bgBlue(`Error getting image details for item: ${namespaceId} - ${name}`);
+    return null;
+  }
+}
+
+/**
+ * Retrieves the GIF URL from the item page.
+ */
+async function getGifURL(page: Page, name: string): Promise<string | null> {
+  return page.evaluate((itemName: string) => {
+    const img = Array.from(document.querySelectorAll(".invslot-item img")).find(
+      (img) => (img as HTMLImageElement).alt === itemName
+    ) as HTMLImageElement | undefined;
+    return img ? img.getAttribute("data-src") || img.src : null;
+  }, name);
+}
+
+/**
+ * Retrieves the stack size from the item page.
+ */
+async function getStackSize(page: Page, name: string): Promise<number | null> {
+  const exceptions = ["Pufferfish"];
+
+  if (exceptions.includes(name)) return 1;
+
+  return await page.evaluate(() => {
+    // Find the row with the "Stackable" header
+    const row = Array.from(document.querySelectorAll(".infobox-rows tr")).find((row) =>
+      row.querySelector("th")?.textContent.includes("Stackable")
+    );
+
+    if (!row) return null;
+
+    // Get the text from the <td>, whether it's inside a <p> or not
+    const td = row.querySelector("td");
+    const text = td ? td.textContent.trim() : "";
+
+    // Check if the item is not stackable
+    if (text === "No" || text.includes("JE: No")) return 1;
+    if (text.startsWith("Yes,")) {
+      const match = text.match(/\d+/);
+      return match ? parseInt(match[0], 10) : 64;
+    }
+    // Extract the stack size number
+    const match = text.match(/\((\d+)\)/);
+    if (match) {
+      return parseInt(match[1], 10);
+    }
+
+    // If the text is a number (e.g., "64"), return it directly
+    const number = parseInt(text, 10);
+    if (!isNaN(number)) {
+      return number;
+    }
+
+    // If all else fails, return null
+    return null;
+  });
+}
+
+/**
+ * Determines if an item is renewable.
+ */
+async function getRenewableStatus(page: Page, name: string): Promise<boolean | null> {
+  // Handle special cases
+  const specialCases = {
+    renewable: {
+      true: [
+        "Arrow",
+        "Spectral Arrow",
+        "Bundle",
+        "Clay",
+        "Skeleton Skull",
+        "Wither Skeleton Skull",
+        "Zombie Head",
+        "Creeper Head",
+        "Grass",
+        "Fern",
+        "Leather Cap",
+        "Leather Tunic",
+        "Leather Pants",
+        "Turtle Shell",
+        "Firework Star",
+        "Firework Rocket",
+        "Shulker Shell",
+        "Clay Ball",
+        "Enchanted Book",
+        "Music Disc (13)",
+        "Music Disc (Cat)",
+        "Music Disc (Blocks)",
+        "Music Disc (Chirp)",
+        "Music Disc (Far)",
+        "Music Disc (Mall)",
+        "Music Disc (Mellohi)",
+        "Music Disc (Stal)",
+        "Music Disc (Strad)",
+        "Music Disc (Ward)",
+        "Music Disc (11)",
+        "Music Disc (Wait)",
+      ],
+      false: ["Dirt Path", "Dragon Head", "Player Head", "Tall Grass", "Large Fern", "Pufferfish"],
+    },
+    endsWith: {
+      true: ["Shulker Box"],
+      false: ["Nylium"],
+    },
+    contains: {
+      false: ["Infested", "Smithing Template", "Music Disc", "Banner Pattern"],
+    },
+  };
+
+  if (specialCases.renewable.true.includes(name)) return true;
+  if (specialCases.renewable.false.includes(name)) return false;
+
+  if (specialCases.endsWith.true.some((ending) => name.endsWith(ending))) return true;
+  if (specialCases.endsWith.false.some((ending) => name.endsWith(ending))) return false;
+
+  if (specialCases.contains.false.some((substr) => name.includes(substr))) return false;
+
+  // Check more patterns
+  const patterns = [
     {
-      page: "Arrow",
+      condition: (name: string) =>
+        ["Slab", "Stairs", "Wall"].some((ending) => name.endsWith(ending)),
+      value: (name: string) => !name.includes("Deepslate"),
+    },
+    {
+      condition: (name: string) => name.includes("Banner Pattern"),
+      value: (name: string) => !["(Snout)", "(Thing)"].some((pattern) => name.endsWith(pattern)),
+    },
+    {
+      condition: (name: string) =>
+        [
+          "Pickaxe",
+          "Hoe",
+          "Axe",
+          "Shovel",
+          "Sword",
+          "Helmet",
+          "Chestplate",
+          "Leggings",
+          "Boots",
+        ].some((ending) => name.endsWith(ending)),
+      value: (name: string) => !name.startsWith("Netherite"),
+    },
+    {
+      condition: (name: string) => name.endsWith("Horse Armor"),
+      value: (name: string) => name.startsWith("Leather"),
+    },
+    {
+      condition: (name: string) => name.endsWith("Terracotta"),
+      value: (name: string) => name === "Terracotta",
+    },
+  ];
+
+  for (const pattern of patterns) {
+    if (pattern.condition(name)) {
+      return pattern.value(name);
+    }
+  }
+
+  // Default: Try to extract from the page
+  return page.evaluate(() => {
+    let row;
+    row = Array.from(document.querySelectorAll(".infobox-rows tr")).find((row) =>
+      row.textContent?.includes("Renewable")
+    );
+
+    if (!row) return null;
+    const p = row.querySelector("p");
+    const text = p ? p.innerText.trim() : "";
+    if (text.startsWith("Yes")) return true;
+    if (text.startsWith("No")) return false;
+    return null;
+  });
+}
+
+/**
+ * Retrieves the item description from the page.
+ */
+async function getDescription(page: Page): Promise<string> {
+  return page.evaluate(() => {
+    const paragraph = document.querySelector(".mw-parser-output > p");
+    return paragraph ? paragraph.textContent?.replace(/\[a\]|\n$/g, "").trim() || "" : "";
+  });
+}
+
+/**
+ * Processes special items like Potions and Music Discs.
+ */
+async function processSpecialItems(browser: Browser): Promise<void> {
+  const pages = [
+    {
+      page: "Tipped_Arrow",
       namespacedId: "tipped_arrow",
       stackSize: 64,
-      renewable: renewablePotion,
-      filter: (title) => !["Arrow", "Spectral Arrow"].includes(title) && notDecay(title),
+      renewable: (title: string) => !["Uncraftable", "Luck"].some((type) => title.endsWith(type)),
+      filter: (title: string) =>
+        !["Arrow", "Spectral Arrow"].includes(title) && !title.includes("Decay"),
+    },
+    {
+      page: "Bundle",
+      namespacedId: "bundle",
+      stackSize: 1,
+      renewable: () => true,
+      filter: () => true,
+    },
+    {
+      page: "Shield",
+      namespacedId: "shield",
+      stackSize: 1,
+      renewable: () => true,
+      filter: () => true,
     },
     {
       page: "Potion",
       namespacedId: "potion",
       stackSize: 1,
-      renewable: renewablePotion,
-      filter: notDecay,
+      renewable: (title: string) => !["Uncraftable", "Luck"].some((type) => title.endsWith(type)),
+      filter: (title: string) => !title.includes("Decay"),
     },
     {
       page: "Splash_Potion",
       namespacedId: "splash_potion",
       stackSize: 1,
-      renewable: renewablePotion,
-      filter: notDecay,
+      renewable: (title: string) => !["Uncraftable", "Luck"].some((type) => title.endsWith(type)),
+      filter: (title: string) => !title.includes("Decay"),
     },
     {
       page: "Lingering_Potion",
       namespacedId: "lingering_potion",
       stackSize: 1,
-      renewable: renewablePotion,
-      filter: notDecay,
+      renewable: (title: string) => !["Uncraftable", "Luck"].some((type) => title.endsWith(type)),
+      filter: (title: string) => !title.includes("Decay"),
     },
     {
       page: "Map",
       namespacedId: "filled_map",
       stackSize: 64,
       renewable: () => true,
-      filter: (title, i) => i < 2,
+      filter: (_title: string, i: number) => i < 2,
     },
     {
       page: "Explorer_Map",
       namespacedId: "filled_map",
       stackSize: 64,
-      renewable: (title) => title !== "Buried Treasure Map",
-      filter: (title, i) => i < 3,
+      renewable: (title: string) => title !== "Buried Treasure Map",
+      filter: (_title: string, i: number) => i < 3,
     },
     {
       page: "Music_Disc",
-      namespacedId: null, // specially handled
+      namespacedId: null, // Specially handled
       stackSize: 1,
-      renewable: (title) => !["otherside", "Pigstep"].some((disc) => title.includes(disc)),
-      filter: () => true,
+      renewable: (title: string) => !["otherside", "Pigstep"].some((disc) => title.includes(disc)),
+      filter: (_title: string) => true,
     },
   ];
-  await Promise.all(
-    pages.map(async ({ page, namespacedId, stackSize, renewable, filter }) => {
-      const itemPage = await browser.newPage();
-      await itemPage.goto("https://minecraft.fandom.com/wiki/" + page);
-      await itemPage.waitForSelector(".invslot-item");
-      const newItems = (
-        await itemPage.evaluate(() => {
-          const items = [...document.querySelectorAll(`.infobox-imagearea .invslot-item`)];
-          return items.map((item) => {
-            const sprite: HTMLSpanElement = item.querySelector(".sprite");
-            if (sprite) {
-              let name = sprite.title;
-              if (name.endsWith("Music Disc")) {
-                name = item.getAttribute("data-minetip-text").replace("&7", "");
-              }
-              const position = sprite.style.backgroundPosition
-                .split(" ")
-                .map((position) => Math.abs(parseInt(position.replace("px", ""))));
-              return {
-                name,
-                x: position[0],
-                y: position[1],
-              };
-            } else {
-              const img = item.querySelector("img");
-              const name = img.alt;
-              return {
-                name,
-                gifURL: img.getAttribute("data-src") ?? img.src,
-              };
-            }
-          });
-        })
-      ).filter(({ name }, i) => filter(name, i));
-      const description = (
-        await itemPage.evaluate(
-          (element) => element.textContent,
-          await itemPage.$(".mw-parser-output > p")
-        )
-      )
-        .replace(/\[a\]|\n$/g, "")
-        .trim();
-      await Promise.all(
-        newItems.map(async ({ name, x, y, gifURL }) => {
-          let updatedNamespacedId = namespacedId;
-          if (page === "Music_Disc") {
-            const withoutAuthor = name.split(" ").pop().toLowerCase();
-            name = `Music Disc (${name})`;
-            updatedNamespacedId = "music_disc_" + withoutAuthor;
-          }
-          if (names.includes(name)) return;
-          const imageName =
-            page === "Music_Disc" ? updatedNamespacedId : name.toLowerCase().replace(/ /g, "_");
-          const image = `https://minecraft-api.vercel.app/items/${imageName}.${
-            gifURL ? "gif" : "png"
-          }`;
-          if (gifURL) {
-            await new Promise((resolve) => {
-              https.get(gifURL, (res) =>
-                res
-                  .pipe(fs.createWriteStream(`../public/items/${imageName}.gif`))
-                  .on("finish", resolve)
-              );
-            });
-          } else {
-            await writeImage(imageName, x, y);
-          }
-          items.push({
-            name,
-            namespacedId: updatedNamespacedId,
-            description,
-            image,
-            renewable: renewable(name),
-            stackSize,
-          });
-          writeItems(items);
-          console.log("Successfully added special item: " + name);
-        })
-      );
-      console.log("Finished getting special items for page: " + page);
-      await itemPage.close();
-    })
-  );
+
+  for (const { page, namespacedId, stackSize, renewable, filter } of pages) {
+    await processSpecialItemPage(browser, page, namespacedId, stackSize, renewable, filter);
+  }
   writeItems(items);
-  console.log(chalk.blue("Finished getting special items (everything is complete)"));
+  console.log(chalk.blue("Finished processing special items"));
+}
+
+/**
+ * Processes a special item page.
+ */
+async function processSpecialItemPage(
+  browser: Browser,
+  pageName: string,
+  defaultNamespacedId: string | null,
+  stackSize: number,
+  isRenewable: (title: string) => boolean,
+  filter: (title: string, index: number) => boolean
+): Promise<void> {
+  const pageUrl = `https://minecraft.wiki/w/${pageName}`;
+  const itemPage: Page = await browser.newPage();
+  try {
+    await itemPage.goto(pageUrl, { timeout: 0, waitUntil: "networkidle2" });
+    await itemPage.waitForSelector(".invslot-item");
+
+    const itemsData: Array<{ name: string; imageUrl: string }> = await getSpecialItemsData(
+      itemPage,
+      filter
+    );
+    const description: string = await getDescription(itemPage);
+
+    for (const itemData of itemsData) {
+      let { name, imageUrl } = itemData;
+
+      let updatedNamespacedId: string | null = defaultNamespacedId;
+      let imageName: string = name.toLowerCase().replace(/ /g, "_");
+
+      if (pageName === "Music_Disc") {
+        const discName = name.split(" ").pop()?.toLowerCase().replace(")", "") || "unknown";
+        name = `Music Disc (${name})`;
+        updatedNamespacedId = `music_disc_${discName}`;
+        imageName = updatedNamespacedId;
+      }
+
+      const imageExt = imageUrl.includes(".gif") ? "gif" : "png";
+      if (name === "Potion") {
+        throw new Error(imageUrl);
+      }
+      if (imageExt === "gif") {
+        // download GIF and place in public/items
+        await downloadGifImage(imageUrl, `${ITEMS_IMAGE_PATH}${imageName}.gif`);
+      } else {
+        await downloadImagePNG(imageUrl, imageName);
+      }
+      const imageTarget = `https://mc.geertvandrunen.nl/_new/items/${imageName}.${imageExt}`;
+
+      items.push({
+        name,
+        namespacedId: updatedNamespacedId || "",
+        description,
+        image: imageTarget,
+        renewable: isRenewable(name),
+        stackSize,
+      });
+
+      writeItems(items);
+      console.log(`Successfully added special item: ${name}`);
+    }
+
+    console.log(`Finished processing special items for page: ${pageName}`);
+  } catch (error) {
+    console.error(chalk.red(`Error processing special items for page: ${pageName}`), error);
+  } finally {
+    await itemPage.close();
+  }
+}
+
+/**
+ * Retrieves data for special items from a page.
+ */
+async function getSpecialItemsData(
+  page: Page,
+  filterFn: (title: string, index: number) => boolean
+): Promise<Array<{ name: string; imageUrl: string }>> {
+  return page.evaluate((filterFnString: string) => {
+    const filter = new Function("title", "index", `return (${filterFnString})(title, index);`);
+    const items = Array.from(document.querySelectorAll(".infobox-imagearea .invslot-item")).map(
+      (item) => {
+        let name;
+        if (item.hasAttribute("data-minetip-title")) name = item.getAttribute("data-minetip-title");
+        if (item.querySelector("span[title]"))
+          name = item.querySelector("span[title]")?.getAttribute("title");
+        if (item.querySelector("a[title]"))
+          name = item.querySelector("a[title]")?.getAttribute("title");
+
+        if (name.endsWith("Music Disc")) {
+          const dataTipText = item.getAttribute("data-minetip-text") || "";
+          name = dataTipText.replace("&7", "");
+        }
+        if (!name) name = "NO SPECIAL NAME";
+
+        const img = item.querySelector("img") as HTMLImageElement | null;
+        let imageUrl;
+        if (img) {
+          imageUrl = img.getAttribute("data-src") || img.src;
+        }
+
+        return { name, imageUrl };
+      }
+    );
+
+    return items.filter(({ name }, index) => filter(name, index));
+  }, filterFn.toString());
+}
+
+/**
+ * Main execution function.
+ */
+(async () => {
+  const browser = await initBrowser();
+  try {
+    const dataPage = await openDataPage(browser);
+    await processRegularItems(browser, dataPage);
+    await processSpecialItems(browser);
+  } catch (error) {
+    console.error(chalk.red("An unexpected error occurred:"), error);
+  } finally {
+    await browser.close();
+  }
 })();

@@ -1,132 +1,14 @@
-import puppeteer from "puppeteer";
+import puppeteer, { Page } from "puppeteer";
 import fs from "fs";
 import chalk from "chalk";
 
 import { CraftingRecipe, Item } from "../types";
 import itemsJSON from "../data/items.json";
 import { sortByKey } from "../utils";
+import { error } from "console";
 
 (async () => {
-  const browser = await puppeteer.launch({
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  });
-  const page = await browser.newPage();
-  console.log("Opening crafting page...");
-  await page.goto("https://minecraft.fandom.com/wiki/Crafting", {
-    waitUntil: "domcontentloaded",
-  });
-  console.log("Crafting page loaded");
-  await page.evaluate(() =>
-    [...document.querySelectorAll(".jslink")]
-      .slice(0, 10)
-      .forEach((button: HTMLElement) => button.click())
-  );
-  await page.waitForFunction(
-    () => document.querySelectorAll("table[data-description='Crafting recipes']").length === 10,
-    {
-      timeout: 50000,
-    }
-  );
-  console.log("Crafting recipes loaded");
-  let recipes = await page.evaluate((): CraftingRecipe[] => {
-    let rows = [
-      ...document.querySelectorAll("table[data-description='Crafting recipes'] tbody tr"),
-    ];
-    rows = rows.filter((row) => {
-      let details = row.querySelector("td:nth-child(4)");
-      if (
-        !details ||
-        [
-          "Bedrock Edition only",
-          "Bedrock and Education editions only",
-          "Minecraft Earth",
-          "upcoming",
-        ].some((detail) => details.textContent.includes(detail)) ||
-        [
-          "Glow Stick",
-          "Any Planks or",
-          "Firework Star",
-          "Firework Rocket",
-          "Tipped Arrow",
-          "Written Book",
-        ].some((keyword) => row.textContent.includes(keyword)) ||
-        row.textContent.includes("Any Planks or") ||
-        [...row.querySelectorAll(".invslot-large .invslot-item span")].length === 0
-      )
-        return false;
-      return true;
-    });
-    return rows
-      .map((row) => {
-        let quantity: number[] | number = [
-          ...row.querySelectorAll(".invslot-large .invslot-item"),
-        ].map((slot: HTMLElement) => (slot.innerText.length > 0 ? parseInt(slot.innerText) : 1));
-        if (quantity.length === 1 || quantity.every((num) => num === (quantity as number[])[0]))
-          quantity = quantity[0];
-        let item: string[] | string = [...row.querySelectorAll(".invslot-large .inv-sprite")].map(
-          (sprite) => sprite.getAttribute("title")
-        );
-        if (item.length === 1) item = item[0];
-        if (item === "Empty Locator Map") item = "Empty Map";
-        const recipeDetails = {
-          item,
-          quantity,
-          recipe: [...row.querySelectorAll(".mcui-input .invslot")].map((slot) => {
-            const items = [...slot.querySelectorAll(".invslot-item span")];
-            if (items.length === 0) return null;
-            if (items.length > 1) return items.map((item) => item.getAttribute("title"));
-            return items[0].getAttribute("title");
-          }),
-          shapeless: row.querySelector(".mcui-shapeless") !== null,
-          matching: row.textContent.includes("Matching"),
-          any: row.textContent.includes("Any"),
-        };
-        const itemVariants = recipeDetails.recipe.find((recipeItem) =>
-          Array.isArray(recipeItem)
-        ) as string[];
-        const finalRecipeDetails = (({ item, quantity, recipe, shapeless }) => ({
-          item,
-          quantity,
-          recipe,
-          shapeless,
-        }))(recipeDetails);
-        if (itemVariants && !recipeDetails.matching) {
-          if (recipeDetails.any) {
-            return finalRecipeDetails as any;
-          } else {
-            return itemVariants.map((itemVariant, i) => ({
-              item: Array.isArray(recipeDetails.item) ? recipeDetails.item[i] : recipeDetails.item,
-              quantity: Array.isArray(recipeDetails.quantity)
-                ? recipeDetails.quantity[i]
-                : recipeDetails.quantity,
-              recipe: recipeDetails.recipe.map((recipeItem) =>
-                Array.isArray(recipeItem) ? recipeItem[i] : recipeItem
-              ),
-              shapeless: recipeDetails.shapeless,
-            })) as CraftingRecipe[];
-          }
-        }
-        if (recipeDetails.matching && !recipeDetails.any) {
-          return (recipeDetails.item as string[]).map((item: string, i) => ({
-            item,
-            quantity: Array.isArray(recipeDetails.quantity)
-              ? recipeDetails.quantity[i]
-              : recipeDetails.quantity,
-            recipe: recipeDetails.recipe.map((recipeItem) =>
-              Array.isArray(recipeItem) ? recipeItem[i] : recipeItem
-            ),
-            shapeless: recipeDetails.shapeless,
-          })) as CraftingRecipe[];
-        }
-        if (!recipeDetails.matching && !recipeDetails.any) {
-          return finalRecipeDetails as any;
-        }
-        return null;
-      })
-      .filter((recipe) => recipe)
-      .flat();
-  });
-  const wood = [
+  const woodTypes: string[] = [
     "Oak Planks",
     "Spruce Planks",
     "Birch Planks",
@@ -136,7 +18,8 @@ import { sortByKey } from "../utils";
     "Crimson Planks",
     "Warped Planks",
   ];
-  const colors = [
+
+  const colors: string[] = [
     "White",
     "Orange",
     "Magenta",
@@ -154,32 +37,253 @@ import { sortByKey } from "../utils";
     "Red",
     "Black",
   ];
-  for (const color of colors) {
+
+  const materials: { name: string; item: string | string[] }[] = [
+    { name: "Wooden", item: woodTypes },
+    { name: "Stone", item: "Cobblestone" },
+    { name: "Iron", item: "Iron Ingot" },
+    { name: "Golden", item: "Gold Ingot" },
+    { name: "Diamond", item: "Diamond" },
+  ];
+
+  const effects: string[] = [
+    "Splashing",
+    "Regeneration",
+    "Swiftness",
+    "Fire Resistance",
+    "Poison",
+    "Healing",
+    "Night Vision",
+    "Weakness",
+    "Strength",
+    "Slowness",
+    "Leaping",
+    "Harming",
+    "Water Breathing",
+    "Invisibility",
+    "Luck",
+    "the Turtle Master",
+    "Slow Falling",
+  ];
+
+  const browser = await puppeteer.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
+  const page = await browser.newPage();
+
+  await loadCraftingPage(page);
+  const recipes = await scrapeCraftingRecipes(page);
+
+  await browser.close();
+
+  addColoredBedRecipes(recipes, colors, woodTypes);
+  addShulkerBoxRecipes(recipes, colors);
+  addToolRecipes(recipes, materials);
+  addFireworkRecipes(recipes, colors);
+  addTippedArrowRecipes(recipes, effects);
+  addWrittenBookRecipes(recipes);
+
+  // const [validRecipes, invalidItems] = filterInvalidItems(recipes, itemsJSON);
+
+  // console.log("Writing recipes to file...", validRecipes.length);
+  sortByKey(recipes, "item");
+  writeRecipesToFile(recipes, "./data/recipes.json");
+
+  // console.log(invalidItems);
+  console.log(chalk.blue("Done writing recipes. The items that were left out are above."));
+})();
+
+async function loadCraftingPage(page: Page) {
+  console.log("Opening crafting page...");
+  await page.goto("https://minecraft.wiki/w/Crafting", {
+    waitUntil: "networkidle2",
+  });
+  console.log("Crafting page loaded");
+
+  console.log("Loading crafting recipes");
+  await page.evaluate(() => {
+    document
+      .querySelectorAll(".load-page[data-page] .jslink")
+      .forEach((button) => (button as HTMLElement).click());
+  });
+  await page.waitForFunction(
+    () => document.querySelectorAll(".load-page[data-page] table").length === 11,
+    { timeout: 50000 }
+  );
+  console.log("Crafting recipes loaded");
+}
+
+async function scrapeCraftingRecipes(page: Page): Promise<CraftingRecipe[]> {
+  return await page.evaluate(() => {
+    let boatIndex = 0;
+    const rows = Array.from(
+      document.querySelectorAll<HTMLTableRowElement>(".load-page[data-page] table tbody tr")
+    );
+
+    let notarow = 0;
+
+    const filterRows = (row: HTMLTableRowElement) => {
+      if (!row || !("querySelector" in row)) {
+        notarow++;
+        return false;
+      }
+      const details = row.querySelector("td:nth-child(4)");
+      const excludeDetails = [
+        "Bedrock Edition",
+        "Minecraft Education",
+        "Minecraft Earth",
+        "upcoming",
+        "Calcium",
+      ];
+      const excludeKeywords = [
+        "Glow Stick",
+        "Any Planks +",
+        "Firework Star",
+        "Firework Rocket",
+        "Tipped Arrow",
+        "Written Book",
+        "Resin",
+      ];
+
+      if (
+        !details ||
+        excludeDetails.some((detail) => details.textContent?.includes(detail)) ||
+        excludeKeywords.some((keyword) => row.textContent.includes(keyword)) ||
+        row.textContent.includes("Any Planks or") ||
+        row.querySelector('a[title="Planks"]') ||
+        excludeKeywords.includes(row.querySelector("a[title]").getAttribute("title")) ||
+        row.querySelectorAll(".invslot-large .invslot-item span").length === 0
+      ) {
+        return false;
+      }
+      return true;
+    };
+
+    const processRow = (row: HTMLTableRowElement) => {
+      const recipes: {
+        item: string;
+        quantity: number;
+        recipe: (string | string[] | null)[];
+        shapeless: boolean;
+      }[] = [];
+
+      const recipeNames = Array.from(row.querySelectorAll(".mcui-output .invslot-item"));
+      //first, get the output items
+      const recipeNamesWithIndex = recipeNames.map((elem, index) => {
+        const name =
+          elem.hasAttribute("data-minetip-title") &&
+          !elem.getAttribute("data-minetip-title").startsWith("&")
+            ? elem.getAttribute("data-minetip-title")
+            : elem.querySelector("a").getAttribute("title");
+        return {
+          name: name,
+          index: index,
+          totalLength: recipeNames.length,
+        };
+      });
+
+      recipeNamesWithIndex.forEach((recipeNameWithIndex) => {
+        const recipe: Partial<CraftingRecipe> = {
+          item: recipeNameWithIndex.name,
+        };
+
+        //get the recipe
+        const nineTiles = Array.from(row.querySelectorAll(".mcui-input .invslot"));
+        if (nineTiles.length !== 9) throw new Error("Recipe does not have 9 tiles");
+
+        const recipeTiles = nineTiles.map((tile, index) => {
+          const variants = Array.from(tile.querySelectorAll(".invslot-item"));
+
+          if (variants.length === 0) {
+            return null;
+          }
+          if (variants.length === 1) {
+            return variants[0].querySelector("a").getAttribute("title");
+          }
+          if (variants.length === recipeNameWithIndex.totalLength) {
+            const variant = variants[recipeNameWithIndex.index];
+            if (!variant.hasChildNodes()) return null;
+
+            if (variant.hasAttribute("data-minetip-title")) {
+              return variant.getAttribute("data-minetip-title");
+            }
+
+            if (variant.querySelector("a")) {
+              return variant.querySelector("a").getAttribute("title");
+            }
+
+            throw new Error(
+              "No title found for variant index:" +
+                variant.hasChildNodes() +
+                ", " +
+                recipeNameWithIndex.name
+            );
+          }
+
+          const titles = variants.map((variant) => {
+            if (variant.hasAttribute("data-minetip-title")) {
+              return variant.getAttribute("data-minetip-title");
+            }
+            return variant.querySelector("a").getAttribute("title");
+          });
+
+          return titles;
+        });
+
+        recipe.recipe = recipeTiles;
+        if (recipeNameWithIndex.name === "Acacia Boat") {
+          boatIndex++;
+          // throw new Error(JSON.stringify(recipe));
+        }
+        recipes.push(recipe as CraftingRecipe);
+      });
+
+      if (recipeNamesWithIndex.find((recipe) => recipe.name === "Acacia Boat")) {
+      }
+
+      return recipes;
+    };
+
+    const recipes = rows.filter(filterRows).map(processRow).flat();
+
+    const newRecipes = recipes.filter(Boolean);
+
+    return newRecipes;
+  });
+}
+
+function addColoredBedRecipes(recipes: CraftingRecipe[], colors: string[], woodTypes: string[]) {
+  colors.forEach((color) => {
     recipes.push({
-      item: color + " Bed",
+      item: `${color} Bed`,
       quantity: 1,
       recipe: [
         null,
         null,
         null,
-        color + " Wool",
-        color + " Wool",
-        color + " Wool",
-        wood,
-        wood,
-        wood,
+        `${color} Wool`,
+        `${color} Wool`,
+        `${color} Wool`,
+        woodTypes,
+        woodTypes,
+        woodTypes,
       ],
       shapeless: false,
     });
+  });
+}
+
+function addShulkerBoxRecipes(recipes: CraftingRecipe[], colors: string[]) {
+  colors.forEach((color) => {
     recipes.push({
-      item: color + " Shulker Box",
+      item: `${color} Shulker Box`,
       quantity: 1,
       recipe: [
         null,
         null,
         null,
-        colors.map((color) => color + " Shulker Box"),
-        color + " Dye",
+        colors.map((c) => `${c} Shulker Box`),
+        `${color} Dye`,
         null,
         null,
         null,
@@ -187,31 +291,14 @@ import { sortByKey } from "../utils";
       ],
       shapeless: true,
     });
-  }
-  const materials = [
-    {
-      name: "Wooden",
-      item: wood,
-    },
-    {
-      name: "Stone",
-      item: "Cobblestone",
-    },
-    {
-      name: "Iron",
-      item: "Iron Ingot",
-    },
-    {
-      name: "Golden",
-      item: "Gold Ingot",
-    },
-    {
-      name: "Diamond",
-      item: "Diamond",
-    },
-  ];
+  });
+}
 
-  for (const material of materials) {
+function addToolRecipes(
+  recipes: CraftingRecipe[],
+  materials: { name: string; item: string | string[] }[]
+) {
+  materials.forEach((material) => {
     const tools = [
       {
         name: "Pickaxe",
@@ -254,16 +341,21 @@ import { sortByKey } from "../utils";
         recipe: [material.item, material.item, null, null, "Stick", null, null, "Stick", null],
       },
     ];
-    for (const tool of tools) {
+
+    tools.forEach((tool) => {
       recipes.push({
-        item: material.name + " " + tool.name,
+        item: `${material.name} ${tool.name}`,
         quantity: 1,
         recipe: tool.recipe,
         shapeless: false,
       });
-    }
-  }
-  const dyes = colors.map((color) => color + " Dye");
+    });
+  });
+}
+
+function addFireworkRecipes(recipes: CraftingRecipe[], colors: string[]) {
+  const dyes = colors.map((color) => `${color} Dye`);
+
   recipes.push({
     item: "Firework Star",
     quantity: 1,
@@ -292,12 +384,14 @@ import { sortByKey } from "../utils";
     ],
     shapeless: true,
   });
+
   recipes.push({
     item: "Firework Star",
     quantity: 1,
     recipe: [null, null, null, "Firework Star", dyes, null, null, null, null],
     shapeless: true,
   });
+
   recipes.push({
     item: "Firework Rocket",
     quantity: 3,
@@ -314,6 +408,7 @@ import { sortByKey } from "../utils";
     ],
     shapeless: true,
   });
+
   recipes.push({
     item: "Firework Rocket",
     quantity: 3,
@@ -330,45 +425,24 @@ import { sortByKey } from "../utils";
     ],
     shapeless: true,
   });
-  // tipped arrows
-  for (const effect of [
-    "Splashing",
-    "Regeneration",
-    "Swiftness",
-    "Fire Resistance",
-    "Poison",
-    "Healing",
-    "Night Vision",
-    "Weakness",
-    "Strength",
-    "Slowness",
-    "Leaping",
-    "Harming",
-    "Water Breathing",
-    "Invisibility",
-    "Luck",
-    "the Turtle Master",
-    "Slow Falling",
-  ]) {
+}
+
+function addTippedArrowRecipes(recipes: CraftingRecipe[], effects: string[]) {
+  effects.forEach((effect) => {
+    const potion =
+      effect === "Splashing" ? "Lingering Water Bottle" : `Lingering Potion of ${effect}`;
+
     recipes.push({
-      item: "Arrow of " + effect,
+      item: `Arrow of ${effect}`,
       quantity: 8,
-      recipe: [
-        "Arrow",
-        "Arrow",
-        "Arrow",
-        "Arrow",
-        effect === "Splashing" ? "Lingering Water Bottle" : "Lingering Potion of " + effect,
-        "Arrow",
-        "Arrow",
-        "Arrow",
-        "Arrow",
-      ],
+      recipe: ["Arrow", "Arrow", "Arrow", "Arrow", potion, "Arrow", "Arrow", "Arrow", "Arrow"],
       shapeless: false,
     });
-  }
-  // Written Books
-  for (let i = 1; i < 9; i++) {
+  });
+}
+
+function addWrittenBookRecipes(recipes: CraftingRecipe[]) {
+  for (let i = 1; i <= 8; i++) {
     recipes.push({
       item: "Written Book",
       quantity: i,
@@ -376,47 +450,8 @@ import { sortByKey } from "../utils";
       shapeless: true,
     });
   }
-  const invalidItems: string[] = [];
-  const names = itemsJSON.map((item: Item) => item.name);
-  recipes = recipes.filter((recipe) => {
-    if (Array.isArray(recipe.item)) return false;
-    if (!names.includes(recipe.item)) {
-      if (!invalidItems.includes(recipe.item)) {
-        invalidItems.push(recipe.item);
-      }
-      return false;
-    }
-    return true;
-  });
-  recipes.forEach((recipe, i) => {
-    recipe.recipe.forEach((recipeItem, i) => {
-      if (Array.isArray(recipeItem)) {
-        recipe.recipe[i] = recipeItem.filter((variant) => {
-          if (variant && !names.includes(variant)) {
-            if (!invalidItems.includes(variant)) {
-              invalidItems.push(variant);
-            }
-            return false;
-          }
-          return true;
-        });
-      } else if (recipeItem && !names.includes(recipeItem)) {
-        if (recipeItem === "Damaged Turtle Shell") {
-          recipe.recipe[i] = "Turtle Shell";
-        } else {
-          if (!invalidItems.includes(recipeItem)) {
-            invalidItems.push(recipeItem);
-          }
-          recipes.splice(i, 1);
-        }
-      }
-    });
-  });
-  recipes = [...new Set(recipes.map((recipe) => JSON.stringify(recipe)))].map((recipe) =>
-    JSON.parse(recipe)
-  );
-  sortByKey(recipes, "item");
-  fs.writeFileSync("./data/recipes.json", JSON.stringify(recipes, null, 2));
-  console.log(invalidItems);
-  console.log(chalk.blue("Done writing recipes. The items that were left out are above."));
-})();
+}
+
+function writeRecipesToFile(recipes: CraftingRecipe[], filename: string) {
+  fs.writeFileSync(filename, JSON.stringify(recipes, null, 2));
+}

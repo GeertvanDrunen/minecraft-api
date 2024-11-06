@@ -11,12 +11,59 @@ import palette from "get-rgba-palette";
 import { sortByKey } from "../utils";
 import blocksJSON from "../data/blocks.json";
 import { Block } from "../types";
+import axios from "axios";
+import sharp from "sharp";
 
-const limit = pLimit(6);
+const limit = pLimit(4);
 const blocks = blocksJSON as Block[];
 
-const getTextContent = async (page: puppeteer.Page, element: puppeteer.ElementHandle) =>
-  await page.evaluate((element) => element.textContent, element);
+const notfoundlist: any[] = [];
+
+const getTextContent = async (
+  page: puppeteer.Page,
+  element: puppeteer.ElementHandle,
+  type?: string
+) => {
+  if (!element) {
+    chalk.bgRedBright("Element not found", type);
+    return "";
+  }
+  return await page.evaluate((element) => element.textContent, element);
+};
+
+const getItemPageUrl = async (namespaceId: string) => {
+  console.log("getItemPageUrl", namespaceId);
+
+  namespaceId = namespaceId.replace("exposed_", "");
+  namespaceId = namespaceId.replace("oxidized_", "");
+  namespaceId = namespaceId.replace("weathered", "");
+  namespaceId = namespaceId.replace("weeping_", "");
+  namespaceId = namespaceId.replace("potted_", "");
+
+  if (namespaceId === "Beetroot_Seeds") {
+    return "https://minecraft.wiki/w/Beetroot_Seeds";
+  }
+  if (namespaceId === "big_dripleaf_stem") {
+    return "https://minecraft.wiki/w/Big_Dripleaf";
+  }
+  if (namespaceId.includes("carpet")) {
+    return "https://minecraft.wiki/w/Carpet";
+  }
+  if (namespaceId.includes("shulker_box")) {
+    return "https://minecraft.wiki/w/Shulker_Box";
+  }
+  if (namespaceId.includes("concrete_powder")) {
+    return "https://minecraft.wiki/w/Concrete_Powder";
+  }
+  if (namespaceId.includes("concrete")) {
+    return "https://minecraft.wiki/w/Concrete";
+  }
+  if (namespaceId.includes("bed")) {
+    return "https://minecraft.wiki/w/Bed";
+  }
+
+  return "https://minecraft.wiki/w/" + namespaceId;
+};
 
 const writeBlocks = (blocks: Block[]) => {
   sortByKey(blocks, "name");
@@ -62,33 +109,71 @@ const getItemNameForBlock = (name: string) => {
   new Jimp(200, 200, "#00000000", (err, image) => {
     image.write("public/blocks/air.png");
   });
+
+  async function downloadImagePNG(url: string, namespaceId: string): Promise<void> {
+    // Fetch the image using Axios
+    const response = await axios.get(url.replace("30px", "200px"), { responseType: "arraybuffer" });
+
+    if (response.status !== 200) {
+      throw new Error(`Failed to fetch image. Status code: ${response.status}`);
+    }
+
+    const imageBuffer = Buffer.from(response.data, "binary");
+
+    // Process the image with Sharp
+    const resizedImageBuffer = await sharp(imageBuffer)
+      .resize(200, 200, {
+        fit: "inside",
+        withoutEnlargement: false,
+      })
+      .png()
+      .toBuffer();
+
+    // Ensure the directory exists
+    const outputPath = `public/blocks/${namespaceId}.png`;
+    await fs.promises.mkdir("public/blocks", { recursive: true });
+
+    // Write the resized image
+    await fs.promises.writeFile(outputPath, resizedImageBuffer);
+    console.log(`Image saved to ${outputPath}`);
+  }
+
   const browser = await puppeteer.launch({
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const dataPage = await browser.newPage();
   console.log("Opening data page...");
-  await dataPage.goto("https://minecraft.gamepedia.com/Java_Edition_data_values");
+  await dataPage.goto("https://minecraft.wiki/w/Java_Edition_data_values/Blocks", {
+    timeout: 0,
+    waitUntil: "networkidle2",
+  });
   console.log("Data page loaded");
-  await dataPage.waitForSelector("div[data-page='Java Edition data values/Blocks'] .jslink");
-  await dataPage.click("div[data-page='Java Edition data values/Blocks'] .jslink");
-  await dataPage.waitForSelector("a[title='Acacia Button']");
-  console.log("Blocks table loaded");
   const explosionPage = await browser.newPage();
-  await explosionPage.goto("https://minecraft.gamepedia.com/Explosion", {
-    waitUntil: "domcontentloaded",
+  await explosionPage.goto("https://minecraft.wiki/w/Explosion", {
+    timeout: 0,
+    waitUntil: "networkidle2",
   });
   console.log("Explosion page loaded");
   await Promise.all(
     (
-      await dataPage.$$("div[data-page='Java Edition data values/Blocks'] .stikitable tbody tr")
+      await dataPage.$$("body.page-Java_Edition_data_values_Blocks .stikitable tbody tr")
     ).map((row) =>
       limit(async (row) => {
-        const a = await row.$("a[title]");
-        const name = await getTextContent(dataPage, a);
+        const td = await row.$("td:nth-child(3)");
+        const name = await getTextContent(dataPage, td, "name");
         let blockPage: puppeteer.Page;
         try {
           if (blocks.find((block) => block.name === name)) return;
-          const namespacedId = await getTextContent(dataPage, await row.$("code"));
+
+          const itemFormID = await (
+            await row.$("td:last-child")
+          ).evaluate((el) => {
+            return el.getAttribute("style")?.includes("#ccaaff") ? el.textContent : null;
+          });
+
+          const namespacedId =
+            itemFormID || (await getTextContent(dataPage, await row.$("code"), "code"));
+
           let imageName = namespacedId;
           if (["Air", "Cave Air", "Void Air", "Moving Piston"].includes(name)) {
             imageName = "air";
@@ -103,31 +188,49 @@ const getItemNameForBlock = (name: string) => {
               return src.replace(/width-down.+/, "width-down/200");
             });
             if (wikiImageURL) {
-              const wikiImage = await Jimp.read(wikiImageURL);
-              wikiImage.resize(200, Jimp.AUTO);
-              wikiImage.write("public/blocks/" + namespacedId + ".png");
+              await downloadImagePNG(wikiImageURL, namespacedId);
             }
           }
-          let image = `https://minecraft-api.vercel.app/blocks/${imageName}.png`;
+          let image = `https://mc.geertvandrunen.nl/_new/blocks/${imageName}.png`;
 
           let item = null;
           const itemName = getItemNameForBlock(name);
-          if (itemName !== name || !(await row.$("td[style]"))) {
+          if (itemName !== name) {
             item = itemName;
           }
-          const url: string =
-            name === "Beetroots"
-              ? "https://minecraft.gamepedia.com/Beetroot_Seeds"
-              : await (await a.getProperty("href")).jsonValue();
+
+          const url = await getItemPageUrl(namespacedId);
           blockPage = await browser.newPage();
+          console.log("Opening block page: " + name, url);
           await blockPage.goto(url, {
-            waitUntil: "domcontentloaded",
+            timeout: 0,
+            waitUntil: "networkidle2",
           });
-          const description = (
-            await getTextContent(blockPage, await blockPage.$(".mw-parser-output > p"))
-          )
-            .replace(/\[a\]|\n$/g, "")
-            .trim();
+
+          const noContent = await blockPage.$(".noarticletext");
+          if (noContent) {
+            console.log(chalk.blue("No content found for block: " + name));
+            notfoundlist.push(name);
+            await blockPage.close();
+            return;
+          }
+
+          console.log(" getting description");
+
+          const description = await blockPage.evaluate(() => {
+            return new Promise<string>((resolve) => {
+              const interval = setInterval(() => {
+                const meta = document.head.querySelector('meta[name="description"]');
+                const content = meta?.getAttribute("content");
+
+                if (content && content !== "MediaWiki host for official and independent wikis") {
+                  clearInterval(interval);
+                  resolve(content);
+                  console.log("got it");
+                }
+              }, 100);
+            });
+          });
 
           const block: Block = {
             name,
@@ -320,13 +423,6 @@ const getItemNameForBlock = (name: string) => {
               },
             },
             {
-              blocks: ["Bamboo"],
-              attributes: {
-                flammable: true,
-                tool: "Sword",
-              },
-            },
-            {
               blocks: ["Coral Fan", "Coral Wall Fan"],
               attributes: {
                 // requiresTool: false,
@@ -515,104 +611,29 @@ const getItemNameForBlock = (name: string) => {
             }
           }
 
-          const missingAttribute = (attribute: keyof Block) => {
-            if (block[attribute] === undefined) {
-              console.log(chalk.red(`Unable to get ${attribute} for block: ` + name));
-              blockPage.close();
-              return true;
-            }
-          };
+          const elem = await blockPage.$("table.infobox-rows tr:nth-child(4) td p");
 
-          block.transparent =
-            block.transparent ??
-            (await blockPage.evaluate(() => {
-              const transparenceRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
-                (row) => row.textContent.includes("Transparent")
-              )[0];
-              const text = transparenceRow.querySelector("p").innerText;
-              return text.length < 10 || text.includes("Partial") ? text !== "No" : undefined;
-            }));
-          if (missingAttribute("transparent")) return;
+          block.blastResistance = await getTextContent(blockPage, elem, "blastResistance");
+          block.blastResistance = parseInt(block.blastResistance.toString().trim());
 
-          block.luminance =
-            block.luminance ??
-            (await blockPage.evaluate(() => {
-              const luminanceRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
-                (row) => row.textContent.includes("Luminan")
-              )[0];
-              const text = luminanceRow.querySelector("p").innerText;
-              return text.length < 10
-                ? text.includes("Yes")
-                  ? parseInt(/\((.+)\)/.exec(text)[1])
-                  : 0
-                : undefined;
-            }));
-          if (missingAttribute("luminance")) return;
-
-          block.blastResistance =
-            block.blastResistance ??
-            (await explosionPage.evaluate((blockName) => {
-              let rows = [...document.querySelectorAll("tbody tr")] as HTMLTableRowElement[];
-              if (!rows) return undefined;
-              rows = rows.filter((row) => {
-                const td = row.querySelector("td");
-                if (!td) return false;
-                return (
-                  td.innerText.length > 0 &&
-                  blockName.includes(td.innerText.substring(0, td.innerText.length - 1))
-                );
-              });
-              if (rows.length === 0) return undefined;
-              return parseFloat(
-                (
-                  rows
-                    .sort(
-                      (row1, row2) =>
-                        row2.querySelector("td").innerText.length -
-                        row1.querySelector("td").innerText.length
-                    )[0]
-                    .querySelector("td:nth-child(2)") as any
-                ).innerText.replace(/,/g, "")
-              );
-            }, name));
-          block.blastResistance =
-            block.blastResistance ??
-            (await blockPage.evaluate(() => {
-              const blastResistanceRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
-                (row: HTMLTableRowElement) => row.innerText.includes("Blast resistance")
-              )[0];
-              const text = blastResistanceRow.querySelector("p").innerText;
-              return text.length < 10 ? parseFloat(text) : undefined;
-            }));
-          if (missingAttribute("blastResistance")) return;
-
-          block.flammable =
-            block.flammable ??
-            (await blockPage.evaluate(() => {
-              const flammableRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
-                (row: HTMLTableRowElement) => row.innerText.includes("Flammable")
-              )[0];
-              const text = flammableRow.querySelector("p").innerText;
-              return /(Yes)|(No)(\(\d+\))?/.test(text) ? text.includes("Yes") : undefined;
-            }));
-          if (missingAttribute("flammable")) return;
-
-          if (block.tool === undefined) {
-            // MULTIPLE TOOL TYPES RETURNS UNDEFINED
-            block.tool = (await blockPage.evaluate(() => {
-              const toolRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
-                (row: HTMLTableRowElement) => row.innerText.includes("Tool")
-              )[0];
-              const tools = [...toolRow.querySelectorAll("a")];
-              const allTools = ["Pickaxe", "Hoe", "Axe", "Shovel", "Sword", "Shears"];
-              return tools.length === 0
-                ? null
-                : tools.length > 1 || !allTools.includes(tools[0].title)
-                ? undefined
-                : tools[0].title;
-            })) as Block["tool"];
-          }
-          if (missingAttribute("tool")) return;
+          // if (block.tool === undefined) {
+          //   // MULTIPLE TOOL TYPES RETURNS UNDEFINED
+          //   block.tool = (await blockPage.evaluate(() => {
+          //     const toolRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
+          //       (row: HTMLTableRowElement) => row.innerText.includes("Tool")
+          //     )[0];
+          //     console.log("TOOLROW", toolRow);
+          //     if (!toolRow) return null;
+          //     const tools = [...toolRow.querySelectorAll("a")];
+          //     const allTools = ["Pickaxe", "Hoe", "Axe", "Shovel", "Sword", "Shears"];
+          //     return tools.length === 0
+          //       ? null
+          //       : tools.length > 1 || !allTools.includes(tools[0].title)
+          //       ? undefined
+          //       : tools[0].title;
+          //   })) as Block["tool"];
+          // }
+          // if (missingAttribute("tool")) return;
 
           // disabled requiresTool and requiresSilkTouch since the information has been moved to
           // https://minecraft.fandom.com/wiki/Breaking and https://minecraft.fandom.com/wiki/Silk_Touch
@@ -644,6 +665,9 @@ const getItemNameForBlock = (name: string) => {
           console.log(chalk.red("Uncaught error when getting block: " + name));
           console.log(e);
           if (blockPage) await blockPage.close();
+          // stop the script if an error occurs
+          Promise.reject(e);
+
           return;
         }
       }, row)
@@ -651,4 +675,7 @@ const getItemNameForBlock = (name: string) => {
   );
   writeBlocks(blocks);
   console.log(chalk.blue("Finished getting all blocks"));
+
+  console.log("Not found list");
+  notfoundlist?.map((name) => console.log(name));
 })();

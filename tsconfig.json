@@ -9,6 +9,7 @@
     "moduleResolution": "Node",
     "sourceMap": true,
     "baseUrl": ".",
+    "strict": false,
     "lib": ["es2020", "dom", "dom.iterable"]
   },
   "include": ["scripts/**/*", "api/**/*", "types/**/*", "utils/**/*"]
