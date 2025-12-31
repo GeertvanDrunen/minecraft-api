@@ -3,7 +3,6 @@ import fs from "fs";
 import pLimit from "p-limit";
 import sharp from "sharp";
 import chalk from "chalk";
-import https from "https";
 
 import { Item } from "../types";
 import itemsJSON from "../data/items.json";
@@ -21,6 +20,7 @@ const EXCLUDED_ITEMS = [
   "Tipped Arrow",
   "Music Disc",
   "Chorus Plant",
+  "Ominous Shield",
 ];
 
 // Initialize items and names arrays
@@ -28,7 +28,7 @@ let items: Item[] = itemsJSON;
 let names: string[] = items.map((item) => item.name);
 
 // Limit concurrent operations
-const limit = pLimit(5);
+const limit = pLimit(3);
 
 /**
  * Writes the items array to a JSON file after sorting.
@@ -75,8 +75,6 @@ async function populateItemsJson(
 ) {
   try {
     const namespacedId: string = await getNamespacedId(dataPage, row);
-    console.log("namespacedId", namespacedId);
-    console.log(`Processing item: ${name}`);
     const url: string = await getItemPageUrl(dataPage, row, name);
     const itemData: Item | null = await getItemDetails(browser, url, name, namespacedId);
 
@@ -612,7 +610,7 @@ async function processSpecialItems(browser: Browser): Promise<void> {
     },
     {
       page: "Music_Disc",
-      namespacedId: null, // Specially handled
+      namespacedId: null,
       stackSize: 1,
       renewable: (title: string) => !["otherside", "Pigstep"].some((disc) => title.includes(disc)),
       filter: (_title: string) => true,

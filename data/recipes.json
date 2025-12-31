@@ -786,7 +786,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -796,7 +797,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -806,7 +808,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -1389,7 +1392,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -1399,7 +1403,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -1409,7 +1414,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -1934,7 +1940,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -1944,7 +1951,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -1954,7 +1962,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -3398,7 +3407,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -3408,7 +3418,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -3418,7 +3429,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -4437,6 +4449,20 @@
     ]
   },
   {
+    "item": "Empty Map",
+    "recipe": [
+      "Paper",
+      "Paper",
+      "Paper",
+      "Paper",
+      "Compass",
+      "Paper",
+      "Paper",
+      "Paper",
+      "Paper"
+    ]
+  },
+  {
     "item": "Enchanting Table",
     "recipe": [
       null,
@@ -5376,7 +5402,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -5386,7 +5413,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -5396,7 +5424,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -5699,7 +5728,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -5709,7 +5739,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -5719,7 +5750,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -6001,20 +6033,6 @@
       null,
       null,
       null,
-      null
-    ]
-  },
-  {
-    "item": "Honey Bottle",
-    "recipe": [
-      null,
-      null,
-      null,
-      "Glass Bottle",
-      "Glass Bottle",
-      "Honey Block",
-      "Glass Bottle",
-      "Glass Bottle",
       null
     ]
   },
@@ -6653,7 +6671,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -6663,7 +6682,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -6673,7 +6693,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -6990,7 +7011,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -7000,7 +7022,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -7010,7 +7033,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -7345,7 +7369,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -7355,7 +7380,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -7365,7 +7391,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -7696,7 +7723,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -7706,7 +7734,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -7716,7 +7745,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -8961,7 +8991,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -8971,7 +9002,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -8981,7 +9013,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -9472,7 +9505,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -9482,7 +9516,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -9492,7 +9527,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -10313,7 +10349,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -10323,7 +10360,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -10333,7 +10371,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -10898,7 +10937,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -10908,7 +10948,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -10918,7 +10959,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -13541,7 +13583,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -13551,7 +13594,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -13561,7 +13605,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false
@@ -13886,7 +13931,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -13896,7 +13942,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       null,
       [
@@ -13907,7 +13954,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       "Stick",
       null,
@@ -13929,7 +13977,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -13939,7 +13988,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       null,
       null,
@@ -13963,7 +14013,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -13973,7 +14024,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -13983,7 +14035,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       null,
       "Stick",
@@ -14007,7 +14060,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       null,
       null,
@@ -14032,7 +14086,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       null,
       null,
@@ -14044,7 +14099,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       null,
       null,
@@ -14227,7 +14283,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -14237,7 +14294,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ],
       [
         "Oak Planks",
@@ -14247,7 +14305,8 @@
         "Acacia Planks",
         "Dark Oak Planks",
         "Crimson Planks",
-        "Warped Planks"
+        "Warped Planks",
+        "Pale Oak Planks"
       ]
     ],
     "shapeless": false

@@ -17,6 +17,7 @@ import { error } from "console";
     "Dark Oak Planks",
     "Crimson Planks",
     "Warped Planks",
+    "Pale Oak Planks",
   ];
 
   const colors: string[] = [

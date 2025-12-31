@@ -34,7 +34,7 @@
   {
     "name": "Angler Pottery Sherd",
     "namespacedId": "angler_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "An angler pottery sherd is a pottery sherd that depicts a fishing rod. It can be found in warm ocean ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/angler_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -50,7 +50,7 @@
   {
     "name": "Archer Pottery Sherd",
     "namespacedId": "archer_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "An archer pottery sherd is a pottery sherd that depicts a bow. It can be found in desert pyramids.",
     "image": "https://mc.geertvandrunen.nl/_new/items/archer_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -82,7 +82,7 @@
   {
     "name": "Arms Up Pottery Sherd",
     "namespacedId": "arms_up_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "An arms up pottery sherd is a pottery sherd that depicts a humanoid figure raising their arms. It can be found in desert wells.",
     "image": "https://mc.geertvandrunen.nl/_new/items/arms_up_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -104,10 +104,34 @@
     "stackSize": 64
   },
   {
+    "name": "Arrow of Fire Resistance",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_fire_resistance.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
     "name": "Arrow of Harming",
     "namespacedId": "tipped_arrow",
     "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
     "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_harming.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Harming",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_harming.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Healing",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_healing.png",
     "renewable": true,
     "stackSize": 64
   },
@@ -128,10 +152,34 @@
     "stackSize": 64
   },
   {
+    "name": "Arrow of Infestation",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_infestation.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
     "name": "Arrow of Invisibility",
     "namespacedId": "tipped_arrow",
     "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
     "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_invisibility.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Invisibility",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_invisibility.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Leaping",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_leaping.png",
     "renewable": true,
     "stackSize": 64
   },
@@ -152,10 +200,34 @@
     "stackSize": 64
   },
   {
+    "name": "Arrow of Luck",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_luck.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Arrow of Night Vision",
     "namespacedId": "tipped_arrow",
     "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
     "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_night_vision.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Night Vision",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_night_vision.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Oozing",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_oozing.png",
     "renewable": true,
     "stackSize": 64
   },
@@ -176,10 +248,34 @@
     "stackSize": 64
   },
   {
+    "name": "Arrow of Poison",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_poison.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
     "name": "Arrow of Regeneration",
     "namespacedId": "tipped_arrow",
     "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
     "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_regeneration.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Regeneration",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_regeneration.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Slow Falling",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_slow_falling.png",
     "renewable": true,
     "stackSize": 64
   },
@@ -200,10 +296,34 @@
     "stackSize": 64
   },
   {
+    "name": "Arrow of Slowness",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_slowness.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
     "name": "Arrow of Splashing",
     "namespacedId": "tipped_arrow",
     "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
     "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_splashing.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Splashing",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_splashing.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Strength",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_strength.png",
     "renewable": true,
     "stackSize": 64
   },
@@ -224,10 +344,34 @@
     "stackSize": 64
   },
   {
+    "name": "Arrow of Swiftness",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_swiftness.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
     "name": "Arrow of Water Breathing",
     "namespacedId": "tipped_arrow",
     "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
     "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_water_breathing.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Water Breathing",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_water_breathing.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Weakness",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_weakness.png",
     "renewable": true,
     "stackSize": 64
   },
@@ -248,10 +392,34 @@
     "stackSize": 64
   },
   {
+    "name": "Arrow of Weaving",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_weaving.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
     "name": "Arrow of Wind Charging",
     "namespacedId": "tipped_arrow",
     "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
     "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_wind_charging.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of Wind Charging",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_wind_charging.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Arrow of the Turtle Master",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/arrow_of_the_turtle_master.png",
     "renewable": true,
     "stackSize": 64
   },
@@ -272,10 +440,34 @@
     "stackSize": 1
   },
   {
+    "name": "Awkward Lingering Potion",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/awkward_lingering_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Awkward Potion",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/awkward_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Awkward Potion",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/awkward_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Awkward Splash Potion",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/awkward_splash_potion.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -377,6 +569,22 @@
   },
   {
     "name": "Black Bundle",
+    "namespacedId": "black_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/black_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Black Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/black_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Black Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/black_bundle.png",
@@ -400,9 +608,17 @@
     "stackSize": 1
   },
   {
+    "name": "Black Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/black_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Blade Pottery Sherd",
     "namespacedId": "blade_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A blade pottery sherd is a pottery sherd that depicts a sword. It can be found in cold ocean ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/blade_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -433,6 +649,22 @@
   },
   {
     "name": "Blue Bundle",
+    "namespacedId": "blue_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/blue_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Blue Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/blue_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Blue Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/blue_bundle.png",
@@ -456,10 +688,26 @@
     "stackSize": 1
   },
   {
+    "name": "Blue Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/blue_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Bogged Spawn Egg",
     "namespacedId": "bogged_spawn_egg",
     "description": "A spawn egg is an item used to spawn mobs directly.",
     "image": "https://mc.geertvandrunen.nl/_new/items/bogged_spawn_egg.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
+    "name": "Bolt Armor Trim",
+    "namespacedId": "bolt_armor_trim_smithing_template",
+    "description": "Bolt armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, a block of copper or waxed block of copper, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/bolt_armor_trim_smithing_template.png",
     "renewable": false,
     "stackSize": 64
   },
@@ -493,6 +741,14 @@
     "description": "A book and quill is an item used by players to store and edit text. After signing, it turns into a written book with all the text inside saved permanently.",
     "image": "https://mc.geertvandrunen.nl/_new/items/writable_book.png",
     "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Bordure Indented Banner Pattern",
+    "namespacedId": "bordure_indented_banner_pattern",
+    "description": "A bordure indented banner pattern is a banner pattern used to customize banners with a shape of a fancy border.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/bordure_indented_banner_pattern.png",
+    "renewable": false,
     "stackSize": 1
   },
   {
@@ -546,7 +802,7 @@
   {
     "name": "Brewer Pottery Sherd",
     "namespacedId": "brewer_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A brewer pottery sherd is a pottery sherd that depicts a potion. It can be found in desert wells.",
     "image": "https://mc.geertvandrunen.nl/_new/items/brewer_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -558,6 +814,22 @@
     "image": "https://mc.geertvandrunen.nl/_new/items/brick.png",
     "renewable": true,
     "stackSize": 64
+  },
+  {
+    "name": "Brown Bundle",
+    "namespacedId": "brown_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/brown_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Brown Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/brown_bundle.png",
+    "renewable": true,
+    "stackSize": 1
   },
   {
     "name": "Brown Bundle",
@@ -574,6 +846,14 @@
     "image": "https://mc.geertvandrunen.nl/_new/items/brown_dye.png",
     "renewable": true,
     "stackSize": 64
+  },
+  {
+    "name": "Brown Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/brown_shield.png",
+    "renewable": true,
+    "stackSize": 1
   },
   {
     "name": "Brown Shield",
@@ -602,7 +882,7 @@
   {
     "name": "Bucket of Axolotl",
     "namespacedId": "axolotl_bucket",
-    "description": "A bucket of aquatic mob is a small aquatic mob (a fish, axolotl, or tadpole) inside of a water bucket, obtained by using a water bucket on each respective mob.",
+    "description": "A bucket of axolotl, internally known as an axolotl bucket, is an axolotl inside of a water bucket.",
     "image": "https://mc.geertvandrunen.nl/_new/items/axolotl_bucket.png",
     "renewable": true,
     "stackSize": 1
@@ -610,7 +890,7 @@
   {
     "name": "Bucket of Cod",
     "namespacedId": "cod_bucket",
-    "description": "A bucket of aquatic mob is a small aquatic mob (a fish, axolotl, or tadpole) inside of a water bucket, obtained by using a water bucket on each respective mob.",
+    "description": "A bucket of cod, internally known as cod bucket, is a cod inside of a water bucket.",
     "image": "https://mc.geertvandrunen.nl/_new/items/cod_bucket.png",
     "renewable": true,
     "stackSize": 1
@@ -618,7 +898,7 @@
   {
     "name": "Bucket of Pufferfish",
     "namespacedId": "pufferfish_bucket",
-    "description": "A bucket of aquatic mob is a small aquatic mob (a fish, axolotl, or tadpole) inside of a water bucket, obtained by using a water bucket on each respective mob.",
+    "description": "A bucket of pufferfish, internally known as a pufferfish bucket, is a pufferfish inside of a water bucket.",
     "image": "https://mc.geertvandrunen.nl/_new/items/pufferfish_bucket.png",
     "renewable": true,
     "stackSize": 1
@@ -626,7 +906,7 @@
   {
     "name": "Bucket of Salmon",
     "namespacedId": "salmon_bucket",
-    "description": "A bucket of aquatic mob is a small aquatic mob (a fish, axolotl, or tadpole) inside of a water bucket, obtained by using a water bucket on each respective mob.",
+    "description": "A bucket of salmon, internally known as a salmon bucket, is a salmon inside of a water bucket.",
     "image": "https://mc.geertvandrunen.nl/_new/items/salmon_bucket.png",
     "renewable": true,
     "stackSize": 1
@@ -634,7 +914,7 @@
   {
     "name": "Bucket of Tadpole",
     "namespacedId": "tadpole_bucket",
-    "description": "A bucket of aquatic mob is a small aquatic mob (a fish, axolotl, or tadpole) inside of a water bucket, obtained by using a water bucket on each respective mob.",
+    "description": "A bucket of tadpole, also known as a tadpole bucket, is a tadpole inside of a water bucket.",
     "image": "https://mc.geertvandrunen.nl/_new/items/tadpole_bucket.png",
     "renewable": true,
     "stackSize": 1
@@ -642,8 +922,16 @@
   {
     "name": "Bucket of Tropical Fish",
     "namespacedId": "tropical_fish_bucket",
-    "description": "A bucket of aquatic mob is a small aquatic mob (a fish, axolotl, or tadpole) inside of a water bucket, obtained by using a water bucket on each respective mob.",
+    "description": "A bucket of tropical fish, internally known as a tropical fish bucket, is a tropical fish inside of a water bucket, in the form of an item.",
     "image": "https://mc.geertvandrunen.nl/_new/items/tropical_fish_bucket.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/bundle.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -666,7 +954,7 @@
   {
     "name": "Burn Pottery Sherd",
     "namespacedId": "burn_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A burn pottery sherd is a pottery sherd that depicts a flame of fire. It can be found in trail ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/burn_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -808,6 +1096,14 @@
     "stackSize": 64
   },
   {
+    "name": "Coast Armor Trim",
+    "namespacedId": "coast_armor_trim_smithing_template",
+    "description": "Coast armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, cobblestone, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/coast_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Cocoa Beans",
     "namespacedId": "cocoa_beans",
     "description": "Cocoa beans are items obtained from cocoa pods and are used to plant them, as well as to craft brown dye and cookies.",
@@ -904,9 +1200,17 @@
     "stackSize": 64
   },
   {
+    "name": "Creaking Spawn Egg",
+    "namespacedId": "creaking_spawn_egg",
+    "description": "A spawn egg is an item used to spawn mobs directly.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/creaking_spawn_egg.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Creeper Charge Banner Pattern",
     "namespacedId": "creeper_banner_pattern",
-    "description": "Banner patterns are items used to customize banners inside looms.",
+    "description": "A creeper charge banner pattern is a banner pattern used to customize banners with a shape of a creeper face.",
     "image": "https://mc.geertvandrunen.nl/_new/items/creeper_banner_pattern.png",
     "renewable": false,
     "stackSize": 1
@@ -924,6 +1228,22 @@
     "namespacedId": "crossbow",
     "description": "A crossbow is a ranged weapon similar to a bow that uses arrows or firework rockets as ammunition.",
     "image": "https://mc.geertvandrunen.nl/_new/items/crossbow.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Cyan Bundle",
+    "namespacedId": "cyan_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/cyan_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Cyan Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/cyan_bundle.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -952,9 +1272,17 @@
     "stackSize": 1
   },
   {
+    "name": "Cyan Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/cyan_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Danger Pottery Sherd",
     "namespacedId": "danger_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A danger pottery sherd is a pottery sherd that depicts a creeper. It can be found in trail ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/danger_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -1120,6 +1448,14 @@
     "stackSize": 64
   },
   {
+    "name": "Dune Armor Trim",
+    "namespacedId": "dune_armor_trim_smithing_template",
+    "description": "Dune armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, sandstone, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/dune_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Echo Shard",
     "namespacedId": "echo_shard",
     "description": "An echo shard is an item found only in ancient cities which can be used to craft recovery compasses.",
@@ -1146,7 +1482,7 @@
   {
     "name": "Elytra",
     "namespacedId": "elytra",
-    "description": "Elytra (/ˈɛl.ɪ.trə/ ᴇʟ-i-trə, sing. elytron) are rare wings found only in end ships in the outer islands of the End. While worn as torso armor, they allow gliding by pressing jump while midair. Firework rockets can be used as propulsion while gliding, allowing for true flight.",
+    "description": "Elytra (singular form elytron) are rare wings found only in end ships in the outer islands of the End. While worn as torso armor, they allow gliding by pressing jump while midair. Firework rockets can be used as propulsion while gliding, allowing for true flight.",
     "image": "https://mc.geertvandrunen.nl/_new/items/elytra.png",
     "renewable": false,
     "stackSize": 1
@@ -1242,8 +1578,16 @@
   {
     "name": "Explorer Pottery Sherd",
     "namespacedId": "explorer_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "An explorer pottery sherd is a pottery sherd that depicts a map. It can be found in cold ocean ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/explorer_pottery_sherd.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
+    "name": "Eye Armor Trim",
+    "namespacedId": "eye_armor_trim_smithing_template",
+    "description": "Eye armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, end stone, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/eye_armor_trim_smithing_template.png",
     "renewable": false,
     "stackSize": 64
   },
@@ -1270,6 +1614,14 @@
     "image": "https://mc.geertvandrunen.nl/_new/items/fermented_spider_eye.png",
     "renewable": true,
     "stackSize": 64
+  },
+  {
+    "name": "Field Masoned Banner Pattern",
+    "namespacedId": "field_masoned_banner_pattern",
+    "description": "A field masoned banner pattern is a banner pattern used to customize banners with a shape of bricks.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/field_masoned_banner_pattern.png",
+    "renewable": false,
+    "stackSize": 1
   },
   {
     "name": "Fire Charge",
@@ -1320,9 +1672,17 @@
     "stackSize": 1
   },
   {
+    "name": "Flow Armor Trim",
+    "namespacedId": "flow_armor_trim_smithing_template",
+    "description": "Flow armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, a breeze rod, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/flow_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Flow Banner Pattern",
     "namespacedId": "flow_banner_pattern",
-    "description": "Banner patterns are items used to customize banners inside looms.",
+    "description": "A flow banner pattern is a banner pattern used to customize banners with a shape of a spiral. It can only be found in trial chambers and cannot be crafted.",
     "image": "https://mc.geertvandrunen.nl/_new/items/flow_banner_pattern.png",
     "renewable": false,
     "stackSize": 1
@@ -1338,7 +1698,7 @@
   {
     "name": "Flower Charge Banner Pattern",
     "namespacedId": "flower_banner_pattern",
-    "description": "Banner patterns are items used to customize banners inside looms.",
+    "description": "A flower charge banner pattern is a banner pattern used to customize banners with a shape of a flower.",
     "image": "https://mc.geertvandrunen.nl/_new/items/flower_banner_pattern.png",
     "renewable": false,
     "stackSize": 1
@@ -1354,7 +1714,7 @@
   {
     "name": "Friend Pottery Sherd",
     "namespacedId": "friend_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A friend pottery sherd is a pottery sherd that depicts the unibrow and nose of a villager or iron golem. It can be found in trail ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/friend_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -1402,7 +1762,7 @@
   {
     "name": "Globe Banner Pattern",
     "namespacedId": "globe_banner_pattern",
-    "description": "Banner patterns are items used to customize banners inside looms.",
+    "description": "A globe banner pattern is a banner pattern used to customize banners with a shape of a cube-shaped earth. It can only be obtained from trading and cannot be crafted.",
     "image": "https://mc.geertvandrunen.nl/_new/items/globe_banner_pattern.png",
     "renewable": false,
     "stackSize": 1
@@ -1426,7 +1786,7 @@
   {
     "name": "Glow Item Frame",
     "namespacedId": "glow_item_frame",
-    "description": "An item frame is an entity‌[JE  only] or block entity‌[BE  only] that displays the item or block that is inside it.",
+    "description": "A glow item frame is an entity‌[Java Edition  only] or block entity‌[Bedrock Edition  only] that keeps itself and the item inside it illuminated, even in the dark.",
     "image": "https://mc.geertvandrunen.nl/_new/items/glow_item_frame.png",
     "renewable": true,
     "stackSize": 64
@@ -1577,6 +1937,22 @@
   },
   {
     "name": "Gray Bundle",
+    "namespacedId": "gray_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/gray_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Gray Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/gray_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Gray Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/gray_bundle.png",
@@ -1586,7 +1962,7 @@
   {
     "name": "Gray Dye",
     "namespacedId": "gray_dye",
-    "description": "Gray dye is one of the sixteen available dyes. Crafting it is possible only with other dyes.",
+    "description": "Gray dye is one of the sixteen available dyes. Crafting it is possible only with other dyes‌[until JE 1.21.4 & BE 1.21.50].",
     "image": "https://mc.geertvandrunen.nl/_new/items/gray_dye.png",
     "renewable": true,
     "stackSize": 64
@@ -1596,6 +1972,30 @@
     "namespacedId": "shield",
     "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
     "image": "https://mc.geertvandrunen.nl/_new/items/gray_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Gray Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/gray_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Green Bundle",
+    "namespacedId": "green_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/green_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Green Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/green_bundle.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -1624,6 +2024,14 @@
     "stackSize": 1
   },
   {
+    "name": "Green Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/green_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Guardian Spawn Egg",
     "namespacedId": "guardian_spawn_egg",
     "description": "A spawn egg is an item used to spawn mobs directly.",
@@ -1642,7 +2050,7 @@
   {
     "name": "Guster Banner Pattern",
     "namespacedId": "guster_banner_pattern",
-    "description": "Banner patterns are items used to customize banners inside looms.",
+    "description": "A guster banner pattern is a banner pattern used to customize banners with the appearance of a breeze. It can only be found in trial chambers and cannot be crafted.",
     "image": "https://mc.geertvandrunen.nl/_new/items/guster_banner_pattern.png",
     "renewable": false,
     "stackSize": 1
@@ -1658,7 +2066,7 @@
   {
     "name": "Heart Pottery Sherd",
     "namespacedId": "heart_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A heart pottery sherd is a pottery sherd that depicts a heart. It can be found in trail ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/heart_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -1674,7 +2082,7 @@
   {
     "name": "Heartbreak Pottery Sherd",
     "namespacedId": "heartbreak_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A heartbreak pottery sherd is a pottery sherd that depicts a broken heart. It can be found in trail ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/heartbreak_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -1712,9 +2120,17 @@
     "stackSize": 64
   },
   {
+    "name": "Host Armor Trim",
+    "namespacedId": "host_armor_trim_smithing_template",
+    "description": "Host armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, terracotta, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/host_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Howl Pottery Sherd",
     "namespacedId": "howl_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A howl pottery sherd is a pottery sherd that depicts a wolf. It can be found in trail ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/howl_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -1945,6 +2361,22 @@
   },
   {
     "name": "Light Blue Bundle",
+    "namespacedId": "light_blue_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/light_blue_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Light Blue Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/light_blue_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Light Blue Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/light_blue_bundle.png",
@@ -1964,6 +2396,30 @@
     "namespacedId": "shield",
     "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
     "image": "https://mc.geertvandrunen.nl/_new/items/light_blue_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Light Blue Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/light_blue_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Light Gray Bundle",
+    "namespacedId": "light_gray_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/light_gray_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Light Gray Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/light_gray_bundle.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -1992,6 +2448,30 @@
     "stackSize": 1
   },
   {
+    "name": "Light Gray Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/light_gray_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lime Bundle",
+    "namespacedId": "lime_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lime_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lime Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lime_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Lime Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
@@ -2016,10 +2496,34 @@
     "stackSize": 1
   },
   {
+    "name": "Lime Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lime_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Lingering Potion of Fire Resistance",
     "namespacedId": "lingering_potion",
     "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
     "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_fire_resistance.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Fire Resistance",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_fire_resistance.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Harming",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_harming.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2040,10 +2544,34 @@
     "stackSize": 1
   },
   {
+    "name": "Lingering Potion of Healing",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_healing.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Lingering Potion of Infestation",
     "namespacedId": "lingering_potion",
     "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
     "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_infestation.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Infestation",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_infestation.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Invisibility",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_invisibility.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2064,6 +2592,22 @@
     "stackSize": 1
   },
   {
+    "name": "Lingering Potion of Leaping",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_leaping.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Luck",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_luck.png",
+    "renewable": false,
+    "stackSize": 1
+  },
+  {
     "name": "Lingering Potion of Luck",
     "namespacedId": "lingering_potion",
     "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
@@ -2076,6 +2620,22 @@
     "namespacedId": "lingering_potion",
     "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
     "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_night_vision.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Night Vision",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_night_vision.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Oozing",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_oozing.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2096,10 +2656,34 @@
     "stackSize": 1
   },
   {
+    "name": "Lingering Potion of Poison",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_poison.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Lingering Potion of Regeneration",
     "namespacedId": "lingering_potion",
     "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
     "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_regeneration.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Regeneration",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_regeneration.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Slow Falling",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_slow_falling.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2120,10 +2704,34 @@
     "stackSize": 1
   },
   {
+    "name": "Lingering Potion of Slowness",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_slowness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Lingering Potion of Strength",
     "namespacedId": "lingering_potion",
     "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
     "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_strength.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Strength",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_strength.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Swiftness",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_swiftness.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2144,10 +2752,34 @@
     "stackSize": 1
   },
   {
+    "name": "Lingering Potion of Water Breathing",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_water_breathing.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Lingering Potion of Weakness",
     "namespacedId": "lingering_potion",
     "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
     "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_weakness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Weakness",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_weakness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of Weaving",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_weaving.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2168,10 +2800,34 @@
     "stackSize": 1
   },
   {
+    "name": "Lingering Potion of Wind Charging",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_wind_charging.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Lingering Potion of the Turtle Master",
     "namespacedId": "lingering_potion",
     "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
     "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_the_turtle_master.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Potion of the Turtle Master",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_potion_of_the_turtle_master.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lingering Water Bottle",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/lingering_water_bottle.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2201,6 +2857,22 @@
   },
   {
     "name": "Magenta Bundle",
+    "namespacedId": "magenta_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/magenta_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Magenta Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/magenta_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Magenta Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/magenta_bundle.png",
@@ -2214,6 +2886,14 @@
     "image": "https://mc.geertvandrunen.nl/_new/items/magenta_dye.png",
     "renewable": true,
     "stackSize": 64
+  },
+  {
+    "name": "Magenta Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/magenta_shield.png",
+    "renewable": true,
+    "stackSize": 1
   },
   {
     "name": "Magenta Shield",
@@ -2346,7 +3026,7 @@
   {
     "name": "Miner Pottery Sherd",
     "namespacedId": "miner_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A miner pottery sherd is a pottery sherd that depicts a pickaxe. It can be found in desert pyramids.",
     "image": "https://mc.geertvandrunen.nl/_new/items/miner_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -2362,7 +3042,7 @@
   {
     "name": "Mourner Pottery Sherd",
     "namespacedId": "mourner_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A mourner pottery sherd is a pottery sherd that depicts a warden. It can be found in cold ocean ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/mourner_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -2384,10 +3064,34 @@
     "stackSize": 1
   },
   {
+    "name": "Mundane Lingering Potion",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/mundane_lingering_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Mundane Potion",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/mundane_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Mundane Potion",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/mundane_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Mundane Splash Potion",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/mundane_splash_potion.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2410,7 +3114,7 @@
   {
     "name": "Music Disc (11)",
     "namespacedId": "music_disc_11",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"11\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_11.png",
     "renewable": true,
     "stackSize": 1
@@ -2418,7 +3122,7 @@
   {
     "name": "Music Disc (13)",
     "namespacedId": "music_disc_13",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"13\" (in-game) or Thirteen (soundtrack name) refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons, or from various structures, where it is commonly found in monster rooms and woodland mansions.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_13.png",
     "renewable": true,
     "stackSize": 1
@@ -2426,7 +3130,7 @@
   {
     "name": "Music Disc (5)",
     "namespacedId": "music_disc_5",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"5\" refers to both a song composed by Samuel Åberg, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from crafting with disc fragments.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_5.png",
     "renewable": false,
     "stackSize": 1
@@ -2544,9 +3248,9 @@
     "stackSize": 1
   },
   {
-    "name": "Music Disc (Creator (Music Box version))",
+    "name": "Music Disc (Creator (Music Box))",
     "namespacedId": "music_disc_creator_music_box",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"Creator (Music Box)\" refers to both a song composed by Lena Raine, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from trial chambers, as a rare drop from decorated pots.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_creator_music_box.png",
     "renewable": false,
     "stackSize": 1
@@ -2554,7 +3258,7 @@
   {
     "name": "Music Disc (Creator)",
     "namespacedId": "music_disc_creator",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"Creator\" refers to both a song composed by Lena Raine, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from trial chambers, as a rare reward given by ominous vaults.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_creator.png",
     "renewable": false,
     "stackSize": 1
@@ -2594,7 +3298,7 @@
   {
     "name": "Music Disc (Pigstep)",
     "namespacedId": "music_disc_pigstep",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"Pigstep\" refers to both a song composed by Lena Raine, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from bastion remnants.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_pigstep.png",
     "renewable": false,
     "stackSize": 1
@@ -2602,7 +3306,7 @@
   {
     "name": "Music Disc (Precipice)",
     "namespacedId": "music_disc_precipice",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"Precipice\" refers to both a song composed by Aaron Cherof, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from trial chambers, as a rare reward given by vaults or found in reward chests.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_precipice.png",
     "renewable": false,
     "stackSize": 1
@@ -2610,7 +3314,7 @@
   {
     "name": "Music Disc (Relic)",
     "namespacedId": "music_disc_relic",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"Relic\" refers to both a song composed by Aaron Cherof, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from trail ruins, from brushing suspicious gravel.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_relic.png",
     "renewable": false,
     "stackSize": 1
@@ -2626,7 +3330,7 @@
   {
     "name": "Music Disc (blocks)",
     "namespacedId": "music_disc_blocks",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"blocks\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_blocks.png",
     "renewable": false,
     "stackSize": 1
@@ -2634,7 +3338,7 @@
   {
     "name": "Music Disc (cat)",
     "namespacedId": "music_disc_cat",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"cat\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons, or from various structures, where it is commonly found in monster rooms and woodland mansions.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_cat.png",
     "renewable": false,
     "stackSize": 1
@@ -2642,7 +3346,7 @@
   {
     "name": "Music Disc (chirp)",
     "namespacedId": "music_disc_chirp",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"chirp\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_chirp.png",
     "renewable": false,
     "stackSize": 1
@@ -2650,7 +3354,7 @@
   {
     "name": "Music Disc (far)",
     "namespacedId": "music_disc_far",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"far\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_far.png",
     "renewable": false,
     "stackSize": 1
@@ -2658,7 +3362,7 @@
   {
     "name": "Music Disc (mall)",
     "namespacedId": "music_disc_mall",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"mall\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_mall.png",
     "renewable": false,
     "stackSize": 1
@@ -2666,7 +3370,7 @@
   {
     "name": "Music Disc (mellohi)",
     "namespacedId": "music_disc_mellohi",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"mellohi\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_mellohi.png",
     "renewable": false,
     "stackSize": 1
@@ -2674,7 +3378,7 @@
   {
     "name": "Music Disc (otherside)",
     "namespacedId": "music_disc_otherside",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"otherside\" refers to both a song composed by Lena Raine, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from various structures, but is most commonly found in ancient cities.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_otherside.png",
     "renewable": false,
     "stackSize": 1
@@ -2682,7 +3386,7 @@
   {
     "name": "Music Disc (stal)",
     "namespacedId": "music_disc_stal",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"stal\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_stal.png",
     "renewable": false,
     "stackSize": 1
@@ -2690,7 +3394,7 @@
   {
     "name": "Music Disc (strad)",
     "namespacedId": "music_disc_strad",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"strad\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_strad.png",
     "renewable": false,
     "stackSize": 1
@@ -2698,7 +3402,7 @@
   {
     "name": "Music Disc (wait)",
     "namespacedId": "music_disc_wait",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"wait\", previously known as \"where are we now\", refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_wait.png",
     "renewable": false,
     "stackSize": 1
@@ -2706,7 +3410,7 @@
   {
     "name": "Music Disc (ward)",
     "namespacedId": "music_disc_ward",
-    "description": "Music discs are a set of nineteen items that can be played in jukeboxes.",
+    "description": "\"ward\" refers to both a song composed by C418, and a music disc that plays the song when inserted in a jukebox. The music disc is obtained from creepers killed by skeletons.",
     "image": "https://mc.geertvandrunen.nl/_new/items/music_disc_ward.png",
     "renewable": false,
     "stackSize": 1
@@ -2848,6 +3552,14 @@
     "stackSize": 1
   },
   {
+    "name": "Netherite Upgrade",
+    "namespacedId": "netherite_upgrade_smithing_template",
+    "description": "A netherite upgrade is a type of smithing template used in smithing tables to upgrade armor and tools from diamond to netherite. It is consumed when used, but can be duplicated using an existing template, netherrack, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/netherite_upgrade_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Oak Boat",
     "namespacedId": "oak_boat",
     "description": "A boat is a drivable vehicle entity used primarily for fast transport of players and passenger mobs over bodies of water. Bamboo rafts look different, but function almost identically to other boats.",
@@ -2897,6 +3609,22 @@
   },
   {
     "name": "Orange Bundle",
+    "namespacedId": "orange_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/orange_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Orange Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/orange_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Orange Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/orange_bundle.png",
@@ -2920,12 +3648,36 @@
     "stackSize": 1
   },
   {
+    "name": "Orange Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/orange_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Painting",
     "namespacedId": "painting",
     "description": "Paintings are decorative entities that hang on walls.",
     "image": "https://mc.geertvandrunen.nl/_new/items/painting.png",
     "renewable": true,
     "stackSize": 64
+  },
+  {
+    "name": "Pale Oak Boat",
+    "namespacedId": "pale_oak_boat",
+    "description": "A boat is a drivable vehicle entity used primarily for fast transport of players and passenger mobs over bodies of water. Bamboo rafts look different, but function almost identically to other boats.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/pale_oak_boat.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Pale Oak Boat with Chest",
+    "namespacedId": "pale_oak_chest_boat",
+    "description": "A boat with chest is a single chest occupying the passenger seat of a boat, and functions as such. As it can still be driven it can be used to transport items over bodies of water.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/pale_oak_chest_boat.png",
+    "renewable": true,
+    "stackSize": 1
   },
   {
     "name": "Panda Spawn Egg",
@@ -3001,6 +3753,22 @@
   },
   {
     "name": "Pink Bundle",
+    "namespacedId": "pink_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/pink_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Pink Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/pink_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Pink Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/pink_bundle.png",
@@ -3024,6 +3792,14 @@
     "stackSize": 1
   },
   {
+    "name": "Pink Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/pink_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Pitcher Pod",
     "namespacedId": "pitcher_pod",
     "description": "A pitcher pod is an ancient bulbous seed that has a chance to be dropped by sniffers when they finish digging. It is the seed of pitcher plants.",
@@ -3034,7 +3810,7 @@
   {
     "name": "Plenty Pottery Sherd",
     "namespacedId": "plenty_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A plenty pottery sherd is a pottery sherd that depicts an open chest. It can be found in cold ocean ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/plenty_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -3074,7 +3850,15 @@
   {
     "name": "Potion of Fire Resistance",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_fire_resistance.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Fire Resistance",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_fire_resistance.png",
     "renewable": true,
     "stackSize": 1
@@ -3082,7 +3866,15 @@
   {
     "name": "Potion of Harming",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_harming.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Harming",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_harming.png",
     "renewable": true,
     "stackSize": 1
@@ -3090,7 +3882,15 @@
   {
     "name": "Potion of Healing",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_healing.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Healing",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_healing.png",
     "renewable": true,
     "stackSize": 1
@@ -3098,7 +3898,15 @@
   {
     "name": "Potion of Infestation",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_infestation.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Infestation",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_infestation.png",
     "renewable": true,
     "stackSize": 1
@@ -3106,7 +3914,15 @@
   {
     "name": "Potion of Invisibility",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_invisibility.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Invisibility",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_invisibility.png",
     "renewable": true,
     "stackSize": 1
@@ -3114,7 +3930,15 @@
   {
     "name": "Potion of Leaping",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_leaping.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Leaping",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_leaping.png",
     "renewable": true,
     "stackSize": 1
@@ -3122,7 +3946,15 @@
   {
     "name": "Potion of Luck",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_luck.png",
+    "renewable": false,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Luck",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_luck.png",
     "renewable": false,
     "stackSize": 1
@@ -3130,7 +3962,15 @@
   {
     "name": "Potion of Night Vision",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_night_vision.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Night Vision",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_night_vision.png",
     "renewable": true,
     "stackSize": 1
@@ -3138,7 +3978,15 @@
   {
     "name": "Potion of Oozing",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_oozing.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Oozing",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_oozing.png",
     "renewable": true,
     "stackSize": 1
@@ -3146,7 +3994,15 @@
   {
     "name": "Potion of Poison",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_poison.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Poison",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_poison.png",
     "renewable": true,
     "stackSize": 1
@@ -3154,7 +4010,15 @@
   {
     "name": "Potion of Regeneration",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_regeneration.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Regeneration",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_regeneration.png",
     "renewable": true,
     "stackSize": 1
@@ -3162,7 +4026,15 @@
   {
     "name": "Potion of Slow Falling",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_slow_falling.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Slow Falling",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_slow_falling.png",
     "renewable": true,
     "stackSize": 1
@@ -3170,7 +4042,15 @@
   {
     "name": "Potion of Slowness",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_slowness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Slowness",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_slowness.png",
     "renewable": true,
     "stackSize": 1
@@ -3178,7 +4058,15 @@
   {
     "name": "Potion of Strength",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_strength.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Strength",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_strength.png",
     "renewable": true,
     "stackSize": 1
@@ -3186,7 +4074,15 @@
   {
     "name": "Potion of Swiftness",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_swiftness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Swiftness",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_swiftness.png",
     "renewable": true,
     "stackSize": 1
@@ -3194,7 +4090,15 @@
   {
     "name": "Potion of Water Breathing",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_water_breathing.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Water Breathing",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_water_breathing.png",
     "renewable": true,
     "stackSize": 1
@@ -3202,7 +4106,15 @@
   {
     "name": "Potion of Weakness",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_weakness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Weakness",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_weakness.png",
     "renewable": true,
     "stackSize": 1
@@ -3210,7 +4122,15 @@
   {
     "name": "Potion of Weaving",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_weaving.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Weaving",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_weaving.png",
     "renewable": true,
     "stackSize": 1
@@ -3218,7 +4138,15 @@
   {
     "name": "Potion of Wind Charging",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_wind_charging.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of Wind Charging",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_wind_charging.png",
     "renewable": true,
     "stackSize": 1
@@ -3226,7 +4154,15 @@
   {
     "name": "Potion of the Turtle Master",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_the_turtle_master.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Potion of the Turtle Master",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/potion_of_the_turtle_master.png",
     "renewable": true,
     "stackSize": 1
@@ -3258,7 +4194,7 @@
   {
     "name": "Prize Pottery Sherd",
     "namespacedId": "prize_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A prize pottery sherd is a pottery sherd that depicts a gemstone. It can be found in desert pyramids.",
     "image": "https://mc.geertvandrunen.nl/_new/items/prize_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -3297,6 +4233,22 @@
   },
   {
     "name": "Purple Bundle",
+    "namespacedId": "purple_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/purple_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Purple Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/purple_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Purple Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/purple_bundle.png",
@@ -3310,6 +4262,14 @@
     "image": "https://mc.geertvandrunen.nl/_new/items/purple_dye.png",
     "renewable": true,
     "stackSize": 64
+  },
+  {
+    "name": "Purple Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/purple_shield.png",
+    "renewable": true,
+    "stackSize": 1
   },
   {
     "name": "Purple Shield",
@@ -3349,6 +4309,14 @@
     "description": "A rabbit's foot is a brewing item obtained from rabbits.",
     "image": "https://mc.geertvandrunen.nl/_new/items/rabbit_foot.png",
     "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Raiser Armor Trim",
+    "namespacedId": "raiser_armor_trim_smithing_template",
+    "description": "Raiser armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, terracotta, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/raiser_armor_trim_smithing_template.png",
+    "renewable": false,
     "stackSize": 64
   },
   {
@@ -3418,7 +4386,7 @@
   {
     "name": "Raw Porkchop",
     "namespacedId": "porkchop",
-    "description": "A raw porkchop is a food item that can be eaten by the player or cooked to make a cooked porkchop.",
+    "description": "A raw porkchop is a food item that can be cooked into a cooked porkchop.",
     "image": "https://mc.geertvandrunen.nl/_new/items/porkchop.png",
     "renewable": true,
     "stackSize": 64
@@ -3449,6 +4417,22 @@
   },
   {
     "name": "Red Bundle",
+    "namespacedId": "red_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/red_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Red Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/red_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Red Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/red_bundle.png",
@@ -3472,11 +4456,35 @@
     "stackSize": 1
   },
   {
+    "name": "Red Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/red_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Redstone Dust",
     "namespacedId": "redstone",
     "description": "Redstone dust, internally known as redstone in item form, is a mineral that can transmit redstone power as a wire when placed as a block. It is also used in crafting, brewing and when trimming armor.",
     "image": "https://mc.geertvandrunen.nl/_new/items/redstone.png",
     "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Resin Brick",
+    "namespacedId": "resin_brick",
+    "description": "A resin brick is a item used to create resin bricks. In addition, it can also be used as a smithing ingredient, giving orange details to pieces of armor.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/resin_brick.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Rib Armor Trim",
+    "namespacedId": "rib_armor_trim_smithing_template",
+    "description": "Rib armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, netherrack, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/rib_armor_trim_smithing_template.png",
+    "renewable": false,
     "stackSize": 64
   },
   {
@@ -3512,9 +4520,25 @@
     "stackSize": 64
   },
   {
+    "name": "Sentry Armor Trim",
+    "namespacedId": "sentry_armor_trim_smithing_template",
+    "description": "Sentry armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, cobblestone, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/sentry_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
+    "name": "Shaper Armor Trim",
+    "namespacedId": "shaper_armor_trim_smithing_template",
+    "description": "Shaper armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, terracotta, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/shaper_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Sheaf Pottery Sherd",
     "namespacedId": "sheaf_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A sheaf pottery sherd is a pottery sherd that depicts wheat. It can be found in trail ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/sheaf_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -3538,10 +4562,18 @@
   {
     "name": "Shelter Pottery Sherd",
     "namespacedId": "shelter_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A shelter pottery sherd is a pottery sherd that depicts an acacia. It can be found in warm ocean ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/shelter_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
+  },
+  {
+    "name": "Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/shield.png",
+    "renewable": true,
+    "stackSize": 1
   },
   {
     "name": "Shield",
@@ -3576,6 +4608,14 @@
     "stackSize": 64
   },
   {
+    "name": "Silence Armor Trim",
+    "namespacedId": "silence_armor_trim_smithing_template",
+    "description": "Silence armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, cobbled deepslate, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/silence_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Silverfish Spawn Egg",
     "namespacedId": "silverfish_spawn_egg",
     "description": "A spawn egg is an item used to spawn mobs directly.",
@@ -3602,7 +4642,7 @@
   {
     "name": "Skull Charge Banner Pattern",
     "namespacedId": "skull_banner_pattern",
-    "description": "Banner patterns are items used to customize banners inside looms.",
+    "description": "A skull charge banner pattern is a banner pattern used to customize banners with a shape of a skull with crossbones.",
     "image": "https://mc.geertvandrunen.nl/_new/items/skull_banner_pattern.png",
     "renewable": false,
     "stackSize": 1
@@ -3610,7 +4650,7 @@
   {
     "name": "Skull Pottery Sherd",
     "namespacedId": "skull_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A skull pottery sherd is a pottery sherd that depicts a skeleton skull. It can be found in desert pyramids.",
     "image": "https://mc.geertvandrunen.nl/_new/items/skull_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
@@ -3632,158 +4672,6 @@
     "stackSize": 64
   },
   {
-    "name": "Smithing Template (Bolt Armor Trim)",
-    "namespacedId": "bolt_armor_trim_smithing_template",
-    "description": "Bolt armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, a block of copper or waxed block of copper, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/bolt_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Coast Armor Trim)",
-    "namespacedId": "coast_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/coast_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Dune Armor Trim)",
-    "namespacedId": "dune_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/dune_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Eye Armor Trim)",
-    "namespacedId": "eye_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/eye_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Flow Armor Trim)",
-    "namespacedId": "flow_armor_trim_smithing_template",
-    "description": "Flow armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, a breeze rod, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/flow_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Host Armor Trim)",
-    "namespacedId": "host_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/host_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Netherite Upgrade)",
-    "namespacedId": "netherite_upgrade_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/netherite_upgrade_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Raiser Armor Trim)",
-    "namespacedId": "raiser_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/raiser_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Rib Armor Trim)",
-    "namespacedId": "rib_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/rib_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Sentry Armor Trim)",
-    "namespacedId": "sentry_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/sentry_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Shaper Armor Trim)",
-    "namespacedId": "shaper_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/shaper_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Silence Armor Trim)",
-    "namespacedId": "silence_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/silence_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Snout Armor Trim)",
-    "namespacedId": "snout_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/snout_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Spire Armor Trim)",
-    "namespacedId": "spire_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/spire_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Tide Armor Trim)",
-    "namespacedId": "tide_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/tide_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Vex Armor Trim)",
-    "namespacedId": "vex_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/vex_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Ward Armor Trim)",
-    "namespacedId": "ward_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/ward_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Wayfinder Armor Trim)",
-    "namespacedId": "wayfinder_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/wayfinder_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
-    "name": "Smithing Template (Wild Armor Trim)",
-    "namespacedId": "wild_armor_trim_smithing_template",
-    "description": "A smithing template is an item used with a smithing table to apply a decorative alteration to a tool or armor. The template is consumed when used, but can be duplicated using an existing template, its material, and diamonds.",
-    "image": "https://mc.geertvandrunen.nl/_new/items/wild_armor_trim_smithing_template.png",
-    "renewable": false,
-    "stackSize": 64
-  },
-  {
     "name": "Sniffer Spawn Egg",
     "namespacedId": "sniffer_spawn_egg",
     "description": "A spawn egg is an item used to spawn mobs directly.",
@@ -3794,15 +4682,23 @@
   {
     "name": "Snort Pottery Sherd",
     "namespacedId": "snort_pottery_sherd",
-    "description": "A pottery sherd[note 1] is an item used to craft decorated pots with ornamental designs. There are 23 variants. Pottery sherds are found in trial chambers, suspicious sand, and suspicious gravel.",
+    "description": "A snort pottery sherd is a pottery sherd that depicts a sniffer. It can be found in warm ocean ruins.",
     "image": "https://mc.geertvandrunen.nl/_new/items/snort_pottery_sherd.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
+    "name": "Snout Armor Trim",
+    "namespacedId": "snout_armor_trim_smithing_template",
+    "description": "Snout armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, blackstone, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/snout_armor_trim_smithing_template.png",
     "renewable": false,
     "stackSize": 64
   },
   {
     "name": "Snout Banner Pattern",
     "namespacedId": "piglin_banner_pattern",
-    "description": "Banner patterns are items used to customize banners inside looms.",
+    "description": "A snout banner pattern is a banner pattern used to customize banners with a shape of a piglin snout. It can only be found in bastion remnants and cannot be crafted.",
     "image": "https://mc.geertvandrunen.nl/_new/items/piglin_banner_pattern.png",
     "renewable": false,
     "stackSize": 1
@@ -3848,10 +4744,34 @@
     "stackSize": 64
   },
   {
+    "name": "Spire Armor Trim",
+    "namespacedId": "spire_armor_trim_smithing_template",
+    "description": "Spire armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, a purpur block, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/spire_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Splash Potion of Fire Resistance",
     "namespacedId": "splash_potion",
     "description": "Splash potions are a variant of potions that can be thrown.",
     "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_fire_resistance.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Fire Resistance",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_fire_resistance.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Harming",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_harming.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -3872,10 +4792,34 @@
     "stackSize": 1
   },
   {
+    "name": "Splash Potion of Healing",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_healing.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Splash Potion of Infestation",
     "namespacedId": "splash_potion",
     "description": "Splash potions are a variant of potions that can be thrown.",
     "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_infestation.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Infestation",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_infestation.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Invisibility",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_invisibility.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -3896,6 +4840,22 @@
     "stackSize": 1
   },
   {
+    "name": "Splash Potion of Leaping",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_leaping.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Luck",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_luck.png",
+    "renewable": false,
+    "stackSize": 1
+  },
+  {
     "name": "Splash Potion of Luck",
     "namespacedId": "splash_potion",
     "description": "Splash potions are a variant of potions that can be thrown.",
@@ -3908,6 +4868,22 @@
     "namespacedId": "splash_potion",
     "description": "Splash potions are a variant of potions that can be thrown.",
     "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_night_vision.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Night Vision",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_night_vision.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Oozing",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_oozing.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -3928,10 +4904,34 @@
     "stackSize": 1
   },
   {
+    "name": "Splash Potion of Poison",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_poison.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Splash Potion of Regeneration",
     "namespacedId": "splash_potion",
     "description": "Splash potions are a variant of potions that can be thrown.",
     "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_regeneration.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Regeneration",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_regeneration.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Slow Falling",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_slow_falling.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -3952,10 +4952,34 @@
     "stackSize": 1
   },
   {
+    "name": "Splash Potion of Slowness",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_slowness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Splash Potion of Strength",
     "namespacedId": "splash_potion",
     "description": "Splash potions are a variant of potions that can be thrown.",
     "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_strength.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Strength",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_strength.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Swiftness",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_swiftness.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -3976,10 +5000,34 @@
     "stackSize": 1
   },
   {
+    "name": "Splash Potion of Water Breathing",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_water_breathing.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Splash Potion of Weakness",
     "namespacedId": "splash_potion",
     "description": "Splash potions are a variant of potions that can be thrown.",
     "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_weakness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Weakness",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_weakness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of Weaving",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_weaving.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -4000,6 +5048,22 @@
     "stackSize": 1
   },
   {
+    "name": "Splash Potion of Wind Charging",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_wind_charging.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Potion of the Turtle Master",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_potion_of_the_turtle_master.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Splash Potion of the Turtle Master",
     "namespacedId": "splash_potion",
     "description": "Splash potions are a variant of potions that can be thrown.",
@@ -4012,6 +5076,22 @@
     "namespacedId": "splash_potion",
     "description": "Splash potions are a variant of potions that can be thrown.",
     "image": "https://mc.geertvandrunen.nl/_new/items/splash_uncraftable_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Uncraftable Potion",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_uncraftable_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Splash Water Bottle",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/splash_water_bottle.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -4176,10 +5256,34 @@
     "stackSize": 1
   },
   {
+    "name": "Thick Lingering Potion",
+    "namespacedId": "lingering_potion",
+    "description": "Lingering potions are variants of splash potions that can be thrown to leave clouds with status effects that linger on the ground in an area.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/thick_lingering_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Thick Potion",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/thick_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Thick Potion",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/thick_potion.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Thick Splash Potion",
+    "namespacedId": "splash_potion",
+    "description": "Splash potions are a variant of potions that can be thrown.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/thick_splash_potion.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -4194,10 +5298,26 @@
   {
     "name": "Thing Banner Pattern",
     "namespacedId": "mojang_banner_pattern",
-    "description": "Banner patterns are items used to customize banners inside looms.",
+    "description": "A thing banner pattern is a banner pattern used to customize banners with a shape of the old Mojang logo.",
     "image": "https://mc.geertvandrunen.nl/_new/items/mojang_banner_pattern.png",
     "renewable": false,
     "stackSize": 1
+  },
+  {
+    "name": "Tide Armor Trim",
+    "namespacedId": "tide_armor_trim_smithing_template",
+    "description": "Tide armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, prismarine, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/tide_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
+    "name": "Tipped Arrow",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/tipped_arrow.png",
+    "renewable": true,
+    "stackSize": 64
   },
   {
     "name": "Tipped Arrow",
@@ -4296,6 +5416,22 @@
     "stackSize": 64
   },
   {
+    "name": "Uncraftable Tipped Arrow",
+    "namespacedId": "tipped_arrow",
+    "description": "A tipped arrow is a variant of the regular arrow that can apply status effects to players and mobs.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/uncraftable_tipped_arrow.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Vex Armor Trim",
+    "namespacedId": "vex_armor_trim_smithing_template",
+    "description": "Vex armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, cobblestone, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/vex_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Vex Spawn Egg",
     "namespacedId": "vex_spawn_egg",
     "description": "A spawn egg is an item used to spawn mobs directly.",
@@ -4328,6 +5464,14 @@
     "stackSize": 64
   },
   {
+    "name": "Ward Armor Trim",
+    "namespacedId": "ward_armor_trim_smithing_template",
+    "description": "Ward armor trim is a type of smithing template found in ancient cities used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, cobbled deepslate, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/ward_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
+  },
+  {
     "name": "Warden Spawn Egg",
     "namespacedId": "warden_spawn_egg",
     "description": "A spawn egg is an item used to spawn mobs directly.",
@@ -4346,7 +5490,15 @@
   {
     "name": "Water Bottle",
     "namespacedId": "potion",
-    "description": "Potions are bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/water_bottle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Water Bottle",
+    "namespacedId": "potion",
+    "description": "Potions are consumable bottled substances designed to inflict effects. They are created by brewing and, when drunk, give the player an effect for a certain amount of time. All potions are brewed from a water bottle, which is considered a type of potion but has no effects.",
     "image": "https://mc.geertvandrunen.nl/_new/items/water_bottle.png",
     "renewable": true,
     "stackSize": 1
@@ -4358,6 +5510,14 @@
     "image": "https://mc.geertvandrunen.nl/_new/items/water_bucket.png",
     "renewable": true,
     "stackSize": 1
+  },
+  {
+    "name": "Wayfinder Armor Trim",
+    "namespacedId": "wayfinder_armor_trim_smithing_template",
+    "description": "Wayfinder armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, terracotta, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/wayfinder_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
   },
   {
     "name": "Wheat",
@@ -4374,6 +5534,22 @@
     "image": "https://mc.geertvandrunen.nl/_new/items/wheat_seeds.png",
     "renewable": true,
     "stackSize": 64
+  },
+  {
+    "name": "White Bundle",
+    "namespacedId": "white_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/white_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "White Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/white_bundle.png",
+    "renewable": true,
+    "stackSize": 1
   },
   {
     "name": "White Bundle",
@@ -4398,6 +5574,22 @@
     "image": "https://mc.geertvandrunen.nl/_new/items/white_shield.png",
     "renewable": true,
     "stackSize": 1
+  },
+  {
+    "name": "White Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/white_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Wild Armor Trim",
+    "namespacedId": "wild_armor_trim_smithing_template",
+    "description": "Wild armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, mossy cobblestone, and diamonds.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/wild_armor_trim_smithing_template.png",
+    "renewable": false,
+    "stackSize": 64
   },
   {
     "name": "Wind Charge",
@@ -4505,6 +5697,22 @@
   },
   {
     "name": "Yellow Bundle",
+    "namespacedId": "yellow_bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/yellow_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Yellow Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/yellow_bundle.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Yellow Bundle",
     "namespacedId": "bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items that stack to less than 64 occupy more space within the bundle, and items that do not stack occupy the entire bundle without allowing space for any other items.",
     "image": "https://mc.geertvandrunen.nl/_new/items/yellow_bundle.png",
@@ -4518,6 +5726,14 @@
     "image": "https://mc.geertvandrunen.nl/_new/items/yellow_dye.png",
     "renewable": true,
     "stackSize": 64
+  },
+  {
+    "name": "Yellow Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields can be temporarily disabled by getting hit with an axe, and some attacks ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc.geertvandrunen.nl/_new/items/yellow_shield.png",
+    "renewable": true,
+    "stackSize": 1
   },
   {
     "name": "Yellow Shield",

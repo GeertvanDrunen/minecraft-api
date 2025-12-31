@@ -38,6 +38,7 @@ const getItemPageUrl = async (namespaceId: string) => {
   namespaceId = namespaceId.replace("oxidized_", "");
   namespaceId = namespaceId.replace("weathered", "");
   namespaceId = namespaceId.replace("weeping_", "");
+  namespaceId = namespaceId.replace("waxed_", "");
   namespaceId = namespaceId.replace("potted_", "");
 
   if (namespaceId === "Beetroot_Seeds") {
@@ -60,6 +61,9 @@ const getItemPageUrl = async (namespaceId: string) => {
   }
   if (namespaceId.includes("bed")) {
     return "https://minecraft.wiki/w/Bed";
+  }
+  if (namespaceId.includes("jack_o_lantern")) {
+    return "https://minecraft.wiki/w/Jack_o%27Lantern";
   }
 
   return "https://minecraft.wiki/w/" + namespaceId;
@@ -160,7 +164,7 @@ const getItemNameForBlock = (name: string) => {
     ).map((row) =>
       limit(async (row) => {
         const td = await row.$("td:nth-child(3)");
-        const name = await getTextContent(dataPage, td, "name");
+        const name = (await getTextContent(dataPage, td, "name")).trim();
         let blockPage: puppeteer.Page;
         try {
           if (blocks.find((block) => block.name === name)) return;
@@ -511,8 +515,6 @@ const getItemNameForBlock = (name: string) => {
                 blastResistance: 3,
                 flammable: true,
                 tool: "Axe",
-                // requiresTool: false,
-                // requiresSilkTouch: false,
               },
             },
             {
