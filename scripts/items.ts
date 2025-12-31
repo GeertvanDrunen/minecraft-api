@@ -11,7 +11,9 @@ import axios from "axios";
 
 // Constants
 const ITEMS_JSON_PATH = "data/items.json";
-const ITEMS_IMAGE_PATH = "../public/items/";
+const ITEMS_IMAGE_PATH = "public/items/";
+const ITEMS_ERRORS_JSON_PATH = "data/items-errors.json";
+const ITEMS_ERRORS_TXT_PATH = "data/items-errors.txt";
 const DATA_VALUES_URL = "https://minecraft.wiki/w/Java_Edition_data_values";
 const EXCLUDED_ITEMS = [
   "Lingering Potion",
@@ -29,6 +31,92 @@ let names: string[] = items.map((item) => item.name);
 
 // Limit concurrent operations
 const limit = pLimit(3);
+
+type ItemErrorStage =
+  | "getNamespacedId"
+  | "getItemPageUrl"
+  | "getItemDetails"
+  | "specialPage"
+  | "specialItem";
+
+type ItemErrorCategory = "regular" | "special";
+
+type ItemError = {
+  stage: ItemErrorStage;
+  message: string;
+};
+
+type ItemErrorEntry = {
+  category: ItemErrorCategory;
+  name: string;
+  namespacedId?: string;
+  url?: string;
+  errors: ItemError[];
+};
+
+const erroredItems = new Map<string, ItemErrorEntry>();
+
+function toErrorMessage(error: unknown): string {
+  if (error instanceof Error) return error.message;
+  try {
+    return JSON.stringify(error);
+  } catch {
+    return String(error);
+  }
+}
+
+function recordItemError(params: {
+  category: ItemErrorCategory;
+  stage: ItemErrorStage;
+  name: string;
+  namespacedId?: string;
+  url?: string;
+  error: unknown;
+}): void {
+  const key = `${params.category}:${params.name}`;
+  const existing = erroredItems.get(key);
+  const message = toErrorMessage(params.error);
+  const itemError: ItemError = { stage: params.stage, message };
+
+  if (existing) {
+    existing.errors.push(itemError);
+    if (!existing.namespacedId && params.namespacedId) existing.namespacedId = params.namespacedId;
+    if (!existing.url && params.url) existing.url = params.url;
+    return;
+  }
+
+  erroredItems.set(key, {
+    category: params.category,
+    name: params.name,
+    namespacedId: params.namespacedId,
+    url: params.url,
+    errors: [itemError],
+  });
+}
+
+function writeErroredItemsReport(): void {
+  const entries = Array.from(erroredItems.values()).sort((a, b) => {
+    if (a.category !== b.category) return a.category.localeCompare(b.category);
+    return a.name.localeCompare(b.name);
+  });
+
+  if (entries.length === 0) {
+    console.log(chalk.green("No item processing errors recorded."));
+    return;
+  }
+
+  console.log(chalk.yellow(`Items with errors (${entries.length}):`));
+  for (const entry of entries) {
+    const first = entry.errors[0];
+    const suffix = first ? ` (${first.stage}: ${first.message})` : "";
+    console.log(`- [${entry.category}] ${entry.name}${suffix}`);
+  }
+
+  fs.writeFileSync(ITEMS_ERRORS_JSON_PATH, JSON.stringify(entries, null, 2));
+  fs.writeFileSync(ITEMS_ERRORS_TXT_PATH, entries.map((e) => e.name).join("\n") + "\n");
+  console.log(chalk.blue(`Wrote error report: ${ITEMS_ERRORS_JSON_PATH}`));
+  console.log(chalk.blue(`Wrote error list: ${ITEMS_ERRORS_TXT_PATH}`));
+}
 
 /**
  * Writes the items array to a JSON file after sorting.
@@ -48,22 +136,75 @@ async function initBrowser(): Promise<Browser> {
   });
 }
 
+async function dumpPageDiagnostics(page: Page, slug: string): Promise<void> {
+  const dir = "data/debug";
+  try {
+    await fs.promises.mkdir(dir, { recursive: true });
+    const safeSlug = slug.replace(/[^a-z0-9._-]+/gi, "_");
+    const [html, url] = await Promise.all([page.content(), page.url()]);
+    await fs.promises.writeFile(`${dir}/${safeSlug}.html`, `<!-- ${url} -->\n${html}`);
+    await page.screenshot({ path: `${dir}/${safeSlug}.png`, fullPage: true });
+  } catch (error) {
+    console.error(chalk.yellow("Failed to write debug artifacts:"), error);
+  }
+}
+
+function shouldDumpItemDiagnostics(): boolean {
+  const raw = process.env.ITEMS_DEBUG_DUMPS;
+  if (!raw) return false;
+  const n = Number.parseInt(raw, 10);
+  return Number.isFinite(n) && n > 0;
+}
+
+let remainingItemDiagnosticsDumps = (() => {
+  const raw = process.env.ITEMS_DEBUG_DUMPS;
+  if (!raw) return 0;
+  const n = Number.parseInt(raw, 10);
+  return Number.isFinite(n) && n > 0 ? n : 0;
+})();
+
+async function dumpItemDiagnosticsIfEnabled(page: Page, slug: string): Promise<void> {
+  if (!shouldDumpItemDiagnostics()) return;
+  if (remainingItemDiagnosticsDumps <= 0) return;
+  remainingItemDiagnosticsDumps -= 1;
+  await dumpPageDiagnostics(page, slug);
+}
+
+async function expandDataValuesSection(page: Page, dataPage: string): Promise<void> {
+  const sectionRootSelector = `div[data-page='${dataPage}']`;
+  const toggleSelector = `${sectionRootSelector} .jslink`;
+  const rowSelector = `${sectionRootSelector} .stikitable tbody tr`;
+
+  await page.waitForSelector(sectionRootSelector);
+
+  const hasRowsAlready = (await page.$(rowSelector)) !== null;
+  if (!hasRowsAlready) {
+    await page.waitForSelector(toggleSelector);
+    await page.click(toggleSelector);
+  }
+
+  await page.waitForFunction(
+    (selector: string) => document.querySelectorAll(selector).length > 0,
+    { timeout: 60_000 },
+    rowSelector
+  );
+}
+
 /**
  * Opens the data page and loads item and block tables.
  */
 async function openDataPage(browser: Browser): Promise<Page> {
   const page = await browser.newPage();
   console.log("Opening data page...");
-  await page.goto(DATA_VALUES_URL, { timeout: 0 });
+  await page.goto(DATA_VALUES_URL, { timeout: 0, waitUntil: "domcontentloaded" });
 
-  // Expand item and block sections
-  await page.waitForSelector("div[data-page='Java Edition data values/Items'] .jslink");
-  await page.click("div[data-page='Java Edition data values/Items'] .jslink");
-  await page.waitForSelector("a[title='Spawn Egg']");
-
-  await page.waitForSelector("div[data-page='Java Edition data values/Blocks'] .jslink");
-  await page.click("div[data-page='Java Edition data values/Blocks'] .jslink");
-  await page.waitForSelector("a[href='/w/File:Acacia_Leaves.png']");
+  try {
+    await expandDataValuesSection(page, "Java Edition data values/Items");
+    await expandDataValuesSection(page, "Java Edition data values/Blocks");
+  } catch (error) {
+    await dumpPageDiagnostics(page, "openDataPage");
+    throw error;
+  }
   return page;
 }
 
@@ -73,10 +214,27 @@ async function populateItemsJson(
   name: string,
   browser: Browser
 ) {
+  let recorded = false;
+  let namespacedId = "";
+  let url = "";
   try {
-    const namespacedId: string = await getNamespacedId(dataPage, row);
-    const url: string = await getItemPageUrl(dataPage, row, name);
-    const itemData: Item | null = await getItemDetails(browser, url, name, namespacedId);
+    try {
+      namespacedId = await getNamespacedId(dataPage, row);
+    } catch (error) {
+      recordItemError({ category: "regular", stage: "getNamespacedId", name, error });
+      recorded = true;
+      throw error;
+    }
+
+    try {
+      url = await getItemPageUrl(dataPage, row, name);
+    } catch (error) {
+      recordItemError({ category: "regular", stage: "getItemPageUrl", name, namespacedId, error });
+      recorded = true;
+      throw error;
+    }
+
+    const itemData: Item = await getItemDetails(browser, url, name, namespacedId);
 
     if (itemData) {
       items.push(itemData);
@@ -84,6 +242,9 @@ async function populateItemsJson(
       console.log(`Successfully added item: ${name}`);
     }
   } catch (error) {
+    if (!recorded) {
+      recordItemError({ category: "regular", stage: "getItemDetails", name, namespacedId, url, error });
+    }
     console.error(chalk.red(`Error processing item: ${name}`), error);
   }
 }
@@ -166,7 +327,7 @@ async function getItemPageUrl(
   name: string
 ): Promise<string> {
   if (name === "Tropical Fish") {
-    return "https://minecraft.wiki/w/Tropical_Fish";
+    return "https://minecraft.wiki/w/Tropical_Fish_(item)";
   } else {
     const hrefHandle = await (await row.$("a")).evaluate((element) => element.getAttribute("href"));
     return `https://minecraft.wiki${hrefHandle}`;
@@ -174,6 +335,9 @@ async function getItemPageUrl(
 }
 
 async function downloadImagePNG(url: string, namespaceId: string): Promise<void> {
+  if (url.startsWith("//")) url = `https:${url}`;
+  if (url.startsWith("/")) url = `https://minecraft.wiki${url}`;
+
   // Fetch the image using Axios
   const response = await axios.get(url, { responseType: "arraybuffer" });
 
@@ -209,6 +373,9 @@ async function downloadImagePNG(url: string, namespaceId: string): Promise<void>
  */
 async function downloadGifImage(url: string, outputPath: string): Promise<void> {
   try {
+    if (url.startsWith("//")) url = `https:${url}`;
+    if (url.startsWith("/")) url = `https://minecraft.wiki${url}`;
+
     // Fetch the GIF image using Axios with responseType 'arraybuffer'
     const response = await axios.get(url, { responseType: "arraybuffer" });
 
@@ -239,22 +406,39 @@ async function getItemDetails(
   url: string,
   name: string,
   namespacedId: string
-): Promise<Item | null> {
+): Promise<Item> {
   const itemPage: Page = await browser.newPage();
   try {
-    await itemPage.goto(url.trim(), { timeout: 0, waitUntil: "networkidle2" });
-    await itemPage.waitForSelector(".invslot-item");
+    await itemPage.goto(url.trim(), { timeout: 0, waitUntil: "domcontentloaded" });
+    await itemPage.waitForSelector(".mw-parser-output", { timeout: 30_000 });
+    await itemPage
+      .waitForSelector(".infobox-imagearea img, .infobox-rows", { timeout: 10_000 })
+      .catch(() => undefined);
     const imageName: string = name.startsWith("Banner Pattern") ? "banner_pattern" : namespacedId;
     let image: string = `https://mc.geertvandrunen.nl/_new/items/${imageName}.png`;
 
     const imageUrl = await getImageUrl(itemPage, namespacedId, name);
 
     if (imageUrl) {
-      console.log("Processing image from URL:", imageUrl);
-      await downloadImagePNG(imageUrl, namespacedId);
+      const isGif = (() => {
+        try {
+          return new URL(imageUrl).pathname.toLowerCase().endsWith(".gif");
+        } catch {
+          return imageUrl.toLowerCase().includes(".gif");
+        }
+      })();
 
-      // Update the image URL to point to the local image
-      image = `https://mc.geertvandrunen.nl/_new/items/${namespacedId}.png`;
+      if (isGif) {
+        console.log("Processing GIF from URL:", imageUrl);
+        await downloadGifImage(imageUrl, `${ITEMS_IMAGE_PATH}${imageName}.gif`);
+        image = image.replace("png", "gif");
+      } else {
+        console.log("Processing image from URL:", imageUrl);
+        await downloadImagePNG(imageUrl, namespacedId);
+
+        // Update the image URL to point to the local image
+        image = `https://mc.geertvandrunen.nl/_new/items/${namespacedId}.png`;
+      }
     } else {
       console.log("Image URL not found. Handling GIF images.");
       // Handle GIF images
@@ -263,20 +447,19 @@ async function getItemDetails(
         await downloadGifImage(gifURL, `${ITEMS_IMAGE_PATH}${imageName}.gif`);
         image = image.replace("png", "gif");
       } else {
+        await dumpItemDiagnosticsIfEnabled(itemPage, `image_not_found_${namespacedId}`);
         throw new Error("Image details and GIF URL not found.");
       }
     }
 
     const stackSize: number | null = await getStackSize(itemPage, name);
     if (stackSize === null) {
-      console.error(chalk.red(`Error getting stack size for item: ${name}`));
-      return null;
+      throw new Error(`Stack size not found for item: ${name}`);
     }
 
     const renewable: boolean | null = await getRenewableStatus(itemPage, name);
     if (renewable === null) {
-      console.error(chalk.red(`Error getting renewable status for item: ${name}`));
-      return null;
+      throw new Error(`Renewable status not found for item: ${name}`);
     }
 
     const description: string = await getDescription(itemPage);
@@ -290,8 +473,7 @@ async function getItemDetails(
       stackSize,
     };
   } catch (error) {
-    console.error(chalk.red(`Error processing item page for item: ${name}`), error);
-    return null;
+    throw error;
   } finally {
     await itemPage.close();
   }
@@ -302,62 +484,103 @@ async function getItemDetails(
  */
 async function getImageUrl(page: Page, namespaceId: string, name: string): Promise<string | null> {
   try {
-    return await page.evaluate((name: string) => {
-      const invImages = Array.from(
-        document.querySelectorAll(`.infobox-imagearea .invslot-item-image img`)
-      );
-      let foundImage;
+    const matchCandidates = Array.from(
+      new Set(
+        [
+          name,
+          name.startsWith("Banner Pattern") ? name.replace("Banner Pattern (", "").replace(")", "") : null,
+          name.startsWith("Smithing Template")
+            ? name.replace("Smithing Template (", "").replace(")", "")
+            : null,
+          name.startsWith("Music Disc") ? name.replace("Music Disc (", "").replace(")", "") : null,
+          name.includes("Music Box version") ? "Creator" : null,
+          name.includes("Boat with Chest") ? name.split(" ")[0] : null,
+        ].filter(Boolean) as string[]
+      )
+    );
 
-      if (invImages.length === 1) {
-        foundImage = invImages[0];
+    return await page.evaluate((candidates: string[]) => {
+      const toAbs = (maybeUrl: string | null | undefined): string | null => {
+        if (!maybeUrl) return null;
+        const url = maybeUrl.trim();
+        if (!url || url.startsWith("data:")) return null;
+        if (url.startsWith("http://") || url.startsWith("https://")) return url;
+        if (url.startsWith("//")) return `https:${url}`;
+        if (url.startsWith("/")) return `${location.origin}${url}`;
+        return url;
+      };
+
+      const fromSrcset = (srcset: string | null | undefined): string | null => {
+        if (!srcset) return null;
+        const first = srcset
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean)[0];
+        if (!first) return null;
+        const url = first.split(/\s+/)[0];
+        return toAbs(url);
+      };
+
+      const pickImageUrl = (img: HTMLImageElement): string | null => {
+        return (
+          toAbs(img.getAttribute("data-src")) ||
+          fromSrcset(img.getAttribute("data-srcset")) ||
+          toAbs((img as any).currentSrc) ||
+          toAbs(img.src) ||
+          fromSrcset(img.getAttribute("srcset")) ||
+          toAbs(img.getAttribute("src"))
+        );
+      };
+
+      const lowerCandidates = candidates.map((c) => c.toLowerCase());
+
+      const infoboxInvslotImgs = Array.from(
+        document.querySelectorAll(".infobox-imagearea .invslot-item img")
+      ) as HTMLImageElement[];
+      const inviconImgs = Array.from(document.querySelectorAll(".invslot-item img")).filter((el) => {
+        const img = el as HTMLImageElement;
+        const alt = (img.getAttribute("alt") || "").toLowerCase();
+        return alt.startsWith("invicon ") || alt.includes("inventory sprite");
+      }) as HTMLImageElement[];
+      const infoboxImgs = Array.from(document.querySelectorAll(".infobox-imagearea img")) as HTMLImageElement[];
+      const allInvslotImgs = Array.from(document.querySelectorAll(".invslot-item img")) as HTMLImageElement[];
+
+      const pool =
+        infoboxInvslotImgs.length > 0
+          ? infoboxInvslotImgs
+          : inviconImgs.length > 0
+            ? inviconImgs
+          : infoboxImgs.length > 0
+            ? infoboxImgs
+            : allInvslotImgs;
+
+      const matchText = (img: HTMLImageElement): string => {
+        const alt = img.getAttribute("alt") || "";
+        const title = img.getAttribute("title") || "";
+        const aTitle = img.closest("a")?.getAttribute("title") || "";
+        return `${alt} ${title} ${aTitle}`.toLowerCase();
+      };
+
+      let found: HTMLImageElement | undefined;
+      if (pool.length === 1) {
+        found = pool[0];
       } else {
-        foundImage = invImages.find((img) => {
-          return (img as HTMLImageElement).alt.toLowerCase().includes(name.toLowerCase());
-        });
+        found = pool.find((img) => lowerCandidates.some((c) => matchText(img).includes(c)));
       }
 
-      if (!foundImage && name.startsWith("Banner Pattern")) {
-        //Banner Pattern (Creeper Charge) -> Creeper Charge
-        const variant = name.replace("Banner Pattern (", "").replace(")", "");
-        foundImage = invImages.find((img) => {
-          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
-        });
-      }
+      if (found) return pickImageUrl(found);
 
-      if (!foundImage && name.startsWith("Smithing Template")) {
-        const variant = name.replace("Smithing Template (", "").replace(")", "");
-        foundImage = invImages.find((img) => {
-          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
-        });
-      }
+      const og = document.querySelector("meta[property='og:image']") as HTMLMetaElement | null;
+      if (og?.content) return toAbs(og.content);
 
-      if (!foundImage && name.startsWith("Music Disc")) {
-        const variant = name.replace("Music Disc (", "").replace(")", "");
-        foundImage = invImages.find((img) => {
-          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
-        });
-      }
+      const twitter = document.querySelector("meta[name='twitter:image']") as HTMLMetaElement | null;
+      if (twitter?.content) return toAbs(twitter.content);
 
-      if (!foundImage && name.includes("Music Box version")) {
-        const variant = "Creator";
-        foundImage = invImages.find((img) => {
-          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
-        });
-      }
-
-      if (!foundImage && name.includes("Boat with Chest")) {
-        const variant = name.split(" ")[0];
-        foundImage = invImages.find((img) => {
-          return (img as HTMLImageElement).alt.toLowerCase().includes(variant.toLowerCase());
-        });
-      }
-
-      if (foundImage) {
-        return `https://minecraft.wiki${foundImage.getAttribute("src")}`;
-      }
+      const imageSrc = document.querySelector("link[rel='image_src']") as HTMLLinkElement | null;
+      if (imageSrc?.href) return toAbs(imageSrc.href);
 
       return null;
-    }, name);
+    }, matchCandidates);
   } catch {
     chalk.bgBlue(`Error getting image details for item: ${namespaceId} - ${name}`);
     return null;
@@ -369,10 +592,45 @@ async function getImageUrl(page: Page, namespaceId: string, name: string): Promi
  */
 async function getGifURL(page: Page, name: string): Promise<string | null> {
   return page.evaluate((itemName: string) => {
-    const img = Array.from(document.querySelectorAll(".invslot-item img")).find(
-      (img) => (img as HTMLImageElement).alt === itemName
-    ) as HTMLImageElement | undefined;
-    return img ? img.getAttribute("data-src") || img.src : null;
+    const toAbs = (maybeUrl: string | null | undefined): string | null => {
+      if (!maybeUrl) return null;
+      const url = maybeUrl.trim();
+      if (!url || url.startsWith("data:")) return null;
+      if (url.startsWith("http://") || url.startsWith("https://")) return url;
+      if (url.startsWith("//")) return `https:${url}`;
+      if (url.startsWith("/")) return `${location.origin}${url}`;
+      return url;
+    };
+
+    const fromSrcset = (srcset: string | null | undefined): string | null => {
+      if (!srcset) return null;
+      const first = srcset
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean)[0];
+      if (!first) return null;
+      const url = first.split(/\s+/)[0];
+      return toAbs(url);
+    };
+
+    const lowerName = itemName.toLowerCase();
+    const img = Array.from(document.querySelectorAll(".invslot-item img")).find((el) => {
+      const img = el as HTMLImageElement;
+      const alt = (img.getAttribute("alt") || "").toLowerCase();
+      const title = (img.getAttribute("title") || "").toLowerCase();
+      return alt === lowerName || title === lowerName || alt.includes(lowerName) || title.includes(lowerName);
+    }) as HTMLImageElement | undefined;
+
+    if (!img) return null;
+
+    return (
+      toAbs(img.getAttribute("data-src")) ||
+      fromSrcset(img.getAttribute("data-srcset")) ||
+      toAbs((img as any).currentSrc) ||
+      toAbs(img.src) ||
+      fromSrcset(img.getAttribute("srcset")) ||
+      toAbs(img.getAttribute("src"))
+    );
   }, name);
 }
 
@@ -648,45 +906,65 @@ async function processSpecialItemPage(
     const description: string = await getDescription(itemPage);
 
     for (const itemData of itemsData) {
-      let { name, imageUrl } = itemData;
+      try {
+        let { name, imageUrl } = itemData;
 
-      let updatedNamespacedId: string | null = defaultNamespacedId;
-      let imageName: string = name.toLowerCase().replace(/ /g, "_");
+        let updatedNamespacedId: string | null = defaultNamespacedId;
+        let imageName: string = name.toLowerCase().replace(/ /g, "_");
 
-      if (pageName === "Music_Disc") {
-        const discName = name.split(" ").pop()?.toLowerCase().replace(")", "") || "unknown";
-        name = `Music Disc (${name})`;
-        updatedNamespacedId = `music_disc_${discName}`;
-        imageName = updatedNamespacedId;
+        if (pageName === "Music_Disc") {
+          const discName = name.split(" ").pop()?.toLowerCase().replace(")", "") || "unknown";
+          name = `Music Disc (${name})`;
+          updatedNamespacedId = `music_disc_${discName}`;
+          imageName = updatedNamespacedId;
+        }
+
+        if (!imageUrl) {
+          throw new Error("Image URL not found for special item.");
+        }
+
+        const imageExt = imageUrl.includes(".gif") ? "gif" : "png";
+        if (imageExt === "gif") {
+          await downloadGifImage(imageUrl, `${ITEMS_IMAGE_PATH}${imageName}.gif`);
+        } else {
+          await downloadImagePNG(imageUrl, imageName);
+        }
+        const imageTarget = `https://mc.geertvandrunen.nl/_new/items/${imageName}.${imageExt}`;
+
+        items.push({
+          name,
+          namespacedId: updatedNamespacedId || "",
+          description,
+          image: imageTarget,
+          renewable: isRenewable(name),
+          stackSize,
+        });
+
+        writeItems(items);
+        console.log(`Successfully added special item: ${name}`);
+      } catch (error) {
+        recordItemError({
+          category: "special",
+          stage: "specialItem",
+          name: itemData.name,
+          namespacedId: defaultNamespacedId ?? undefined,
+          url: pageUrl,
+          error,
+        });
+        console.error(chalk.red(`Error processing special item: ${itemData.name}`), error);
       }
-
-      const imageExt = imageUrl.includes(".gif") ? "gif" : "png";
-      if (name === "Potion") {
-        throw new Error(imageUrl);
-      }
-      if (imageExt === "gif") {
-        // download GIF and place in public/items
-        await downloadGifImage(imageUrl, `${ITEMS_IMAGE_PATH}${imageName}.gif`);
-      } else {
-        await downloadImagePNG(imageUrl, imageName);
-      }
-      const imageTarget = `https://mc.geertvandrunen.nl/_new/items/${imageName}.${imageExt}`;
-
-      items.push({
-        name,
-        namespacedId: updatedNamespacedId || "",
-        description,
-        image: imageTarget,
-        renewable: isRenewable(name),
-        stackSize,
-      });
-
-      writeItems(items);
-      console.log(`Successfully added special item: ${name}`);
     }
 
     console.log(`Finished processing special items for page: ${pageName}`);
   } catch (error) {
+    recordItemError({
+      category: "special",
+      stage: "specialPage",
+      name: `page:${pageName}`,
+      namespacedId: defaultNamespacedId ?? undefined,
+      url: pageUrl,
+      error,
+    });
     console.error(chalk.red(`Error processing special items for page: ${pageName}`), error);
   } finally {
     await itemPage.close();
@@ -743,6 +1021,7 @@ async function getSpecialItemsData(
   } catch (error) {
     console.error(chalk.red("An unexpected error occurred:"), error);
   } finally {
+    writeErroredItemsReport();
     await browser.close();
   }
 })();

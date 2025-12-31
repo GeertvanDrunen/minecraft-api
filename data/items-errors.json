@@ -1,0 +1,112 @@
+[
+  {
+    "category": "regular",
+    "name": "Debug Stick",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Enchanted Book",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Goat Horn",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Knowledge Book",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Name Tag",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Ominous Trial Key",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Poisonous Potato",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Rotten Flesh",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Totem of Undying",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Trial Key",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+      }
+    ]
+  },
+  {
+    "category": "regular",
+    "name": "Tropical Fish",
+    "errors": [
+      {
+        "stage": "getItemDetails",
+        "message": "Stack size not found for item: Tropical Fish"
+      }
+    ]
+  }
+]

@@ -481,6 +481,50 @@
     ]
   },
   {
+    "name": "Acacia Shelf",
+    "namespacedId": "acacia_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/acacia_shelf.png",
+    "item": null,
+    "tool": "Axe",
+    "flammable": true,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          119,
+          66,
+          41
+        ],
+        "amount": 0.568
+      },
+      {
+        "color": [
+          181,
+          95,
+          60
+        ],
+        "amount": 0.213
+      },
+      {
+        "color": [
+          156,
+          81,
+          53
+        ],
+        "amount": 0.173
+      },
+      {
+        "color": [
+          85,
+          46,
+          29
+        ],
+        "amount": 0.046
+      }
+    ]
+  },
+  {
     "name": "Acacia Sign",
     "namespacedId": "acacia_sign",
     "description": "A sign is a non-solid block that can display text, and can be placed on the top or side of other blocks. The text of signs can be customized with dyes and glow ink sacs, and they can be waxed to prevent its text from being edited by any player.",
@@ -1934,6 +1978,40 @@
     ]
   },
   {
+    "name": "Bamboo Shelf",
+    "namespacedId": "bamboo_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/bamboo_shelf.png",
+    "item": null,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          149,
+          134,
+          62
+        ],
+        "amount": 0.785
+      },
+      {
+        "color": [
+          211,
+          189,
+          87
+        ],
+        "amount": 0.19
+      },
+      {
+        "color": [
+          97,
+          88,
+          40
+        ],
+        "amount": 0.014
+      }
+    ]
+  },
+  {
     "name": "Bamboo Shoot",
     "namespacedId": "bamboo_sapling",
     "description": "Bamboo is a versatile, fast-growing plant found primarily in jungles, used for crafting (particularly scaffolding and bamboo wood), smelting, and breeding pandas.",
@@ -3073,6 +3151,50 @@
           98
         ],
         "amount": 0.044
+      }
+    ]
+  },
+  {
+    "name": "Birch Shelf",
+    "namespacedId": "birch_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/birch_shelf.png",
+    "item": null,
+    "tool": "Axe",
+    "flammable": true,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          129,
+          114,
+          77
+        ],
+        "amount": 0.488
+      },
+      {
+        "color": [
+          200,
+          180,
+          122
+        ],
+        "amount": 0.335
+      },
+      {
+        "color": [
+          167,
+          150,
+          102
+        ],
+        "amount": 0.157
+      },
+      {
+        "color": [
+          178,
+          164,
+          112
+        ],
+        "amount": 0.012
       }
     ]
   },
@@ -6880,6 +7002,56 @@
     ]
   },
   {
+    "name": "Bush",
+    "namespacedId": "bush",
+    "description": "A bush is a non-solid plant block found in many grassy biomes. Its color is biome-dependent, and matches the color of grass blocks.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/bush.png",
+    "item": null,
+    "blastResistance": 0,
+    "colors": [
+      {
+        "color": [
+          57,
+          89,
+          47
+        ],
+        "amount": 0.518
+      },
+      {
+        "color": [
+          86,
+          130,
+          73
+        ],
+        "amount": 0.228
+      },
+      {
+        "color": [
+          76,
+          116,
+          67
+        ],
+        "amount": 0.143
+      },
+      {
+        "color": [
+          36,
+          66,
+          33
+        ],
+        "amount": 0.079
+      },
+      {
+        "color": [
+          68,
+          106,
+          60
+        ],
+        "amount": 0.032
+      }
+    ]
+  },
+  {
     "name": "Cactus",
     "namespacedId": "cactus",
     "description": "Java Edition",
@@ -6910,6 +7082,48 @@
           52
         ],
         "amount": 0.037
+      }
+    ]
+  },
+  {
+    "name": "Cactus Flower",
+    "namespacedId": "cactus_flower",
+    "description": "A cactus flower is a type of flower that grows from cacti. It can be placed on any solid top surface or crafted into pink dye.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/cactus_flower.png",
+    "item": null,
+    "blastResistance": 0,
+    "colors": [
+      {
+        "color": [
+          177,
+          97,
+          121
+        ],
+        "amount": 0.65
+      },
+      {
+        "color": [
+          234,
+          149,
+          147
+        ],
+        "amount": 0.263
+      },
+      {
+        "color": [
+          145,
+          78,
+          108
+        ],
+        "amount": 0.06
+      },
+      {
+        "color": [
+          95,
+          141,
+          48
+        ],
+        "amount": 0.024
       }
     ]
   },
@@ -8594,6 +8808,40 @@
           198
         ],
         "amount": 0.379
+      }
+    ]
+  },
+  {
+    "name": "Cherry Shelf",
+    "namespacedId": "cherry_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/cherry_shelf.png",
+    "item": null,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          169,
+          111,
+          110
+        ],
+        "amount": 0.693
+      },
+      {
+        "color": [
+          218,
+          148,
+          153
+        ],
+        "amount": 0.239
+      },
+      {
+        "color": [
+          128,
+          84,
+          84
+        ],
+        "amount": 0.054
       }
     ]
   },
@@ -10465,6 +10713,57 @@
     ]
   },
   {
+    "name": "Copper Bars",
+    "namespacedId": "copper_bars",
+    "description": "Copper bars are copper variants of bars. Unlike iron bars, they are colored copper orange and can oxidize over time, similar to other copper blocks.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/copper_bars.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          110,
+          54,
+          37
+        ],
+        "amount": 0.655
+      },
+      {
+        "color": [
+          149,
+          82,
+          60
+        ],
+        "amount": 0.147
+      },
+      {
+        "color": [
+          174,
+          98,
+          72
+        ],
+        "amount": 0.108
+      },
+      {
+        "color": [
+          132,
+          76,
+          52
+        ],
+        "amount": 0.079
+      },
+      {
+        "color": [
+          82,
+          43,
+          29
+        ],
+        "amount": 0.011
+      }
+    ]
+  },
+  {
     "name": "Copper Bulb",
     "namespacedId": "copper_bulb",
     "description": "A copper bulb is a light-emitting block. It toggles on or off when it receives a redstone pulse, and does not need continuous power to emit light. Its light level depends on its state of oxidation.",
@@ -10496,6 +10795,92 @@
           8
         ],
         "amount": 0.084
+      }
+    ]
+  },
+  {
+    "name": "Copper Chain",
+    "namespacedId": "copper_chain",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/copper_chain.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          172,
+          92,
+          66
+        ],
+        "amount": 0.356
+      },
+      {
+        "color": [
+          134,
+          68,
+          44
+        ],
+        "amount": 0.297
+      },
+      {
+        "color": [
+          164,
+          91,
+          61
+        ],
+        "amount": 0.238
+      },
+      {
+        "color": [
+          148,
+          76,
+          52
+        ],
+        "amount": 0.089
+      },
+      {
+        "color": [
+          156,
+          76,
+          52
+        ],
+        "amount": 0.02
+      }
+    ]
+  },
+  {
+    "name": "Copper Chest",
+    "namespacedId": "copper_chest",
+    "description": "Single",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/copper_chest.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          129,
+          70,
+          50
+        ],
+        "amount": 0.728
+      },
+      {
+        "color": [
+          196,
+          109,
+          82
+        ],
+        "amount": 0.243
+      },
+      {
+        "color": [
+          143,
+          141,
+          141
+        ],
+        "amount": 0.021
       }
     ]
   },
@@ -10551,6 +10936,49 @@
     ]
   },
   {
+    "name": "Copper Golem Statue",
+    "namespacedId": "copper_golem_statue",
+    "description": "A copper golem statue is the result of a copper golem fully oxidizing and petrifying into a block. It can be posed in four different ways, or it can be reanimated by scraping it with an axe enough times.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/copper_golem_statue.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          133,
+          74,
+          55
+        ],
+        "amount": 0.704
+      },
+      {
+        "color": [
+          218,
+          126,
+          100
+        ],
+        "amount": 0.199
+      },
+      {
+        "color": [
+          74,
+          33,
+          17
+        ],
+        "amount": 0.045
+      },
+      {
+        "color": [
+          184,
+          108,
+          84
+        ],
+        "amount": 0.043
+      }
+    ]
+  },
+  {
     "name": "Copper Grate",
     "namespacedId": "copper_grate",
     "description": "Copper grates are a variant of copper blocks that have perforations that can be seen through.",
@@ -10594,6 +11022,58 @@
     ]
   },
   {
+    "name": "Copper Lantern",
+    "namespacedId": "copper_lantern",
+    "description": "A copper lantern is a copper variant of a lantern that displays a green flame and oxidizes over time.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/copper_lantern.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "luminance": 15,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          116,
+          60,
+          43
+        ],
+        "amount": 0.612
+      },
+      {
+        "color": [
+          113,
+          175,
+          82
+        ],
+        "amount": 0.145
+      },
+      {
+        "color": [
+          167,
+          174,
+          162
+        ],
+        "amount": 0.117
+      },
+      {
+        "color": [
+          180,
+          99,
+          69
+        ],
+        "amount": 0.099
+      },
+      {
+        "color": [
+          57,
+          119,
+          59
+        ],
+        "amount": 0.027
+      }
+    ]
+  },
+  {
     "name": "Copper Ore",
     "namespacedId": "copper_ore",
     "description": "Copper Ore",
@@ -10625,6 +11105,50 @@
           75
         ],
         "amount": 0.038
+      }
+    ]
+  },
+  {
+    "name": "Copper Torch",
+    "namespacedId": "copper_torch",
+    "description": "A copper torch is a non-solid block that emits light. Copper torches can also be used to craft copper lanterns.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/copper_torch.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "luminance": 14,
+    "blastResistance": 0,
+    "colors": [
+      {
+        "color": [
+          128,
+          116,
+          71
+        ],
+        "amount": 0.768
+      },
+      {
+        "color": [
+          246,
+          249,
+          246
+        ],
+        "amount": 0.104
+      },
+      {
+        "color": [
+          150,
+          230,
+          149
+        ],
+        "amount": 0.085
+      },
+      {
+        "color": [
+          66,
+          52,
+          30
+        ],
+        "amount": 0.039
       }
     ]
   },
@@ -11007,6 +11531,48 @@
           8
         ],
         "amount": 0.06
+      }
+    ]
+  },
+  {
+    "name": "Creaking Heart",
+    "namespacedId": "creaking_heart",
+    "description": "A creaking heart is a living block&#91;1&#93;&#91;2&#93; that can be crafted or found in pale oak trees in pale gardens. It activates if placed in a line between two pale oak logs; then, during nighttime, it spawns a creaking and protects it from all damage. Breaking a creaking heart that is protecting...",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/creaking_heart.png",
+    "item": null,
+    "blastResistance": null,
+    "colors": [
+      {
+        "color": [
+          57,
+          47,
+          42
+        ],
+        "amount": 0.77
+      },
+      {
+        "color": [
+          92,
+          84,
+          77
+        ],
+        "amount": 0.113
+      },
+      {
+        "color": [
+          104,
+          95,
+          94
+        ],
+        "amount": 0.088
+      },
+      {
+        "color": [
+          85,
+          76,
+          76
+        ],
+        "amount": 0.018
       }
     ]
   },
@@ -11633,6 +12199,58 @@
           51
         ],
         "amount": 0.225
+      }
+    ]
+  },
+  {
+    "name": "Crimson Shelf",
+    "namespacedId": "crimson_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/crimson_shelf.png",
+    "item": null,
+    "tool": "Axe",
+    "flammable": true,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          98,
+          39,
+          62
+        ],
+        "amount": 0.33
+      },
+      {
+        "color": [
+          144,
+          60,
+          95
+        ],
+        "amount": 0.289
+      },
+      {
+        "color": [
+          110,
+          46,
+          76
+        ],
+        "amount": 0.19
+      },
+      {
+        "color": [
+          126,
+          54,
+          81
+        ],
+        "amount": 0.149
+      },
+      {
+        "color": [
+          75,
+          31,
+          50
+        ],
+        "amount": 0.041
       }
     ]
   },
@@ -13488,6 +14106,50 @@
           20
         ],
         "amount": 0.067
+      }
+    ]
+  },
+  {
+    "name": "Dark Oak Shelf",
+    "namespacedId": "dark_oak_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/dark_oak_shelf.png",
+    "item": null,
+    "tool": "Axe",
+    "flammable": true,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          55,
+          43,
+          27
+        ],
+        "amount": 0.761
+      },
+      {
+        "color": [
+          77,
+          60,
+          36
+        ],
+        "amount": 0.165
+      },
+      {
+        "color": [
+          35,
+          22,
+          13
+        ],
+        "amount": 0.048
+      },
+      {
+        "color": [
+          44,
+          28,
+          19
+        ],
+        "amount": 0.026
       }
     ]
   },
@@ -16136,6 +16798,56 @@
     ]
   },
   {
+    "name": "Dried Ghast",
+    "namespacedId": "dried_ghast",
+    "description": "A dried ghast is an immobile, shriveled, harmless ghast in the form of a block. It can be found near Nether fossils or obtained through bartering or crafting. Placing it in water will cause it to hydrate over time until it becomes a ghastling.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/dried_ghast.png",
+    "item": null,
+    "blastResistance": null,
+    "colors": [
+      {
+        "color": [
+          107,
+          98,
+          98
+        ],
+        "amount": 0.637
+      },
+      {
+        "color": [
+          174,
+          158,
+          158
+        ],
+        "amount": 0.276
+      },
+      {
+        "color": [
+          144,
+          132,
+          132
+        ],
+        "amount": 0.046
+      },
+      {
+        "color": [
+          148,
+          142,
+          142
+        ],
+        "amount": 0.029
+      },
+      {
+        "color": [
+          62,
+          61,
+          61
+        ],
+        "amount": 0.012
+      }
+    ]
+  },
+  {
     "name": "Dried Kelp Block",
     "namespacedId": "dried_kelp_block",
     "description": "Dried kelp blocks are storage blocks equivalent to nine dried kelp that can also be used as fuel.",
@@ -16855,6 +17567,49 @@
     ]
   },
   {
+    "name": "Exposed Copper Bars",
+    "namespacedId": "exposed_copper_bars",
+    "description": "Copper bars are copper variants of bars. Unlike iron bars, they are colored copper orange and can oxidize over time, similar to other copper blocks.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/exposed_copper_bars.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          91,
+          75,
+          62
+        ],
+        "amount": 0.623
+      },
+      {
+        "color": [
+          132,
+          98,
+          82
+        ],
+        "amount": 0.196
+      },
+      {
+        "color": [
+          161,
+          113,
+          99
+        ],
+        "amount": 0.109
+      },
+      {
+        "color": [
+          114,
+          101,
+          84
+        ],
+        "amount": 0.066
+      }
+    ]
+  },
+  {
     "name": "Exposed Copper Bulb",
     "namespacedId": "exposed_copper_bulb",
     "description": "A copper bulb is a light-emitting block. It toggles on or off when it receives a redstone pulse, and does not need continuous power to emit light. Its light level depends on its state of oxidation.",
@@ -16898,6 +17653,100 @@
     ]
   },
   {
+    "name": "Exposed Copper Chain",
+    "namespacedId": "exposed_copper_chain",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/exposed_copper_chain.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          149,
+          129,
+          99
+        ],
+        "amount": 0.43
+      },
+      {
+        "color": [
+          119,
+          100,
+          84
+        ],
+        "amount": 0.156
+      },
+      {
+        "color": [
+          140,
+          108,
+          92
+        ],
+        "amount": 0.156
+      },
+      {
+        "color": [
+          104,
+          91,
+          76
+        ],
+        "amount": 0.141
+      },
+      {
+        "color": [
+          140,
+          116,
+          92
+        ],
+        "amount": 0.117
+      }
+    ]
+  },
+  {
+    "name": "Exposed Copper Chest",
+    "namespacedId": "exposed_copper_chest",
+    "description": "Single",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/exposed_copper_chest.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          119,
+          91,
+          76
+        ],
+        "amount": 0.859
+      },
+      {
+        "color": [
+          185,
+          128,
+          118
+        ],
+        "amount": 0.089
+      },
+      {
+        "color": [
+          68,
+          57,
+          45
+        ],
+        "amount": 0.038
+      },
+      {
+        "color": [
+          147,
+          146,
+          146
+        ],
+        "amount": 0.013
+      }
+    ]
+  },
+  {
     "name": "Exposed Copper Door",
     "namespacedId": "exposed_copper_door",
     "description": "A copper door is a type of door made of copper that can be opened and closed by the player without redstone.",
@@ -16929,6 +17778,57 @@
           46
         ],
         "amount": 0.054
+      }
+    ]
+  },
+  {
+    "name": "Exposed Copper Golem Statue",
+    "namespacedId": "exposed_copper_golem_statue",
+    "description": "A copper golem statue is the result of a copper golem fully oxidizing and petrifying into a block. It can be posed in four different ways, or it can be reanimated by scraping it with an axe enough times.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/exposed_copper_golem_statue.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          114,
+          86,
+          73
+        ],
+        "amount": 0.726
+      },
+      {
+        "color": [
+          198,
+          136,
+          126
+        ],
+        "amount": 0.191
+      },
+      {
+        "color": [
+          165,
+          115,
+          108
+        ],
+        "amount": 0.031
+      },
+      {
+        "color": [
+          61,
+          55,
+          46
+        ],
+        "amount": 0.03
+      },
+      {
+        "color": [
+          151,
+          135,
+          104
+        ],
+        "amount": 0.021
       }
     ]
   },
@@ -16972,6 +17872,50 @@
           107
         ],
         "amount": 0.012
+      }
+    ]
+  },
+  {
+    "name": "Exposed Copper Lantern",
+    "namespacedId": "exposed_copper_lantern",
+    "description": "A copper lantern is a copper variant of a lantern that displays a green flame and oxidizes over time.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/exposed_copper_lantern.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "luminance": 15,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          105,
+          90,
+          69
+        ],
+        "amount": 0.768
+      },
+      {
+        "color": [
+          174,
+          138,
+          121
+        ],
+        "amount": 0.136
+      },
+      {
+        "color": [
+          107,
+          168,
+          79
+        ],
+        "amount": 0.069
+      },
+      {
+        "color": [
+          140,
+          140,
+          140
+        ],
+        "amount": 0.018
       }
     ]
   },
@@ -17170,6 +18114,49 @@
           92
         ],
         "amount": 0.02
+      }
+    ]
+  },
+  {
+    "name": "Exposed Lightning Rod",
+    "namespacedId": "exposed_lightning_rod",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/exposed_lightning_rod.png",
+    "item": null,
+    "luminance": 15,
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          100,
+          77,
+          66
+        ],
+        "amount": 0.563
+      },
+      {
+        "color": [
+          153,
+          110,
+          97
+        ],
+        "amount": 0.213
+      },
+      {
+        "color": [
+          193,
+          134,
+          122
+        ],
+        "amount": 0.206
+      },
+      {
+        "color": [
+          124,
+          116,
+          84
+        ],
+        "amount": 0.016
       }
     ]
   },
@@ -17477,6 +18464,49 @@
           36
         ],
         "amount": 0.072
+      }
+    ]
+  },
+  {
+    "name": "Firefly Bush",
+    "namespacedId": "firefly_bush",
+    "description": "A firefly bush is a decorative plant that produces firefly particles around it when exposed to darkness.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/firefly_bush.png",
+    "item": null,
+    "luminance": 15,
+    "blastResistance": 0,
+    "colors": [
+      {
+        "color": [
+          64,
+          68,
+          35
+        ],
+        "amount": 0.408
+      },
+      {
+        "color": [
+          158,
+          127,
+          57
+        ],
+        "amount": 0.323
+      },
+      {
+        "color": [
+          116,
+          108,
+          68
+        ],
+        "amount": 0.217
+      },
+      {
+        "color": [
+          130,
+          115,
+          56
+        ],
+        "amount": 0.049
       }
     ]
   },
@@ -20257,6 +21287,57 @@
     ]
   },
   {
+    "name": "Iron Chain",
+    "namespacedId": "iron_chain",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/iron_chain.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          60,
+          68,
+          84
+        ],
+        "amount": 0.495
+      },
+      {
+        "color": [
+          44,
+          49,
+          68
+        ],
+        "amount": 0.186
+      },
+      {
+        "color": [
+          36,
+          44,
+          60
+        ],
+        "amount": 0.155
+      },
+      {
+        "color": [
+          52,
+          60,
+          76
+        ],
+        "amount": 0.082
+      },
+      {
+        "color": [
+          68,
+          68,
+          84
+        ],
+        "amount": 0.082
+      }
+    ]
+  },
+  {
     "name": "Iron Door",
     "namespacedId": "iron_door",
     "description": "An iron door is a variant of the door made of iron that can only be opened using redstone. Iron doors are more secure than wooden and copper doors because they cannot be opened by hand and cannot be broken by zombies. They are also more resistant to explosions, and immune to fire and lava.",
@@ -20954,6 +22035,50 @@
     ]
   },
   {
+    "name": "Jungle Shelf",
+    "namespacedId": "jungle_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/jungle_shelf.png",
+    "item": null,
+    "tool": "Axe",
+    "flammable": true,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          129,
+          101,
+          62
+        ],
+        "amount": 0.724
+      },
+      {
+        "color": [
+          183,
+          138,
+          94
+        ],
+        "amount": 0.187
+      },
+      {
+        "color": [
+          158,
+          132,
+          76
+        ],
+        "amount": 0.048
+      },
+      {
+        "color": [
+          90,
+          71,
+          39
+        ],
+        "amount": 0.04
+      }
+    ]
+  },
+  {
     "name": "Jungle Sign",
     "namespacedId": "jungle_sign",
     "description": "A sign is a non-solid block that can display text, and can be placed on the top or side of other blocks. The text of signs can be customized with dyes and glow ink sacs, and they can be waxed to prevent its text from being edited by any player.",
@@ -21629,6 +22754,56 @@
           23
         ],
         "amount": 0.376
+      }
+    ]
+  },
+  {
+    "name": "Leaf Litter",
+    "namespacedId": "leaf_litter",
+    "description": "Leaf litter is a thin decorative block resembling fallen leaves. Up to four can be placed in the same block space.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/leaf_litter.png",
+    "item": null,
+    "blastResistance": 0,
+    "colors": [
+      {
+        "color": [
+          105,
+          75,
+          44
+        ],
+        "amount": 0.606
+      },
+      {
+        "color": [
+          149,
+          106,
+          63
+        ],
+        "amount": 0.175
+      },
+      {
+        "color": [
+          78,
+          58,
+          36
+        ],
+        "amount": 0.104
+      },
+      {
+        "color": [
+          128,
+          90,
+          56
+        ],
+        "amount": 0.103
+      },
+      {
+        "color": [
+          132,
+          100,
+          60
+        ],
+        "amount": 0.013
       }
     ]
   },
@@ -24735,6 +25910,48 @@
     ]
   },
   {
+    "name": "Mangrove Shelf",
+    "namespacedId": "mangrove_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/mangrove_shelf.png",
+    "item": null,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          90,
+          38,
+          34
+        ],
+        "amount": 0.65
+      },
+      {
+        "color": [
+          122,
+          55,
+          49
+        ],
+        "amount": 0.251
+      },
+      {
+        "color": [
+          64,
+          23,
+          23
+        ],
+        "amount": 0.078
+      },
+      {
+        "color": [
+          106,
+          60,
+          44
+        ],
+        "amount": 0.012
+      }
+    ]
+  },
+  {
     "name": "Mangrove Sign",
     "namespacedId": "mangrove_sign",
     "description": "A sign is a non-solid block that can display text, and can be placed on the top or side of other blocks. The text of signs can be customized with dyes and glow ink sacs, and they can be waxed to prevent its text from being edited by any player.",
@@ -27123,6 +28340,58 @@
     ]
   },
   {
+    "name": "Oak Shelf",
+    "namespacedId": "oak_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/oak_shelf.png",
+    "item": null,
+    "tool": "Axe",
+    "flammable": true,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          135,
+          108,
+          63
+        ],
+        "amount": 0.646
+      },
+      {
+        "color": [
+          84,
+          64,
+          37
+        ],
+        "amount": 0.129
+      },
+      {
+        "color": [
+          186,
+          151,
+          93
+        ],
+        "amount": 0.108
+      },
+      {
+        "color": [
+          100,
+          76,
+          44
+        ],
+        "amount": 0.083
+      },
+      {
+        "color": [
+          170,
+          140,
+          82
+        ],
+        "amount": 0.034
+      }
+    ]
+  },
+  {
     "name": "Oak Sign",
     "namespacedId": "oak_sign",
     "description": "A sign is a non-solid block that can display text, and can be placed on the top or side of other blocks. The text of signs can be customized with dyes and glow ink sacs, and they can be waxed to prevent its text from being edited by any player.",
@@ -28370,6 +29639,49 @@
     ]
   },
   {
+    "name": "Oxidized Copper Bars",
+    "namespacedId": "oxidized_copper_bars",
+    "description": "Copper bars are copper variants of bars. Unlike iron bars, they are colored copper orange and can oxidize over time, similar to other copper blocks.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/oxidized_copper_bars.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          44,
+          86,
+          70
+        ],
+        "amount": 0.758
+      },
+      {
+        "color": [
+          72,
+          142,
+          117
+        ],
+        "amount": 0.102
+      },
+      {
+        "color": [
+          60,
+          121,
+          95
+        ],
+        "amount": 0.067
+      },
+      {
+        "color": [
+          60,
+          105,
+          93
+        ],
+        "amount": 0.065
+      }
+    ]
+  },
+  {
     "name": "Oxidized Copper Bulb",
     "namespacedId": "oxidized_copper_bulb",
     "description": "A copper bulb is a light-emitting block. It toggles on or off when it receives a redstone pulse, and does not need continuous power to emit light. Its light level depends on its state of oxidation.",
@@ -28409,6 +29721,100 @@
           132
         ],
         "amount": 0.015
+      }
+    ]
+  },
+  {
+    "name": "Oxidized Copper Chain",
+    "namespacedId": "oxidized_copper_chain",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/oxidized_copper_chain.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          61,
+          132,
+          108
+        ],
+        "amount": 0.49
+      },
+      {
+        "color": [
+          60,
+          101,
+          84
+        ],
+        "amount": 0.367
+      },
+      {
+        "color": [
+          63,
+          116,
+          95
+        ],
+        "amount": 0.102
+      },
+      {
+        "color": [
+          60,
+          124,
+          108
+        ],
+        "amount": 0.027
+      },
+      {
+        "color": [
+          68,
+          136,
+          116
+        ],
+        "amount": 0.014
+      }
+    ]
+  },
+  {
+    "name": "Oxidized Copper Chest",
+    "namespacedId": "oxidized_copper_chest",
+    "description": "Single",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/oxidized_copper_chest.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          46,
+          93,
+          77
+        ],
+        "amount": 0.69
+      },
+      {
+        "color": [
+          84,
+          170,
+          141
+        ],
+        "amount": 0.197
+      },
+      {
+        "color": [
+          69,
+          141,
+          115
+        ],
+        "amount": 0.071
+      },
+      {
+        "color": [
+          143,
+          144,
+          143
+        ],
+        "amount": 0.036
       }
     ]
   },
@@ -28456,6 +29862,41 @@
     ]
   },
   {
+    "name": "Oxidized Copper Golem Statue",
+    "namespacedId": "oxidized_copper_golem_statue",
+    "description": "A copper golem statue is the result of a copper golem fully oxidizing and petrifying into a block. It can be posed in four different ways, or it can be reanimated by scraping it with an axe enough times.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/oxidized_copper_golem_statue.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          62,
+          118,
+          95
+        ],
+        "amount": 0.798
+      },
+      {
+        "color": [
+          101,
+          188,
+          152
+        ],
+        "amount": 0.177
+      },
+      {
+        "color": [
+          33,
+          62,
+          53
+        ],
+        "amount": 0.013
+      }
+    ]
+  },
+  {
     "name": "Oxidized Copper Grate",
     "namespacedId": "oxidized_copper_grate",
     "description": "Copper grates are a variant of copper blocks that have perforations that can be seen through.",
@@ -28495,6 +29936,58 @@
           154
         ],
         "amount": 0.05
+      }
+    ]
+  },
+  {
+    "name": "Oxidized Copper Lantern",
+    "namespacedId": "oxidized_copper_lantern",
+    "description": "A copper lantern is a copper variant of a lantern that displays a green flame and oxidizes over time.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/oxidized_copper_lantern.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "luminance": 15,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          47,
+          93,
+          74
+        ],
+        "amount": 0.59
+      },
+      {
+        "color": [
+          140,
+          171,
+          119
+        ],
+        "amount": 0.275
+      },
+      {
+        "color": [
+          76,
+          148,
+          132
+        ],
+        "amount": 0.07
+      },
+      {
+        "color": [
+          86,
+          155,
+          78
+        ],
+        "amount": 0.035
+      },
+      {
+        "color": [
+          92,
+          132,
+          63
+        ],
+        "amount": 0.03
       }
     ]
   },
@@ -28677,6 +30170,49 @@
           128
         ],
         "amount": 0.021
+      }
+    ]
+  },
+  {
+    "name": "Oxidized Lightning Rod",
+    "namespacedId": "oxidized_lightning_rod",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/oxidized_lightning_rod.png",
+    "item": null,
+    "luminance": 15,
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          49,
+          99,
+          84
+        ],
+        "amount": 0.553
+      },
+      {
+        "color": [
+          97,
+          185,
+          150
+        ],
+        "amount": 0.25
+      },
+      {
+        "color": [
+          68,
+          117,
+          97
+        ],
+        "amount": 0.106
+      },
+      {
+        "color": [
+          83,
+          150,
+          121
+        ],
+        "amount": 0.08
       }
     ]
   },
@@ -29337,6 +30873,50 @@
           82
         ],
         "amount": 0.055
+      }
+    ]
+  },
+  {
+    "name": "Pale Oak Shelf",
+    "namespacedId": "pale_oak_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/pale_oak_shelf.png",
+    "item": null,
+    "tool": "Axe",
+    "flammable": true,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          187,
+          181,
+          179
+        ],
+        "amount": 0.739
+      },
+      {
+        "color": [
+          247,
+          240,
+          239
+        ],
+        "amount": 0.211
+      },
+      {
+        "color": [
+          140,
+          133,
+          133
+        ],
+        "amount": 0.029
+      },
+      {
+        "color": [
+          231,
+          220,
+          221
+        ],
+        "amount": 0.018
       }
     ]
   },
@@ -37706,6 +39286,48 @@
     ]
   },
   {
+    "name": "Short Dry Grass",
+    "namespacedId": "short_dry_grass",
+    "description": "Short dry grass is a one-block tall foliage block that generates frequently in deserts and all types of badlands. It grows on sand and terracotta. It can also be eaten by sheep.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/short_dry_grass.png",
+    "item": null,
+    "blastResistance": 0,
+    "colors": [
+      {
+        "color": [
+          168,
+          135,
+          86
+        ],
+        "amount": 0.582
+      },
+      {
+        "color": [
+          207,
+          197,
+          155
+        ],
+        "amount": 0.34
+      },
+      {
+        "color": [
+          195,
+          172,
+          130
+        ],
+        "amount": 0.057
+      },
+      {
+        "color": [
+          204,
+          178,
+          130
+        ],
+        "amount": 0.011
+      }
+    ]
+  },
+  {
     "name": "Short Grass",
     "namespacedId": "short_grass",
     "description": "Short grass is a non-solid plant block that has wheat seeds as a drop. Its color is biome-dependent, and matches the color of grass blocks.",
@@ -39663,6 +41285,50 @@
           4
         ],
         "amount": 0.027
+      }
+    ]
+  },
+  {
+    "name": "Spruce Shelf",
+    "namespacedId": "spruce_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/spruce_shelf.png",
+    "item": null,
+    "tool": "Axe",
+    "flammable": true,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          85,
+          67,
+          38
+        ],
+        "amount": 0.743
+      },
+      {
+        "color": [
+          124,
+          93,
+          54
+        ],
+        "amount": 0.221
+      },
+      {
+        "color": [
+          57,
+          51,
+          34
+        ],
+        "amount": 0.018
+      },
+      {
+        "color": [
+          79,
+          79,
+          82
+        ],
+        "amount": 0.012
       }
     ]
   },
@@ -41921,6 +43587,56 @@
     ]
   },
   {
+    "name": "Tall Dry Grass",
+    "namespacedId": "tall_dry_grass",
+    "description": "Tall dry grass is the tall variant of dry grass. Unlike other tall variants of foliage, this block is only one-block tall. It generates frequently in deserts and all types of badlands, and looks like a more full version of short dry grass. It also grows on sand and terracotta, and can be eaten by sheep...",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/tall_dry_grass.png",
+    "item": null,
+    "blastResistance": 0,
+    "colors": [
+      {
+        "color": [
+          198,
+          180,
+          136
+        ],
+        "amount": 0.67
+      },
+      {
+        "color": [
+          172,
+          148,
+          100
+        ],
+        "amount": 0.161
+      },
+      {
+        "color": [
+          156,
+          118,
+          69
+        ],
+        "amount": 0.102
+      },
+      {
+        "color": [
+          171,
+          146,
+          92
+        ],
+        "amount": 0.049
+      },
+      {
+        "color": [
+          219,
+          209,
+          163
+        ],
+        "amount": 0.019
+      }
+    ]
+  },
+  {
     "name": "Tall Grass",
     "namespacedId": "tall_grass",
     "description": "Tall grass is the 2-block tall variant of short grass.",
@@ -42085,6 +43801,90 @@
           43
         ],
         "amount": 0.112
+      }
+    ]
+  },
+  {
+    "name": "Test Block",
+    "namespacedId": "test_block",
+    "description": "A test block is a technical block that is used for game tests.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/test_block.png",
+    "item": null,
+    "blastResistance": null,
+    "colors": [
+      {
+        "color": [
+          130,
+          93,
+          52
+        ],
+        "amount": 0.533
+      },
+      {
+        "color": [
+          211,
+          211,
+          210
+        ],
+        "amount": 0.394
+      },
+      {
+        "color": [
+          145,
+          142,
+          137
+        ],
+        "amount": 0.058
+      },
+      {
+        "color": [
+          197,
+          152,
+          84
+        ],
+        "amount": 0.012
+      }
+    ]
+  },
+  {
+    "name": "Test Instance Block",
+    "namespacedId": "test_instance_block",
+    "description": "A test instance block is a technical block that is used for game tests.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/test_instance_block.png",
+    "item": null,
+    "blastResistance": null,
+    "colors": [
+      {
+        "color": [
+          73,
+          67,
+          65
+        ],
+        "amount": 0.598
+      },
+      {
+        "color": [
+          214,
+          214,
+          214
+        ],
+        "amount": 0.341
+      },
+      {
+        "color": [
+          136,
+          133,
+          131
+        ],
+        "amount": 0.04
+      },
+      {
+        "color": [
+          156,
+          156,
+          156
+        ],
+        "amount": 0.019
       }
     ]
   },
@@ -43755,6 +45555,58 @@
     ]
   },
   {
+    "name": "Warped Shelf",
+    "namespacedId": "warped_shelf",
+    "description": "A shelf is a block that can store and display up to three stacks of items. A shelf can be used to swap its slots with the slots in the player's hotbar. It swaps 1 slot normally, and 3 slots at a time when powered with redstone.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/warped_shelf.png",
+    "item": null,
+    "tool": "Axe",
+    "flammable": true,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          43,
+          119,
+          115
+        ],
+        "amount": 0.798
+      },
+      {
+        "color": [
+          63,
+          159,
+          154
+        ],
+        "amount": 0.096
+      },
+      {
+        "color": [
+          28,
+          81,
+          78
+        ],
+        "amount": 0.075
+      },
+      {
+        "color": [
+          35,
+          93,
+          84
+        ],
+        "amount": 0.021
+      },
+      {
+        "color": [
+          57,
+          148,
+          148
+        ],
+        "amount": 0.011
+      }
+    ]
+  },
+  {
     "name": "Warped Sign",
     "namespacedId": "warped_sign",
     "description": "A sign is a non-solid block that can display text, and can be placed on the top or side of other blocks. The text of signs can be customized with dyes and glow ink sacs, and they can be waxed to prevent its text from being edited by any player.",
@@ -44284,6 +46136,57 @@
     ]
   },
   {
+    "name": "Waxed Copper Bars",
+    "namespacedId": "waxed_copper_bars",
+    "description": "Copper bars are copper variants of bars. Unlike iron bars, they are colored copper orange and can oxidize over time, similar to other copper blocks.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_copper_bars.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          110,
+          54,
+          37
+        ],
+        "amount": 0.655
+      },
+      {
+        "color": [
+          149,
+          82,
+          60
+        ],
+        "amount": 0.147
+      },
+      {
+        "color": [
+          174,
+          98,
+          72
+        ],
+        "amount": 0.108
+      },
+      {
+        "color": [
+          132,
+          76,
+          52
+        ],
+        "amount": 0.079
+      },
+      {
+        "color": [
+          82,
+          43,
+          29
+        ],
+        "amount": 0.011
+      }
+    ]
+  },
+  {
     "name": "Waxed Copper Bulb",
     "namespacedId": "waxed_copper_bulb",
     "description": "A copper bulb is a light-emitting block. It toggles on or off when it receives a redstone pulse, and does not need continuous power to emit light. Its light level depends on its state of oxidation.",
@@ -44315,6 +46218,92 @@
           8
         ],
         "amount": 0.084
+      }
+    ]
+  },
+  {
+    "name": "Waxed Copper Chain",
+    "namespacedId": "waxed_copper_chain",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_copper_chain.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          172,
+          92,
+          66
+        ],
+        "amount": 0.356
+      },
+      {
+        "color": [
+          134,
+          68,
+          44
+        ],
+        "amount": 0.297
+      },
+      {
+        "color": [
+          164,
+          91,
+          61
+        ],
+        "amount": 0.238
+      },
+      {
+        "color": [
+          148,
+          76,
+          52
+        ],
+        "amount": 0.089
+      },
+      {
+        "color": [
+          156,
+          76,
+          52
+        ],
+        "amount": 0.02
+      }
+    ]
+  },
+  {
+    "name": "Waxed Copper Chest",
+    "namespacedId": "waxed_copper_chest",
+    "description": "Single",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_copper_chest.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          129,
+          70,
+          50
+        ],
+        "amount": 0.728
+      },
+      {
+        "color": [
+          196,
+          109,
+          82
+        ],
+        "amount": 0.243
+      },
+      {
+        "color": [
+          143,
+          141,
+          141
+        ],
+        "amount": 0.021
       }
     ]
   },
@@ -44370,6 +46359,49 @@
     ]
   },
   {
+    "name": "Waxed Copper Golem Statue",
+    "namespacedId": "waxed_copper_golem_statue",
+    "description": "A copper golem statue is the result of a copper golem fully oxidizing and petrifying into a block. It can be posed in four different ways, or it can be reanimated by scraping it with an axe enough times.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_copper_golem_statue.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          133,
+          74,
+          55
+        ],
+        "amount": 0.704
+      },
+      {
+        "color": [
+          218,
+          126,
+          100
+        ],
+        "amount": 0.199
+      },
+      {
+        "color": [
+          74,
+          33,
+          17
+        ],
+        "amount": 0.045
+      },
+      {
+        "color": [
+          184,
+          108,
+          84
+        ],
+        "amount": 0.043
+      }
+    ]
+  },
+  {
     "name": "Waxed Copper Grate",
     "namespacedId": "waxed_copper_grate",
     "description": "Copper grates are a variant of copper blocks that have perforations that can be seen through.",
@@ -44409,6 +46441,58 @@
           68
         ],
         "amount": 0.107
+      }
+    ]
+  },
+  {
+    "name": "Waxed Copper Lantern",
+    "namespacedId": "waxed_copper_lantern",
+    "description": "A copper lantern is a copper variant of a lantern that displays a green flame and oxidizes over time.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_copper_lantern.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "luminance": 15,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          116,
+          60,
+          43
+        ],
+        "amount": 0.612
+      },
+      {
+        "color": [
+          113,
+          175,
+          82
+        ],
+        "amount": 0.145
+      },
+      {
+        "color": [
+          167,
+          174,
+          162
+        ],
+        "amount": 0.117
+      },
+      {
+        "color": [
+          180,
+          99,
+          69
+        ],
+        "amount": 0.099
+      },
+      {
+        "color": [
+          57,
+          119,
+          59
+        ],
+        "amount": 0.027
       }
     ]
   },
@@ -44689,6 +46773,49 @@
     ]
   },
   {
+    "name": "Waxed Exposed Copper Bars",
+    "namespacedId": "waxed_exposed_copper_bars",
+    "description": "Copper bars are copper variants of bars. Unlike iron bars, they are colored copper orange and can oxidize over time, similar to other copper blocks.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_exposed_copper_bars.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          91,
+          75,
+          62
+        ],
+        "amount": 0.623
+      },
+      {
+        "color": [
+          132,
+          98,
+          82
+        ],
+        "amount": 0.196
+      },
+      {
+        "color": [
+          161,
+          113,
+          99
+        ],
+        "amount": 0.109
+      },
+      {
+        "color": [
+          114,
+          101,
+          84
+        ],
+        "amount": 0.066
+      }
+    ]
+  },
+  {
     "name": "Waxed Exposed Copper Bulb",
     "namespacedId": "waxed_exposed_copper_bulb",
     "description": "A copper bulb is a light-emitting block. It toggles on or off when it receives a redstone pulse, and does not need continuous power to emit light. Its light level depends on its state of oxidation.",
@@ -44732,6 +46859,100 @@
     ]
   },
   {
+    "name": "Waxed Exposed Copper Chain",
+    "namespacedId": "waxed_exposed_copper_chain",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_exposed_copper_chain.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          149,
+          129,
+          99
+        ],
+        "amount": 0.43
+      },
+      {
+        "color": [
+          119,
+          100,
+          84
+        ],
+        "amount": 0.156
+      },
+      {
+        "color": [
+          140,
+          108,
+          92
+        ],
+        "amount": 0.156
+      },
+      {
+        "color": [
+          104,
+          91,
+          76
+        ],
+        "amount": 0.141
+      },
+      {
+        "color": [
+          140,
+          116,
+          92
+        ],
+        "amount": 0.117
+      }
+    ]
+  },
+  {
+    "name": "Waxed Exposed Copper Chest",
+    "namespacedId": "waxed_exposed_copper_chest",
+    "description": "Single",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_exposed_copper_chest.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          119,
+          91,
+          76
+        ],
+        "amount": 0.859
+      },
+      {
+        "color": [
+          185,
+          128,
+          118
+        ],
+        "amount": 0.089
+      },
+      {
+        "color": [
+          68,
+          57,
+          45
+        ],
+        "amount": 0.038
+      },
+      {
+        "color": [
+          147,
+          146,
+          146
+        ],
+        "amount": 0.013
+      }
+    ]
+  },
+  {
     "name": "Waxed Exposed Copper Door",
     "namespacedId": "waxed_exposed_copper_door",
     "description": "A copper door is a type of door made of copper that can be opened and closed by the player without redstone.",
@@ -44763,6 +46984,57 @@
           46
         ],
         "amount": 0.054
+      }
+    ]
+  },
+  {
+    "name": "Waxed Exposed Copper Golem Statue",
+    "namespacedId": "waxed_exposed_copper_golem_statue",
+    "description": "A copper golem statue is the result of a copper golem fully oxidizing and petrifying into a block. It can be posed in four different ways, or it can be reanimated by scraping it with an axe enough times.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_exposed_copper_golem_statue.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          114,
+          86,
+          73
+        ],
+        "amount": 0.726
+      },
+      {
+        "color": [
+          198,
+          136,
+          126
+        ],
+        "amount": 0.191
+      },
+      {
+        "color": [
+          165,
+          115,
+          108
+        ],
+        "amount": 0.031
+      },
+      {
+        "color": [
+          61,
+          55,
+          46
+        ],
+        "amount": 0.03
+      },
+      {
+        "color": [
+          151,
+          135,
+          104
+        ],
+        "amount": 0.021
       }
     ]
   },
@@ -44806,6 +47078,50 @@
           107
         ],
         "amount": 0.012
+      }
+    ]
+  },
+  {
+    "name": "Waxed Exposed Copper Lantern",
+    "namespacedId": "waxed_exposed_copper_lantern",
+    "description": "A copper lantern is a copper variant of a lantern that displays a green flame and oxidizes over time.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_exposed_copper_lantern.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "luminance": 15,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          105,
+          90,
+          69
+        ],
+        "amount": 0.768
+      },
+      {
+        "color": [
+          174,
+          138,
+          121
+        ],
+        "amount": 0.136
+      },
+      {
+        "color": [
+          107,
+          168,
+          79
+        ],
+        "amount": 0.069
+      },
+      {
+        "color": [
+          140,
+          140,
+          140
+        ],
+        "amount": 0.018
       }
     ]
   },
@@ -45008,6 +47324,100 @@
     ]
   },
   {
+    "name": "Waxed Exposed Lightning Rod",
+    "namespacedId": "waxed_exposed_lightning_rod",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_exposed_lightning_rod.png",
+    "item": null,
+    "luminance": 15,
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          100,
+          77,
+          66
+        ],
+        "amount": 0.563
+      },
+      {
+        "color": [
+          153,
+          110,
+          97
+        ],
+        "amount": 0.213
+      },
+      {
+        "color": [
+          193,
+          134,
+          122
+        ],
+        "amount": 0.206
+      },
+      {
+        "color": [
+          124,
+          116,
+          84
+        ],
+        "amount": 0.016
+      }
+    ]
+  },
+  {
+    "name": "Waxed Lightning Rod",
+    "namespacedId": "waxed_lightning_rod",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_lightning_rod.png",
+    "item": null,
+    "luminance": 15,
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          206,
+          119,
+          95
+        ],
+        "amount": 0.391
+      },
+      {
+        "color": [
+          123,
+          69,
+          51
+        ],
+        "amount": 0.239
+      },
+      {
+        "color": [
+          168,
+          96,
+          72
+        ],
+        "amount": 0.225
+      },
+      {
+        "color": [
+          143,
+          84,
+          66
+        ],
+        "amount": 0.134
+      },
+      {
+        "color": [
+          138,
+          76,
+          68
+        ],
+        "amount": 0.011
+      }
+    ]
+  },
+  {
     "name": "Waxed Oxidized Chiseled Copper",
     "namespacedId": "waxed_oxidized_chiseled_copper",
     "description": "Chiseled copper is a variant of copper blocks that generates in trial chambers.&#91;1&#93;",
@@ -45094,6 +47504,49 @@
     ]
   },
   {
+    "name": "Waxed Oxidized Copper Bars",
+    "namespacedId": "waxed_oxidized_copper_bars",
+    "description": "Copper bars are copper variants of bars. Unlike iron bars, they are colored copper orange and can oxidize over time, similar to other copper blocks.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_oxidized_copper_bars.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          44,
+          86,
+          70
+        ],
+        "amount": 0.758
+      },
+      {
+        "color": [
+          72,
+          142,
+          117
+        ],
+        "amount": 0.102
+      },
+      {
+        "color": [
+          60,
+          121,
+          95
+        ],
+        "amount": 0.067
+      },
+      {
+        "color": [
+          60,
+          105,
+          93
+        ],
+        "amount": 0.065
+      }
+    ]
+  },
+  {
     "name": "Waxed Oxidized Copper Bulb",
     "namespacedId": "waxed_oxidized_copper_bulb",
     "description": "A copper bulb is a light-emitting block. It toggles on or off when it receives a redstone pulse, and does not need continuous power to emit light. Its light level depends on its state of oxidation.",
@@ -45133,6 +47586,100 @@
           132
         ],
         "amount": 0.015
+      }
+    ]
+  },
+  {
+    "name": "Waxed Oxidized Copper Chain",
+    "namespacedId": "waxed_oxidized_copper_chain",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_oxidized_copper_chain.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          61,
+          132,
+          108
+        ],
+        "amount": 0.49
+      },
+      {
+        "color": [
+          60,
+          101,
+          84
+        ],
+        "amount": 0.367
+      },
+      {
+        "color": [
+          63,
+          116,
+          95
+        ],
+        "amount": 0.102
+      },
+      {
+        "color": [
+          60,
+          124,
+          108
+        ],
+        "amount": 0.027
+      },
+      {
+        "color": [
+          68,
+          136,
+          116
+        ],
+        "amount": 0.014
+      }
+    ]
+  },
+  {
+    "name": "Waxed Oxidized Copper Chest",
+    "namespacedId": "waxed_oxidized_copper_chest",
+    "description": "Single",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_oxidized_copper_chest.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          46,
+          93,
+          77
+        ],
+        "amount": 0.69
+      },
+      {
+        "color": [
+          84,
+          170,
+          141
+        ],
+        "amount": 0.197
+      },
+      {
+        "color": [
+          69,
+          141,
+          115
+        ],
+        "amount": 0.071
+      },
+      {
+        "color": [
+          143,
+          144,
+          143
+        ],
+        "amount": 0.036
       }
     ]
   },
@@ -45180,6 +47727,41 @@
     ]
   },
   {
+    "name": "Waxed Oxidized Copper Golem Statue",
+    "namespacedId": "waxed_oxidized_copper_golem_statue",
+    "description": "A copper golem statue is the result of a copper golem fully oxidizing and petrifying into a block. It can be posed in four different ways, or it can be reanimated by scraping it with an axe enough times.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_oxidized_copper_golem_statue.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          62,
+          118,
+          95
+        ],
+        "amount": 0.798
+      },
+      {
+        "color": [
+          101,
+          188,
+          152
+        ],
+        "amount": 0.177
+      },
+      {
+        "color": [
+          33,
+          62,
+          53
+        ],
+        "amount": 0.013
+      }
+    ]
+  },
+  {
     "name": "Waxed Oxidized Copper Grate",
     "namespacedId": "waxed_oxidized_copper_grate",
     "description": "Copper grates are a variant of copper blocks that have perforations that can be seen through.",
@@ -45219,6 +47801,58 @@
           154
         ],
         "amount": 0.05
+      }
+    ]
+  },
+  {
+    "name": "Waxed Oxidized Copper Lantern",
+    "namespacedId": "waxed_oxidized_copper_lantern",
+    "description": "A copper lantern is a copper variant of a lantern that displays a green flame and oxidizes over time.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_oxidized_copper_lantern.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "luminance": 15,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          47,
+          93,
+          74
+        ],
+        "amount": 0.59
+      },
+      {
+        "color": [
+          140,
+          171,
+          119
+        ],
+        "amount": 0.275
+      },
+      {
+        "color": [
+          76,
+          148,
+          132
+        ],
+        "amount": 0.07
+      },
+      {
+        "color": [
+          86,
+          155,
+          78
+        ],
+        "amount": 0.035
+      },
+      {
+        "color": [
+          92,
+          132,
+          63
+        ],
+        "amount": 0.03
       }
     ]
   },
@@ -45405,6 +48039,49 @@
     ]
   },
   {
+    "name": "Waxed Oxidized Lightning Rod",
+    "namespacedId": "waxed_oxidized_lightning_rod",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_oxidized_lightning_rod.png",
+    "item": null,
+    "luminance": 15,
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          49,
+          99,
+          84
+        ],
+        "amount": 0.553
+      },
+      {
+        "color": [
+          97,
+          185,
+          150
+        ],
+        "amount": 0.25
+      },
+      {
+        "color": [
+          68,
+          117,
+          97
+        ],
+        "amount": 0.106
+      },
+      {
+        "color": [
+          83,
+          150,
+          121
+        ],
+        "amount": 0.08
+      }
+    ]
+  },
+  {
     "name": "Waxed Weathered Chiseled Copper",
     "namespacedId": "waxed_weathered_chiseled_copper",
     "description": "Chiseled copper is a variant of copper blocks that generates in trial chambers.&#91;1&#93;",
@@ -45499,6 +48176,57 @@
     ]
   },
   {
+    "name": "Waxed Weathered Copper Bars",
+    "namespacedId": "waxed_weathered_copper_bars",
+    "description": "Copper bars are copper variants of bars. Unlike iron bars, they are colored copper orange and can oxidize over time, similar to other copper blocks.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_weathered_copper_bars.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          56,
+          82,
+          66
+        ],
+        "amount": 0.723
+      },
+      {
+        "color": [
+          96,
+          145,
+          95
+        ],
+        "amount": 0.118
+      },
+      {
+        "color": [
+          75,
+          115,
+          84
+        ],
+        "amount": 0.081
+      },
+      {
+        "color": [
+          100,
+          118,
+          78
+        ],
+        "amount": 0.067
+      },
+      {
+        "color": [
+          73,
+          110,
+          100
+        ],
+        "amount": 0.011
+      }
+    ]
+  },
+  {
     "name": "Waxed Weathered Copper Bulb",
     "namespacedId": "waxed_weathered_copper_bulb",
     "description": "A copper bulb is a light-emitting block. It toggles on or off when it receives a redstone pulse, and does not need continuous power to emit light. Its light level depends on its state of oxidation.",
@@ -45538,6 +48266,108 @@
           40
         ],
         "amount": 0.026
+      }
+    ]
+  },
+  {
+    "name": "Waxed Weathered Copper Chain",
+    "namespacedId": "waxed_weathered_copper_chain",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_weathered_copper_chain.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          64,
+          96,
+          86
+        ],
+        "amount": 0.389
+      },
+      {
+        "color": [
+          106,
+          149,
+          93
+        ],
+        "amount": 0.325
+      },
+      {
+        "color": [
+          76,
+          116,
+          100
+        ],
+        "amount": 0.23
+      },
+      {
+        "color": [
+          108,
+          116,
+          100
+        ],
+        "amount": 0.04
+      },
+      {
+        "color": [
+          76,
+          124,
+          108
+        ],
+        "amount": 0.018
+      }
+    ]
+  },
+  {
+    "name": "Waxed Weathered Copper Chest",
+    "namespacedId": "waxed_weathered_copper_chest",
+    "description": "Single",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_weathered_copper_chest.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          71,
+          100,
+          70
+        ],
+        "amount": 0.88
+      },
+      {
+        "color": [
+          97,
+          159,
+          115
+        ],
+        "amount": 0.047
+      },
+      {
+        "color": [
+          115,
+          174,
+          146
+        ],
+        "amount": 0.027
+      },
+      {
+        "color": [
+          110,
+          127,
+          88
+        ],
+        "amount": 0.026
+      },
+      {
+        "color": [
+          148,
+          149,
+          148
+        ],
+        "amount": 0.019
       }
     ]
   },
@@ -45585,6 +48415,57 @@
     ]
   },
   {
+    "name": "Waxed Weathered Copper Golem Statue",
+    "namespacedId": "waxed_weathered_copper_golem_statue",
+    "description": "A copper golem statue is the result of a copper golem fully oxidizing and petrifying into a block. It can be posed in four different ways, or it can be reanimated by scraping it with an axe enough times.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_weathered_copper_golem_statue.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          75,
+          106,
+          76
+        ],
+        "amount": 0.682
+      },
+      {
+        "color": [
+          115,
+          174,
+          140
+        ],
+        "amount": 0.223
+      },
+      {
+        "color": [
+          100,
+          148,
+          124
+        ],
+        "amount": 0.052
+      },
+      {
+        "color": [
+          52,
+          63,
+          48
+        ],
+        "amount": 0.032
+      },
+      {
+        "color": [
+          125,
+          119,
+          101
+        ],
+        "amount": 0.011
+      }
+    ]
+  },
+  {
     "name": "Waxed Weathered Copper Grate",
     "namespacedId": "waxed_weathered_copper_grate",
     "description": "Copper grates are a variant of copper blocks that have perforations that can be seen through.",
@@ -45624,6 +48505,58 @@
           52
         ],
         "amount": 0.019
+      }
+    ]
+  },
+  {
+    "name": "Waxed Weathered Copper Lantern",
+    "namespacedId": "waxed_weathered_copper_lantern",
+    "description": "A copper lantern is a copper variant of a lantern that displays a green flame and oxidizes over time.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/waxed_weathered_copper_lantern.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "luminance": 15,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          59,
+          89,
+          64
+        ],
+        "amount": 0.445
+      },
+      {
+        "color": [
+          162,
+          197,
+          137
+        ],
+        "amount": 0.362
+      },
+      {
+        "color": [
+          102,
+          177,
+          78
+        ],
+        "amount": 0.131
+      },
+      {
+        "color": [
+          109,
+          146,
+          84
+        ],
+        "amount": 0.049
+      },
+      {
+        "color": [
+          140,
+          132,
+          116
+        ],
+        "amount": 0.013
       }
     ]
   },
@@ -45834,6 +48767,41 @@
     ]
   },
   {
+    "name": "Waxed Weathered Lightning Rod",
+    "namespacedId": "weathered_lightning_rod",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/weathered_lightning_rod.png",
+    "item": null,
+    "luminance": 15,
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          62,
+          88,
+          65
+        ],
+        "amount": 0.638
+      },
+      {
+        "color": [
+          106,
+          164,
+          128
+        ],
+        "amount": 0.304
+      },
+      {
+        "color": [
+          84,
+          129,
+          87
+        ],
+        "amount": 0.045
+      }
+    ]
+  },
+  {
     "name": "Weathered Chiseled Copper",
     "namespacedId": "weathered_chiseled_copper",
     "description": "Chiseled copper is a variant of copper blocks that generates in trial chambers.&#91;1&#93;",
@@ -45928,6 +48896,57 @@
     ]
   },
   {
+    "name": "Weathered Copper Bars",
+    "namespacedId": "weathered_copper_bars",
+    "description": "Copper bars are copper variants of bars. Unlike iron bars, they are colored copper orange and can oxidize over time, similar to other copper blocks.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/weathered_copper_bars.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          56,
+          82,
+          66
+        ],
+        "amount": 0.723
+      },
+      {
+        "color": [
+          96,
+          145,
+          95
+        ],
+        "amount": 0.118
+      },
+      {
+        "color": [
+          75,
+          115,
+          84
+        ],
+        "amount": 0.081
+      },
+      {
+        "color": [
+          100,
+          118,
+          78
+        ],
+        "amount": 0.067
+      },
+      {
+        "color": [
+          73,
+          110,
+          100
+        ],
+        "amount": 0.011
+      }
+    ]
+  },
+  {
     "name": "Weathered Copper Bulb",
     "namespacedId": "weathered_copper_bulb",
     "description": "A copper bulb is a light-emitting block. It toggles on or off when it receives a redstone pulse, and does not need continuous power to emit light. Its light level depends on its state of oxidation.",
@@ -45967,6 +48986,108 @@
           40
         ],
         "amount": 0.026
+      }
+    ]
+  },
+  {
+    "name": "Weathered Copper Chain",
+    "namespacedId": "weathered_copper_chain",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/weathered_copper_chain.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          64,
+          96,
+          86
+        ],
+        "amount": 0.389
+      },
+      {
+        "color": [
+          106,
+          149,
+          93
+        ],
+        "amount": 0.325
+      },
+      {
+        "color": [
+          76,
+          116,
+          100
+        ],
+        "amount": 0.23
+      },
+      {
+        "color": [
+          108,
+          116,
+          100
+        ],
+        "amount": 0.04
+      },
+      {
+        "color": [
+          76,
+          124,
+          108
+        ],
+        "amount": 0.018
+      }
+    ]
+  },
+  {
+    "name": "Weathered Copper Chest",
+    "namespacedId": "weathered_copper_chest",
+    "description": "Single",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/weathered_copper_chest.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          71,
+          100,
+          70
+        ],
+        "amount": 0.88
+      },
+      {
+        "color": [
+          97,
+          159,
+          115
+        ],
+        "amount": 0.047
+      },
+      {
+        "color": [
+          115,
+          174,
+          146
+        ],
+        "amount": 0.027
+      },
+      {
+        "color": [
+          110,
+          127,
+          88
+        ],
+        "amount": 0.026
+      },
+      {
+        "color": [
+          148,
+          149,
+          148
+        ],
+        "amount": 0.019
       }
     ]
   },
@@ -46014,6 +49135,57 @@
     ]
   },
   {
+    "name": "Weathered Copper Golem Statue",
+    "namespacedId": "weathered_copper_golem_statue",
+    "description": "A copper golem statue is the result of a copper golem fully oxidizing and petrifying into a block. It can be posed in four different ways, or it can be reanimated by scraping it with an axe enough times.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/weathered_copper_golem_statue.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          75,
+          106,
+          76
+        ],
+        "amount": 0.682
+      },
+      {
+        "color": [
+          115,
+          174,
+          140
+        ],
+        "amount": 0.223
+      },
+      {
+        "color": [
+          100,
+          148,
+          124
+        ],
+        "amount": 0.052
+      },
+      {
+        "color": [
+          52,
+          63,
+          48
+        ],
+        "amount": 0.032
+      },
+      {
+        "color": [
+          125,
+          119,
+          101
+        ],
+        "amount": 0.011
+      }
+    ]
+  },
+  {
     "name": "Weathered Copper Grate",
     "namespacedId": "weathered_copper_grate",
     "description": "Copper grates are a variant of copper blocks that have perforations that can be seen through.",
@@ -46053,6 +49225,58 @@
           52
         ],
         "amount": 0.019
+      }
+    ]
+  },
+  {
+    "name": "Weathered Copper Lantern",
+    "namespacedId": "weathered_copper_lantern",
+    "description": "A copper lantern is a copper variant of a lantern that displays a green flame and oxidizes over time.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/weathered_copper_lantern.png",
+    "item": null,
+    "tool": "Pickaxe",
+    "luminance": 15,
+    "blastResistance": 3,
+    "colors": [
+      {
+        "color": [
+          59,
+          89,
+          64
+        ],
+        "amount": 0.445
+      },
+      {
+        "color": [
+          162,
+          197,
+          137
+        ],
+        "amount": 0.362
+      },
+      {
+        "color": [
+          102,
+          177,
+          78
+        ],
+        "amount": 0.131
+      },
+      {
+        "color": [
+          109,
+          146,
+          84
+        ],
+        "amount": 0.049
+      },
+      {
+        "color": [
+          140,
+          132,
+          116
+        ],
+        "amount": 0.013
       }
     ]
   },
@@ -46259,6 +49483,41 @@
           107
         ],
         "amount": 0.033
+      }
+    ]
+  },
+  {
+    "name": "Weathered Lightning Rod",
+    "namespacedId": "weathered_lightning_rod",
+    "description": "Java Edition",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/weathered_lightning_rod.png",
+    "item": null,
+    "luminance": 15,
+    "blastResistance": 6,
+    "colors": [
+      {
+        "color": [
+          62,
+          88,
+          65
+        ],
+        "amount": 0.638
+      },
+      {
+        "color": [
+          106,
+          164,
+          128
+        ],
+        "amount": 0.304
+      },
+      {
+        "color": [
+          84,
+          129,
+          87
+        ],
+        "amount": 0.045
       }
     ]
   },
@@ -47008,6 +50267,40 @@
           212
         ],
         "amount": 0.023
+      }
+    ]
+  },
+  {
+    "name": "Wildflowers",
+    "namespacedId": "wildflowers",
+    "description": "Wildflowers are a thin decorative flower that can be placed four times in the space of one block, similar to pink petals and leaf litter.",
+    "image": "https://mc.geertvandrunen.nl/_new/blocks/wildflowers.png",
+    "item": null,
+    "blastResistance": 0,
+    "colors": [
+      {
+        "color": [
+          234,
+          193,
+          50
+        ],
+        "amount": 0.562
+      },
+      {
+        "color": [
+          201,
+          218,
+          218
+        ],
+        "amount": 0.315
+      },
+      {
+        "color": [
+          67,
+          89,
+          54
+        ],
+        "amount": 0.113
       }
     ]
   },
