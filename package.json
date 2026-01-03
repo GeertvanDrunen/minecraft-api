@@ -6,6 +6,8 @@
     "items": "nodemon scripts/items.ts",
     "blocks": "nodemon scripts/blocks.ts",
     "recipes": "nodemon scripts/recipes.ts",
+    "upload:r2": "ts-node scripts/upload-r2.ts",
+    "upload:r2:extras": "ts-node scripts/upload-r2.ts --include biomes,circles,generatedStructures,mobs,redstone,trades",
     "prettier": "prettier . -w"
   },
   "repository": {
@@ -35,6 +37,7 @@
     "zod": "^3.11.6"
   },
   "devDependencies": {
+    "@aws-sdk/client-s3": "^3.500.0",
     "@types/node": "^17.0.8",
     "@types/sharp": "^0.29.5",
     "chalk": "^3.0.0",

@@ -47,3 +47,44 @@ To form requests to the API, append the path of the resource you want to the end
 # A Note About Development
 
 This project is currently a work in progress, and so there may be errors in the documentation or bugs in the API. If you find one, you can help me out by creating an issue in the [GitHub repository](https://github.com/anish-shanbhag/minecraft-api).
+
+# Uploading `public/` assets to Cloudflare R2
+
+The `public/blocks` and `public/items` folders contain ~2k images, which is more than the Cloudflare dashboard upload limit. Use the S3-compatible R2 API instead:
+
+1) Create an R2 bucket in the Cloudflare dashboard.
+2) Create an R2 API token / access key pair (R2 → Manage R2 API tokens).
+3) Install deps (adds the AWS S3 client used by the script):
+
+```bash
+npm install
+```
+
+4) Upload:
+
+```bash
+cp .env.r2.example .env.r2
+# fill in the values in `.env.r2` (the upload script auto-loads it)
+
+# dry run
+npm run upload:r2 -- --dry-run
+
+# real upload
+npm run upload:r2
+```
+
+By default it uploads `public/blocks` and `public/items` into the bucket as `blocks/...` and `items/...`.
+
+To upload only one directory, set `R2_INCLUDE=blocks` (or `items`) in `.env.r2`, or pass `--include blocks` / `--include items`.
+
+To upload into a versioned folder, set `R2_PREFIX=v1` (objects will be `v1/blocks/...` and `v1/items/...`).
+
+To upload the other `public/` folders (biomes, circles, generatedStructures, mobs, redstone, trades):
+
+```bash
+npm run upload:r2 -- --include biomes,circles,generatedStructures,mobs,redstone,trades
+# or
+npm run upload:r2:extras
+```
+
+To skip keys that already exist in the bucket, add `--skip-existing` (or set `R2_SKIP_EXISTING=1`).

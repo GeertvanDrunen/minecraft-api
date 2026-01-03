@@ -30,9 +30,9 @@
   {
     "item": "Acacia Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Acacia Log",
       "Stripped Acacia Log",
       "Stripped Acacia Log",
@@ -42,54 +42,17 @@
     ]
   },
   {
-    "item": "Acacia Planks",
+    "item": "Acacia Shelf",
     "recipe": [
+      "Stripped Acacia Log",
+      "Stripped Acacia Log",
+      "Stripped Acacia Log",
       null,
       null,
       null,
-      null,
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Acacia Log",
+      "Stripped Acacia Log",
+      "Stripped Acacia Log"
     ]
   },
   {
@@ -493,9 +456,9 @@
   {
     "item": "Bamboo Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Block of Stripped Bamboo",
       "Block of Stripped Bamboo",
       "Block of Stripped Bamboo",
@@ -505,17 +468,17 @@
     ]
   },
   {
-    "item": "Bamboo Mosaic Slab",
+    "item": "Bamboo Mosaic",
     "recipe": [
       null,
+      "Bamboo Slab",
+      null,
+      null,
+      "Bamboo Slab",
       null,
       null,
       null,
-      null,
-      null,
-      "Bamboo Mosaic",
-      "Bamboo Mosaic",
-      "Bamboo Mosaic"
+      null
     ]
   },
   {
@@ -526,20 +489,6 @@
       null,
       null,
       null,
-      null,
-      "Bamboo Mosaic",
-      "Bamboo Mosaic",
-      "Bamboo Mosaic"
-    ]
-  },
-  {
-    "item": "Bamboo Mosaic Stairs",
-    "recipe": [
-      "Bamboo Mosaic",
-      null,
-      null,
-      "Bamboo Mosaic",
-      "Bamboo Mosaic",
       null,
       "Bamboo Mosaic",
       "Bamboo Mosaic",
@@ -606,6 +555,20 @@
     ]
   },
   {
+    "item": "Bamboo Shelf",
+    "recipe": [
+      "Block of Stripped Bamboo",
+      "Block of Stripped Bamboo",
+      "Block of Stripped Bamboo",
+      null,
+      null,
+      null,
+      "Block of Stripped Bamboo",
+      "Block of Stripped Bamboo",
+      "Block of Stripped Bamboo"
+    ]
+  },
+  {
     "item": "Beacon",
     "recipe": [
       "Glass",
@@ -664,9 +627,9 @@
   {
     "item": "Birch Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Birch Log",
       "Stripped Birch Log",
       "Stripped Birch Log",
@@ -676,54 +639,17 @@
     ]
   },
   {
-    "item": "Birch Planks",
+    "item": "Birch Shelf",
     "recipe": [
+      "Stripped Birch Log",
+      "Stripped Birch Log",
+      "Stripped Birch Log",
       null,
       null,
       null,
-      null,
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Birch Log",
+      "Stripped Birch Log",
+      "Stripped Birch Log"
     ]
   },
   {
@@ -867,11 +793,11 @@
       null,
       null,
       null,
-      "Black Carpet",
-      "Black Dye",
       null,
       null,
       null,
+      "Black Wool",
+      "Black Wool",
       null
     ]
   },
@@ -881,11 +807,11 @@
       null,
       null,
       null,
+      "Black Carpet",
+      "Black Dye",
       null,
       null,
       null,
-      "Black Wool",
-      "Black Wool",
       null
     ]
   },
@@ -925,6 +851,34 @@
       null,
       null,
       "Wither Rose",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Black Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Black Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Black Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Black Harness",
+      "Black Dye",
       null,
       null,
       null,
@@ -1027,20 +981,6 @@
   {
     "item": "Black Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Black Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Black Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -1050,6 +990,20 @@
       "Black Stained Glass",
       "Black Stained Glass",
       "Black Stained Glass"
+    ]
+  },
+  {
+    "item": "Black Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Black Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -1162,6 +1116,20 @@
       "Amethyst Shard",
       "Amethyst Shard",
       null
+    ]
+  },
+  {
+    "item": "Block of Bamboo",
+    "recipe": [
+      "Bamboo",
+      "Bamboo",
+      "Bamboo",
+      "Bamboo",
+      "Bamboo",
+      "Bamboo",
+      "Bamboo",
+      "Bamboo",
+      "Bamboo"
     ]
   },
   {
@@ -1473,11 +1441,11 @@
       null,
       null,
       null,
-      "Blue Carpet",
-      "Blue Dye",
       null,
       null,
       null,
+      "Blue Wool",
+      "Blue Wool",
       null
     ]
   },
@@ -1487,11 +1455,11 @@
       null,
       null,
       null,
+      "Blue Carpet",
+      "Blue Dye",
       null,
       null,
       null,
-      "Blue Wool",
-      "Blue Wool",
       null
     ]
   },
@@ -1516,7 +1484,7 @@
       null,
       null,
       null,
-      "Cornflower",
+      "Lapis Lazuli",
       null,
       null,
       null,
@@ -1530,7 +1498,35 @@
       null,
       null,
       null,
-      "Lapis Lazuli",
+      "Cornflower",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Blue Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Blue Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Blue Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Blue Harness",
+      "Blue Dye",
       null,
       null,
       null,
@@ -1647,20 +1643,6 @@
   {
     "item": "Blue Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Blue Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Blue Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -1670,6 +1652,20 @@
       "Blue Stained Glass",
       "Blue Stained Glass",
       "Blue Stained Glass"
+    ]
+  },
+  {
+    "item": "Blue Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Blue Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -1698,6 +1694,23 @@
       null,
       null,
       null
+    ]
+  },
+  {
+    "item": "Bolt Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Bolt Armor Trim",
+      "Diamond",
+      "Diamond",
+      [
+        "Block of Copper",
+        "Waxed Block of Copper"
+      ],
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
     ]
   },
   {
@@ -2021,11 +2034,11 @@
       null,
       null,
       null,
-      "Brown Carpet",
-      "Brown Dye",
       null,
       null,
       null,
+      "Brown Wool",
+      "Brown Wool",
       null
     ]
   },
@@ -2035,11 +2048,11 @@
       null,
       null,
       null,
+      "Brown Carpet",
+      "Brown Dye",
       null,
       null,
       null,
-      "Brown Wool",
-      "Brown Wool",
       null
     ]
   },
@@ -2065,6 +2078,34 @@
       null,
       null,
       "Cocoa Beans",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Brown Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Brown Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Brown Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Brown Harness",
+      "Brown Dye",
       null,
       null,
       null,
@@ -2167,20 +2208,6 @@
   {
     "item": "Brown Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Brown Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Brown Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -2190,6 +2217,20 @@
       "Brown Stained Glass",
       "Brown Stained Glass",
       "Brown Stained Glass"
+    ]
+  },
+  {
+    "item": "Brown Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Brown Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -2263,20 +2304,6 @@
     ]
   },
   {
-    "item": "Cake",
-    "recipe": [
-      "Milk Bucket",
-      "Milk Bucket",
-      "Milk Bucket",
-      "Sugar",
-      "Egg",
-      "Sugar",
-      "Wheat",
-      "Wheat",
-      "Wheat"
-    ]
-  },
-  {
     "item": "Calibrated Sculk Sensor",
     "recipe": [
       null,
@@ -2297,156 +2324,10 @@
       "Stick",
       null,
       "Stick",
-      "Charcoal",
-      "Stick",
       [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Crimson Stem",
-        "Warped Stem",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Stripped Crimson Stem",
-        "Stripped Warped Stem",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Crimson Hyphae",
-        "Warped Hyphae",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood",
-        "Stripped Crimson Hyphae",
-        "Stripped Warped Hyphae"
+        "Coal",
+        "Charcoal"
       ],
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Crimson Stem",
-        "Warped Stem",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Stripped Crimson Stem",
-        "Stripped Warped Stem",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Crimson Hyphae",
-        "Warped Hyphae",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood",
-        "Stripped Crimson Hyphae",
-        "Stripped Warped Hyphae"
-      ],
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Crimson Stem",
-        "Warped Stem",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Stripped Crimson Stem",
-        "Stripped Warped Stem",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Crimson Hyphae",
-        "Warped Hyphae",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood",
-        "Stripped Crimson Hyphae",
-        "Stripped Warped Hyphae"
-      ]
-    ]
-  },
-  {
-    "item": "Campfire",
-    "recipe": [
-      null,
-      "Stick",
-      null,
-      "Stick",
-      "Coal",
       "Stick",
       [
         "Oak Log",
@@ -2634,20 +2515,6 @@
     ]
   },
   {
-    "item": "Chain",
-    "recipe": [
-      null,
-      "Iron Nugget",
-      null,
-      null,
-      "Iron Ingot",
-      null,
-      null,
-      "Iron Nugget",
-      null
-    ]
-  },
-  {
     "item": "Cherry Boat",
     "recipe": [
       null,
@@ -2678,9 +2545,9 @@
   {
     "item": "Cherry Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Cherry Log",
       "Stripped Cherry Log",
       "Stripped Cherry Log",
@@ -2690,54 +2557,17 @@
     ]
   },
   {
-    "item": "Cherry Planks",
+    "item": "Cherry Shelf",
     "recipe": [
+      "Stripped Cherry Log",
+      "Stripped Cherry Log",
+      "Stripped Cherry Log",
       null,
       null,
       null,
-      null,
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Cherry Log",
+      "Stripped Cherry Log",
+      "Stripped Cherry Log"
     ]
   },
   {
@@ -2751,6 +2581,20 @@
       null,
       null,
       null,
+      null
+    ]
+  },
+  {
+    "item": "Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Cut Copper Slab",
+      null,
+      null,
+      "Cut Copper Slab",
       null
     ]
   },
@@ -2934,6 +2778,20 @@
       "Gravel",
       "Dirt",
       null
+    ]
+  },
+  {
+    "item": "Coast Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Coast Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Cobblestone",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
     ]
   },
   {
@@ -3168,6 +3026,160 @@
     ]
   },
   {
+    "item": "Copper Axe",
+    "recipe": [
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      "Copper Ingot",
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Copper Bars",
+    "recipe": [
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Copper Boots",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Ingot",
+      null,
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      "Copper Ingot"
+    ]
+  },
+  {
+    "item": "Copper Bulb",
+    "recipe": [
+      null,
+      "Block of Copper",
+      null,
+      "Block of Copper",
+      "Blaze Rod",
+      "Block of Copper",
+      null,
+      "Redstone Dust",
+      null
+    ]
+  },
+  {
+    "item": "Copper Chain",
+    "recipe": [
+      null,
+      "Copper Nugget",
+      null,
+      null,
+      "Copper Ingot",
+      null,
+      null,
+      "Copper Nugget",
+      null
+    ]
+  },
+  {
+    "item": "Copper Chest",
+    "recipe": [
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Chest",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot"
+    ]
+  },
+  {
+    "item": "Copper Chestplate",
+    "recipe": [
+      "Copper Ingot",
+      null,
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot"
+    ]
+  },
+  {
+    "item": "Copper Door",
+    "recipe": [
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      "Copper Ingot",
+      "Copper Ingot",
+      null
+    ]
+  },
+  {
+    "item": "Copper Grate",
+    "recipe": [
+      null,
+      "Block of Copper",
+      null,
+      "Block of Copper",
+      null,
+      "Block of Copper",
+      null,
+      "Block of Copper",
+      null
+    ]
+  },
+  {
+    "item": "Copper Helmet",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      "Copper Ingot"
+    ]
+  },
+  {
+    "item": "Copper Hoe",
+    "recipe": [
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
     "item": "Copper Ingot",
     "recipe": [
       null,
@@ -3181,6 +3193,149 @@
       null,
       null,
       null,
+      null
+    ]
+  },
+  {
+    "item": "Copper Ingot",
+    "recipe": [
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget"
+    ]
+  },
+  {
+    "item": "Copper Lantern",
+    "recipe": [
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Torch",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget",
+      "Copper Nugget"
+    ]
+  },
+  {
+    "item": "Copper Leggings",
+    "recipe": [
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      "Copper Ingot"
+    ]
+  },
+  {
+    "item": "Copper Nugget",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Copper Ingot",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Copper Pickaxe",
+    "recipe": [
+      "Copper Ingot",
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Copper Shovel",
+    "recipe": [
+      null,
+      "Copper Ingot",
+      null,
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Copper Spear",
+    "recipe": [
+      null,
+      null,
+      "Copper Ingot",
+      null,
+      "Stick",
+      null,
+      "Stick",
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Copper Sword",
+    "recipe": [
+      null,
+      "Copper Ingot",
+      null,
+      null,
+      "Copper Ingot",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Copper Torch",
+    "recipe": [
+      null,
+      "Copper Nugget",
+      null,
+      null,
+      [
+        "Coal",
+        "Charcoal"
+      ],
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Copper Trapdoor",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Ingot",
+      "Copper Ingot",
+      null,
+      "Copper Ingot",
+      "Copper Ingot",
       null
     ]
   },
@@ -3201,9 +3356,9 @@
   {
     "item": "Crimson Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Crimson Stem",
       "Stripped Crimson Stem",
       "Stripped Crimson Stem",
@@ -3227,26 +3382,17 @@
     ]
   },
   {
-    "item": "Crimson Planks",
+    "item": "Crimson Shelf",
     "recipe": [
+      "Stripped Crimson Stem",
+      "Stripped Crimson Stem",
+      "Stripped Crimson Stem",
       null,
       null,
       null,
-      null,
-      [
-        "Crimson Stem",
-        "Warped Stem",
-        "Stripped Crimson Stem",
-        "Stripped Warped Stem",
-        "Crimson Hyphae",
-        "Warped Hyphae",
-        "Stripped Crimson Hyphae",
-        "Stripped Warped Hyphae"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Crimson Stem",
+      "Stripped Crimson Stem",
+      "Stripped Crimson Stem"
     ]
   },
   {
@@ -3488,11 +3634,11 @@
       null,
       null,
       null,
-      "Cyan Carpet",
-      "Cyan Dye",
       null,
       null,
       null,
+      "Cyan Wool",
+      "Cyan Wool",
       null
     ]
   },
@@ -3502,11 +3648,11 @@
       null,
       null,
       null,
+      "Cyan Carpet",
+      "Cyan Dye",
       null,
       null,
       null,
-      "Cyan Wool",
-      "Cyan Wool",
       null
     ]
   },
@@ -3546,6 +3692,34 @@
       null,
       null,
       "Pitcher Plant",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Cyan Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Cyan Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Cyan Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Cyan Harness",
+      "Cyan Dye",
       null,
       null,
       null,
@@ -3648,20 +3822,6 @@
   {
     "item": "Cyan Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Cyan Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Cyan Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -3671,6 +3831,20 @@
       "Cyan Stained Glass",
       "Cyan Stained Glass",
       "Cyan Stained Glass"
+    ]
+  },
+  {
+    "item": "Cyan Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Cyan Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -3732,9 +3906,9 @@
   {
     "item": "Dark Oak Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Dark Oak Log",
       "Stripped Dark Oak Log",
       "Stripped Dark Oak Log",
@@ -3744,54 +3918,17 @@
     ]
   },
   {
-    "item": "Dark Oak Planks",
+    "item": "Dark Oak Shelf",
     "recipe": [
+      "Stripped Dark Oak Log",
+      "Stripped Dark Oak Log",
+      "Stripped Dark Oak Log",
       null,
       null,
       null,
-      null,
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Dark Oak Log",
+      "Stripped Dark Oak Log",
+      "Stripped Dark Oak Log"
     ]
   },
   {
@@ -3959,10 +4096,13 @@
         "&eShelter Pottery Sherd",
         "&eSkull Pottery Sherd",
         "&eSnort Pottery Sherd",
+        "Brick",
+        "Brick",
         "Brick"
       ],
       null,
       [
+        "Brick",
         "&eAngler Pottery Sherd",
         "&eArms Up Pottery Sherd",
         "&eArcher Pottery Sherd",
@@ -3986,10 +4126,13 @@
         "&eShelter Pottery Sherd",
         "&eSkull Pottery Sherd",
         "&eSnort Pottery Sherd",
+        "Brick",
         "Brick"
       ],
       null,
       [
+        "Brick",
+        "Brick",
         "&eAngler Pottery Sherd",
         "&eArms Up Pottery Sherd",
         "&eArcher Pottery Sherd",
@@ -4160,6 +4303,20 @@
   },
   {
     "item": "Diamond Axe",
+    "recipe": [
+      "Diamond",
+      "Diamond",
+      null,
+      "Diamond",
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Diamond Axe",
     "quantity": 1,
     "recipe": [
       "Diamond",
@@ -4218,6 +4375,20 @@
   },
   {
     "item": "Diamond Hoe",
+    "recipe": [
+      "Diamond",
+      "Diamond",
+      null,
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Diamond Hoe",
     "quantity": 1,
     "recipe": [
       "Diamond",
@@ -4248,6 +4419,20 @@
   },
   {
     "item": "Diamond Pickaxe",
+    "recipe": [
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Diamond Pickaxe",
     "quantity": 1,
     "recipe": [
       "Diamond",
@@ -4264,6 +4449,20 @@
   },
   {
     "item": "Diamond Shovel",
+    "recipe": [
+      null,
+      "Diamond",
+      null,
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Diamond Shovel",
     "quantity": 1,
     "recipe": [
       null,
@@ -4277,6 +4476,20 @@
       null
     ],
     "shapeless": false
+  },
+  {
+    "item": "Diamond Spear",
+    "recipe": [
+      null,
+      null,
+      "Diamond",
+      null,
+      "Stick",
+      null,
+      "Stick",
+      null,
+      null
+    ]
   },
   {
     "item": "Diamond Sword",
@@ -4379,6 +4592,20 @@
     ]
   },
   {
+    "item": "Dried Ghast",
+    "recipe": [
+      "Ghast Tear",
+      "Ghast Tear",
+      "Ghast Tear",
+      "Ghast Tear",
+      "Soul Sand",
+      "Ghast Tear",
+      "Ghast Tear",
+      "Ghast Tear",
+      "Ghast Tear"
+    ]
+  },
+  {
     "item": "Dried Kelp",
     "recipe": [
       null,
@@ -4435,6 +4662,20 @@
     ]
   },
   {
+    "item": "Dune Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Dune Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Sandstone",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
     "item": "Emerald",
     "recipe": [
       null,
@@ -4446,6 +4687,20 @@
       null,
       null,
       null
+    ]
+  },
+  {
+    "item": "Empty Locator Map",
+    "recipe": [
+      "Paper",
+      "Paper",
+      "Paper",
+      "Paper",
+      "Compass",
+      "Paper",
+      "Paper",
+      "Paper",
+      "Paper"
     ]
   },
   {
@@ -4575,6 +4830,48 @@
     ]
   },
   {
+    "item": "Exposed Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Exposed Cut Copper Slab",
+      null,
+      null,
+      "Exposed Cut Copper Slab",
+      null
+    ]
+  },
+  {
+    "item": "Exposed Copper Bulb",
+    "recipe": [
+      null,
+      "Exposed Copper",
+      null,
+      "Exposed Copper",
+      "Blaze Rod",
+      "Exposed Copper",
+      null,
+      "Redstone Dust",
+      null
+    ]
+  },
+  {
+    "item": "Exposed Copper Grate",
+    "recipe": [
+      null,
+      "Exposed Copper",
+      null,
+      "Exposed Copper",
+      null,
+      "Exposed Copper",
+      null,
+      "Exposed Copper",
+      null
+    ]
+  },
+  {
     "item": "Exposed Cut Copper",
     "recipe": [
       null,
@@ -4614,6 +4911,20 @@
       "Exposed Cut Copper",
       "Exposed Cut Copper",
       "Exposed Cut Copper"
+    ]
+  },
+  {
+    "item": "Eye Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Eye Armor Trim",
+      "Diamond",
+      "Diamond",
+      "End Stone",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
     ]
   },
   {
@@ -4951,6 +5262,20 @@
     ]
   },
   {
+    "item": "Flow Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Flow Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Breeze Rod",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
     "item": "Flower Charge Banner Pattern",
     "recipe": [
       null,
@@ -5152,6 +5477,20 @@
   },
   {
     "item": "Golden Axe",
+    "recipe": [
+      "Gold Ingot",
+      "Gold Ingot",
+      null,
+      "Gold Ingot",
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Golden Axe",
     "quantity": 1,
     "recipe": [
       "Gold Ingot",
@@ -5224,6 +5563,20 @@
   },
   {
     "item": "Golden Hoe",
+    "recipe": [
+      "Gold Ingot",
+      "Gold Ingot",
+      null,
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Golden Hoe",
     "quantity": 1,
     "recipe": [
       "Gold Ingot",
@@ -5254,6 +5607,20 @@
   },
   {
     "item": "Golden Pickaxe",
+    "recipe": [
+      "Gold Ingot",
+      "Gold Ingot",
+      "Gold Ingot",
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Golden Pickaxe",
     "quantity": 1,
     "recipe": [
       "Gold Ingot",
@@ -5270,6 +5637,20 @@
   },
   {
     "item": "Golden Shovel",
+    "recipe": [
+      null,
+      "Gold Ingot",
+      null,
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Golden Shovel",
     "quantity": 1,
     "recipe": [
       null,
@@ -5283,6 +5664,34 @@
       null
     ],
     "shapeless": false
+  },
+  {
+    "item": "Golden Spear",
+    "recipe": [
+      null,
+      null,
+      "Gold Ingot",
+      null,
+      "Stick",
+      null,
+      "Stick",
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Golden Sword",
+    "recipe": [
+      null,
+      "Gold Ingot",
+      null,
+      null,
+      "Gold Ingot",
+      null,
+      null,
+      "Stick",
+      null
+    ]
   },
   {
     "item": "Golden Sword",
@@ -5483,11 +5892,11 @@
       null,
       null,
       null,
-      "Gray Carpet",
-      "Gray Dye",
       null,
       null,
       null,
+      "Gray Wool",
+      "Gray Wool",
       null
     ]
   },
@@ -5497,11 +5906,11 @@
       null,
       null,
       null,
+      "Gray Carpet",
+      "Gray Dye",
       null,
       null,
       null,
-      "Gray Wool",
-      "Gray Wool",
       null
     ]
   },
@@ -5527,6 +5936,48 @@
       null,
       "Black Dye",
       "White Dye",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Gray Dye",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Closed Eyeblossom",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Gray Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Gray Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Gray Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Gray Harness",
+      "Gray Dye",
       null,
       null,
       null,
@@ -5629,20 +6080,6 @@
   {
     "item": "Gray Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Gray Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Gray Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -5652,6 +6089,20 @@
       "Gray Stained Glass",
       "Gray Stained Glass",
       "Gray Stained Glass"
+    ]
+  },
+  {
+    "item": "Gray Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Gray Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -5809,11 +6260,11 @@
       null,
       null,
       null,
-      "Green Carpet",
-      "Green Dye",
       null,
       null,
       null,
+      "Green Wool",
+      "Green Wool",
       null
     ]
   },
@@ -5823,11 +6274,11 @@
       null,
       null,
       null,
+      "Green Carpet",
+      "Green Dye",
       null,
       null,
       null,
-      "Green Wool",
-      "Green Wool",
       null
     ]
   },
@@ -5843,6 +6294,34 @@
       "Gravel",
       "Gravel",
       "Gravel"
+    ]
+  },
+  {
+    "item": "Green Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Green Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Green Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Green Harness",
+      "Green Dye",
+      null,
+      null,
+      null,
+      null
     ]
   },
   {
@@ -5941,20 +6420,6 @@
   {
     "item": "Green Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Green Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Green Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -5964,6 +6429,20 @@
       "Green Stained Glass",
       "Green Stained Glass",
       "Green Stained Glass"
+    ]
+  },
+  {
+    "item": "Green Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Green Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -6037,6 +6516,20 @@
     ]
   },
   {
+    "item": "Honey Bottle",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Glass Bottle",
+      "Glass Bottle",
+      "Honey Block",
+      "Glass Bottle",
+      "Glass Bottle",
+      null
+    ]
+  },
+  {
     "item": "Honeycomb Block",
     "recipe": [
       "Honeycomb",
@@ -6061,6 +6554,34 @@
       "Iron Ingot",
       null,
       "Iron Ingot",
+      null
+    ]
+  },
+  {
+    "item": "Host Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Host Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Terracotta",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
+    "item": "Iron Axe",
+    "recipe": [
+      "Iron Ingot",
+      "Iron Ingot",
+      null,
+      "Iron Ingot",
+      "Stick",
+      null,
+      null,
+      "Stick",
       null
     ]
   },
@@ -6109,6 +6630,20 @@
     ]
   },
   {
+    "item": "Iron Chain",
+    "recipe": [
+      null,
+      "Iron Nugget",
+      null,
+      null,
+      "Iron Ingot",
+      null,
+      null,
+      "Iron Nugget",
+      null
+    ]
+  },
+  {
     "item": "Iron Chestplate",
     "recipe": [
       "Iron Ingot",
@@ -6123,6 +6658,20 @@
     ]
   },
   {
+    "item": "Iron Door",
+    "recipe": [
+      "Iron Ingot",
+      "Iron Ingot",
+      null,
+      "Iron Ingot",
+      "Iron Ingot",
+      null,
+      "Iron Ingot",
+      "Iron Ingot",
+      null
+    ]
+  },
+  {
     "item": "Iron Helmet",
     "recipe": [
       null,
@@ -6134,6 +6683,20 @@
       "Iron Ingot",
       null,
       "Iron Ingot"
+    ]
+  },
+  {
+    "item": "Iron Hoe",
+    "recipe": [
+      "Iron Ingot",
+      "Iron Ingot",
+      null,
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
     ]
   },
   {
@@ -6210,6 +6773,20 @@
   },
   {
     "item": "Iron Pickaxe",
+    "recipe": [
+      "Iron Ingot",
+      "Iron Ingot",
+      "Iron Ingot",
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Iron Pickaxe",
     "quantity": 1,
     "recipe": [
       "Iron Ingot",
@@ -6226,6 +6803,20 @@
   },
   {
     "item": "Iron Shovel",
+    "recipe": [
+      null,
+      "Iron Ingot",
+      null,
+      null,
+      "Stick",
+      null,
+      null,
+      "Stick",
+      null
+    ]
+  },
+  {
+    "item": "Iron Shovel",
     "quantity": 1,
     "recipe": [
       null,
@@ -6239,6 +6830,34 @@
       null
     ],
     "shapeless": false
+  },
+  {
+    "item": "Iron Spear",
+    "recipe": [
+      null,
+      null,
+      "Iron Ingot",
+      null,
+      "Stick",
+      null,
+      "Stick",
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Iron Sword",
+    "recipe": [
+      null,
+      "Iron Ingot",
+      null,
+      null,
+      "Iron Ingot",
+      null,
+      null,
+      "Stick",
+      null
+    ]
   },
   {
     "item": "Iron Sword",
@@ -6329,9 +6948,9 @@
   {
     "item": "Jungle Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Jungle Log",
       "Stripped Jungle Log",
       "Stripped Jungle Log",
@@ -6341,54 +6960,17 @@
     ]
   },
   {
-    "item": "Jungle Planks",
+    "item": "Jungle Shelf",
     "recipe": [
+      "Stripped Jungle Log",
+      "Stripped Jungle Log",
+      "Stripped Jungle Log",
       null,
       null,
       null,
-      null,
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Jungle Log",
+      "Stripped Jungle Log",
+      "Stripped Jungle Log"
     ]
   },
   {
@@ -6454,7 +7036,7 @@
       "String",
       null,
       "String",
-      "Slimeball",
+      "String",
       null,
       null,
       null,
@@ -6752,11 +7334,11 @@
       null,
       null,
       null,
-      "Light Blue Carpet",
-      "Light Blue Dye",
       null,
       null,
       null,
+      "Light Blue Wool",
+      "Light Blue Wool",
       null
     ]
   },
@@ -6766,11 +7348,11 @@
       null,
       null,
       null,
+      "Light Blue Carpet",
+      "Light Blue Dye",
       null,
       null,
       null,
-      "Light Blue Wool",
-      "Light Blue Wool",
       null
     ]
   },
@@ -6794,8 +7376,8 @@
       null,
       null,
       null,
-      "Blue Dye",
-      "White Dye",
+      null,
+      "Blue Orchid",
       null,
       null,
       null,
@@ -6808,8 +7390,36 @@
       null,
       null,
       null,
+      "Blue Dye",
+      "White Dye",
       null,
-      "Blue Orchid",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Light Blue Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Light Blue Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Light Blue Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Light Blue Harness",
+      "Light Blue Dye",
       null,
       null,
       null,
@@ -6912,20 +7522,6 @@
   {
     "item": "Light Blue Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Light Blue Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Light Blue Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -6935,6 +7531,20 @@
       "Light Blue Stained Glass",
       "Light Blue Stained Glass",
       "Light Blue Stained Glass"
+    ]
+  },
+  {
+    "item": "Light Blue Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Light Blue Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -7092,11 +7702,11 @@
       null,
       null,
       null,
-      "Light Gray Carpet",
-      "Light Gray Dye",
       null,
       null,
       null,
+      "Light Gray Wool",
+      "Light Gray Wool",
       null
     ]
   },
@@ -7106,11 +7716,11 @@
       null,
       null,
       null,
+      "Light Gray Carpet",
+      "Light Gray Dye",
       null,
       null,
       null,
-      "Light Gray Wool",
-      "Light Gray Wool",
       null
     ]
   },
@@ -7140,6 +7750,34 @@
         "Oxeye Daisy",
         "White Tulip"
       ],
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Light Gray Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Light Gray Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Light Gray Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Light Gray Harness",
+      "Light Gray Dye",
       null,
       null,
       null,
@@ -7242,20 +7880,6 @@
   {
     "item": "Light Gray Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Light Gray Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Light Gray Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -7265,6 +7889,20 @@
       "Light Gray Stained Glass",
       "Light Gray Stained Glass",
       "Light Gray Stained Glass"
+    ]
+  },
+  {
+    "item": "Light Gray Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Light Gray Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -7450,11 +8088,11 @@
       null,
       null,
       null,
-      "Lime Carpet",
-      "Lime Dye",
       null,
       null,
       null,
+      "Lime Wool",
+      "Lime Wool",
       null
     ]
   },
@@ -7464,11 +8102,11 @@
       null,
       null,
       null,
+      "Lime Carpet",
+      "Lime Dye",
       null,
       null,
       null,
-      "Lime Wool",
-      "Lime Wool",
       null
     ]
   },
@@ -7494,6 +8132,34 @@
       null,
       "Green Dye",
       "White Dye",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Lime Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Lime Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Lime Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Lime Harness",
+      "Lime Dye",
       null,
       null,
       null,
@@ -7596,20 +8262,6 @@
   {
     "item": "Lime Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Lime Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Lime Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -7619,6 +8271,20 @@
       "Lime Stained Glass",
       "Lime Stained Glass",
       "Lime Stained Glass"
+    ]
+  },
+  {
+    "item": "Lime Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Lime Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -7656,7 +8322,7 @@
       "Chiseled Stone Bricks",
       "Chiseled Stone Bricks",
       "Chiseled Stone Bricks",
-      "Netherite Ingot",
+      "Iron Ingot",
       "Chiseled Stone Bricks",
       "Chiseled Stone Bricks",
       "Chiseled Stone Bricks",
@@ -7804,11 +8470,11 @@
       null,
       null,
       null,
-      "Magenta Carpet",
-      "Magenta Dye",
       null,
       null,
       null,
+      "Magenta Wool",
+      "Magenta Wool",
       null
     ]
   },
@@ -7818,11 +8484,11 @@
       null,
       null,
       null,
+      "Magenta Carpet",
+      "Magenta Dye",
       null,
       null,
       null,
-      "Magenta Wool",
-      "Magenta Wool",
       null
     ]
   },
@@ -7860,6 +8526,34 @@
       null,
       null,
       null,
+      null,
+      "Lilac",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Magenta Dye",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Purple Dye",
+      "Pink Dye",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Magenta Dye",
+    "recipe": [
+      null,
+      null,
+      null,
       "Blue Dye",
       "Red Dye",
       null,
@@ -7883,27 +8577,27 @@
     ]
   },
   {
-    "item": "Magenta Dye",
+    "item": "Magenta Harness",
     "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Lilac",
-      null,
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Magenta Wool",
+      "Glass",
       null,
       null,
       null
     ]
   },
   {
-    "item": "Magenta Dye",
+    "item": "Magenta Harness",
     "recipe": [
       null,
       null,
       null,
-      "Purple Dye",
-      "Pink Dye",
+      "Magenta Harness",
+      "Magenta Dye",
       null,
       null,
       null,
@@ -8006,20 +8700,6 @@
   {
     "item": "Magenta Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Magenta Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Magenta Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -8029,6 +8709,20 @@
       "Magenta Stained Glass",
       "Magenta Stained Glass",
       "Magenta Stained Glass"
+    ]
+  },
+  {
+    "item": "Magenta Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Magenta Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -8118,9 +8812,9 @@
   {
     "item": "Mangrove Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Mangrove Log",
       "Stripped Mangrove Log",
       "Stripped Mangrove Log",
@@ -8130,54 +8824,17 @@
     ]
   },
   {
-    "item": "Mangrove Planks",
+    "item": "Mangrove Shelf",
     "recipe": [
+      "Stripped Mangrove Log",
+      "Stripped Mangrove Log",
+      "Stripped Mangrove Log",
       null,
       null,
       null,
-      null,
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Mangrove Log",
+      "Stripped Mangrove Log",
+      "Stripped Mangrove Log"
     ]
   },
   {
@@ -8425,21 +9082,10 @@
       null,
       null,
       "Cobblestone",
-      "Moss Block",
-      null,
-      null,
-      null,
-      null
-    ]
-  },
-  {
-    "item": "Mossy Cobblestone",
-    "recipe": [
-      null,
-      null,
-      null,
-      "Cobblestone",
-      "Vines",
+      [
+        "Vines",
+        "Moss Block"
+      ],
       null,
       null,
       null,
@@ -8537,39 +9183,14 @@
       null,
       null,
       "Stone Bricks",
-      "Moss Block",
+      [
+        "Vines",
+        "Moss Block"
+      ],
       null,
       null,
       null,
       null
-    ]
-  },
-  {
-    "item": "Mossy Stone Bricks",
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone Bricks",
-      "Vines",
-      null,
-      null,
-      null,
-      null
-    ]
-  },
-  {
-    "item": "Mud Brick Slab",
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Mud Bricks",
-      "Mud Bricks",
-      "Mud Bricks"
     ]
   },
   {
@@ -8595,34 +9216,6 @@
       "Mud Bricks",
       "Mud Bricks",
       null,
-      "Mud Bricks",
-      "Mud Bricks",
-      "Mud Bricks"
-    ]
-  },
-  {
-    "item": "Mud Brick Stairs",
-    "recipe": [
-      "Mud Bricks",
-      null,
-      null,
-      "Mud Bricks",
-      "Mud Bricks",
-      null,
-      "Mud Bricks",
-      "Mud Bricks",
-      "Mud Bricks"
-    ]
-  },
-  {
-    "item": "Mud Brick Wall",
-    "recipe": [
-      null,
-      null,
-      null,
-      "Mud Bricks",
-      "Mud Bricks",
-      "Mud Bricks",
       "Mud Bricks",
       "Mud Bricks",
       "Mud Bricks"
@@ -8785,6 +9378,20 @@
   {
     "item": "Netherite Ingot",
     "recipe": [
+      "Netherite Scrap",
+      "Netherite Scrap",
+      "Netherite Scrap",
+      "Netherite Scrap",
+      "Gold Ingot",
+      "Gold Ingot",
+      "Gold Ingot",
+      "Gold Ingot",
+      null
+    ]
+  },
+  {
+    "item": "Netherite Ingot",
+    "recipe": [
       null,
       null,
       null,
@@ -8793,20 +9400,6 @@
       null,
       null,
       null,
-      null
-    ]
-  },
-  {
-    "item": "Netherite Ingot",
-    "recipe": [
-      "Netherite Scrap",
-      "Netherite Scrap",
-      "Netherite Scrap",
-      "Netherite Scrap",
-      "Gold Ingot",
-      "Gold Ingot",
-      "Gold Ingot",
-      "Gold Ingot",
       null
     ]
   },
@@ -8841,9 +9434,9 @@
   {
     "item": "Oak Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Oak Log",
       "Stripped Oak Log",
       "Stripped Oak Log",
@@ -8853,54 +9446,17 @@
     ]
   },
   {
-    "item": "Oak Planks",
+    "item": "Oak Shelf",
     "recipe": [
+      "Stripped Oak Log",
+      "Stripped Oak Log",
+      "Stripped Oak Log",
       null,
       null,
       null,
-      null,
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Oak Log",
+      "Stripped Oak Log",
+      "Stripped Oak Log"
     ]
   },
   {
@@ -9072,11 +9628,11 @@
       null,
       null,
       null,
-      "Orange Carpet",
-      "Orange Dye",
       null,
       null,
       null,
+      "Orange Wool",
+      "Orange Wool",
       null
     ]
   },
@@ -9086,11 +9642,11 @@
       null,
       null,
       null,
+      "Orange Carpet",
+      "Orange Dye",
       null,
       null,
       null,
-      "Orange Wool",
-      "Orange Wool",
       null
     ]
   },
@@ -9117,7 +9673,8 @@
       null,
       [
         "Orange Tulip",
-        "Torchflower"
+        "Torchflower",
+        "Open Eyeblossom"
       ],
       null,
       null,
@@ -9133,6 +9690,34 @@
       null,
       "Red Dye",
       "Yellow Dye",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Orange Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Orange Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Orange Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Orange Harness",
+      "Orange Dye",
       null,
       null,
       null,
@@ -9235,20 +9820,6 @@
   {
     "item": "Orange Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Orange Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Orange Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -9258,6 +9829,20 @@
       "Orange Stained Glass",
       "Orange Stained Glass",
       "Orange Stained Glass"
+    ]
+  },
+  {
+    "item": "Orange Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Orange Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -9285,6 +9870,48 @@
       null,
       null,
       null,
+      null
+    ]
+  },
+  {
+    "item": "Oxidized Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Oxidized Cut Copper Slab",
+      null,
+      null,
+      "Oxidized Cut Copper Slab",
+      null
+    ]
+  },
+  {
+    "item": "Oxidized Copper Bulb",
+    "recipe": [
+      null,
+      "Oxidized Copper",
+      null,
+      "Oxidized Copper",
+      "Blaze Rod",
+      "Oxidized Copper",
+      null,
+      "Redstone Dust",
+      null
+    ]
+  },
+  {
+    "item": "Oxidized Copper Grate",
+    "recipe": [
+      null,
+      "Oxidized Copper",
+      null,
+      "Oxidized Copper",
+      null,
+      "Oxidized Copper",
+      null,
+      "Oxidized Copper",
       null
     ]
   },
@@ -9420,12 +10047,26 @@
   {
     "item": "Pale Oak Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Pale Oak Log",
       "Stripped Pale Oak Log",
       "Stripped Pale Oak Log",
+      "Stripped Pale Oak Log",
+      "Stripped Pale Oak Log",
+      "Stripped Pale Oak Log"
+    ]
+  },
+  {
+    "item": "Pale Oak Shelf",
+    "recipe": [
+      "Stripped Pale Oak Log",
+      "Stripped Pale Oak Log",
+      "Stripped Pale Oak Log",
+      null,
+      null,
+      null,
       "Stripped Pale Oak Log",
       "Stripped Pale Oak Log",
       "Stripped Pale Oak Log"
@@ -9586,11 +10227,11 @@
       null,
       null,
       null,
-      "Pink Carpet",
-      "Pink Dye",
       null,
       null,
       null,
+      "Pink Wool",
+      "Pink Wool",
       null
     ]
   },
@@ -9600,11 +10241,11 @@
       null,
       null,
       null,
+      "Pink Carpet",
+      "Pink Dye",
       null,
       null,
       null,
-      "Pink Wool",
-      "Pink Wool",
       null
     ]
   },
@@ -9629,7 +10270,10 @@
       null,
       null,
       null,
-      "Peony",
+      [
+        "Pink Tulip",
+        "Cactus Flower"
+      ],
       null,
       null,
       null,
@@ -9657,7 +10301,7 @@
       null,
       null,
       null,
-      "Pink Tulip",
+      "Peony",
       null,
       null,
       null,
@@ -9686,6 +10330,34 @@
       null,
       null,
       "Pink Petals",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Pink Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Pink Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Pink Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Pink Harness",
+      "Pink Dye",
       null,
       null,
       null,
@@ -9788,20 +10460,6 @@
   {
     "item": "Pink Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Pink Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Pink Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -9811,6 +10469,20 @@
       "Pink Stained Glass",
       "Pink Stained Glass",
       "Pink Stained Glass"
+    ]
+  },
+  {
+    "item": "Pink Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Pink Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -9894,6 +10566,20 @@
       null,
       "Basalt",
       "Basalt",
+      null
+    ]
+  },
+  {
+    "item": "Polished Blackstone",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Blackstone",
+      "Blackstone",
+      null,
+      "Blackstone",
+      "Blackstone",
       null
     ]
   },
@@ -10164,6 +10850,62 @@
     ]
   },
   {
+    "item": "Polished Tuff",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Tuff",
+      "Tuff",
+      null,
+      "Tuff",
+      "Tuff",
+      null
+    ]
+  },
+  {
+    "item": "Polished Tuff Slab",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "Polished Tuff",
+      "Polished Tuff",
+      "Polished Tuff"
+    ]
+  },
+  {
+    "item": "Polished Tuff Stairs",
+    "recipe": [
+      "Polished Tuff",
+      null,
+      null,
+      "Polished Tuff",
+      "Polished Tuff",
+      null,
+      "Polished Tuff",
+      "Polished Tuff",
+      "Polished Tuff"
+    ]
+  },
+  {
+    "item": "Polished Tuff Wall",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Polished Tuff",
+      "Polished Tuff",
+      "Polished Tuff",
+      "Polished Tuff",
+      "Polished Tuff",
+      "Polished Tuff"
+    ]
+  },
+  {
     "item": "Powered Rail",
     "recipe": [
       "Gold Ingot",
@@ -10285,7 +11027,11 @@
       "Sugar",
       null,
       null,
-      "Egg",
+      [
+        "Egg",
+        "Blue Egg",
+        "Brown Egg"
+      ],
       null
     ]
   },
@@ -10430,11 +11176,11 @@
       null,
       null,
       null,
-      "Purple Carpet",
-      "Purple Dye",
       null,
       null,
       null,
+      "Purple Wool",
+      "Purple Wool",
       null
     ]
   },
@@ -10444,11 +11190,11 @@
       null,
       null,
       null,
+      "Purple Carpet",
+      "Purple Dye",
       null,
       null,
       null,
-      "Purple Wool",
-      "Purple Wool",
       null
     ]
   },
@@ -10474,6 +11220,34 @@
       null,
       "Blue Dye",
       "Red Dye",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Purple Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Purple Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Purple Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Purple Harness",
+      "Purple Dye",
       null,
       null,
       null,
@@ -10576,20 +11350,6 @@
   {
     "item": "Purple Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Purple Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Purple Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -10599,6 +11359,20 @@
       "Purple Stained Glass",
       "Purple Stained Glass",
       "Purple Stained Glass"
+    ]
+  },
+  {
+    "item": "Purple Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Purple Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -10727,6 +11501,34 @@
     ]
   },
   {
+    "item": "Quartz Bricks",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Block of Quartz",
+      "Block of Quartz",
+      null,
+      "Block of Quartz",
+      "Block of Quartz",
+      null
+    ]
+  },
+  {
+    "item": "Quartz Pillar",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Block of Quartz",
+      null,
+      null,
+      "Block of Quartz",
+      null
+    ]
+  },
+  {
     "item": "Quartz Pillar",
     "recipe": [
       null,
@@ -10748,6 +11550,70 @@
       null,
       null,
       null,
+      null,
+      [
+        "Block of Quartz",
+        "Chiseled Quartz Block",
+        "Quartz Pillar"
+      ],
+      [
+        "Block of Quartz",
+        "Chiseled Quartz Block",
+        "Quartz Pillar"
+      ],
+      [
+        "Block of Quartz",
+        "Chiseled Quartz Block",
+        "Quartz Pillar"
+      ]
+    ]
+  },
+  {
+    "item": "Quartz Slab",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      [
+        "Block of Quartz",
+        "Chiseled Quartz Block",
+        "Quartz Pillar"
+      ],
+      [
+        "Block of Quartz",
+        "Chiseled Quartz Block",
+        "Quartz Pillar"
+      ],
+      [
+        "Block of Quartz",
+        "Chiseled Quartz Block",
+        "Quartz Pillar"
+      ]
+    ]
+  },
+  {
+    "item": "Quartz Stairs",
+    "recipe": [
+      [
+        "Block of Quartz",
+        "Chiseled Quartz Block",
+        "Quartz Pillar"
+      ],
+      null,
+      null,
+      [
+        "Block of Quartz",
+        "Chiseled Quartz Block",
+        "Quartz Pillar"
+      ],
+      [
+        "Block of Quartz",
+        "Chiseled Quartz Block",
+        "Quartz Pillar"
+      ],
       null,
       [
         "Block of Quartz",
@@ -10833,6 +11699,20 @@
       "Iron Ingot",
       null,
       "Iron Ingot"
+    ]
+  },
+  {
+    "item": "Raiser Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Raiser Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Terracotta",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
     ]
   },
   {
@@ -11018,11 +11898,11 @@
       null,
       null,
       null,
-      "Red Carpet",
-      "Red Dye",
       null,
       null,
       null,
+      "Red Wool",
+      "Red Wool",
       null
     ]
   },
@@ -11032,11 +11912,11 @@
       null,
       null,
       null,
+      "Red Carpet",
+      "Red Dye",
       null,
       null,
       null,
-      "Red Wool",
-      "Red Wool",
       null
     ]
   },
@@ -11080,6 +11960,34 @@
       null,
       null,
       "Rose Bush",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Red Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Red Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Red Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Red Harness",
+      "Red Dye",
       null,
       null,
       null,
@@ -11182,15 +12090,39 @@
   {
     "item": "Red Sandstone Stairs",
     "recipe": [
-      "Red Sandstone",
+      [
+        "Red Sandstone",
+        "Cut Red Sandstone",
+        "Chiseled Red Sandstone"
+      ],
       null,
       null,
-      "Red Sandstone",
-      "Red Sandstone",
+      [
+        "Red Sandstone",
+        "Cut Red Sandstone",
+        "Chiseled Red Sandstone"
+      ],
+      [
+        "Red Sandstone",
+        "Cut Red Sandstone",
+        "Chiseled Red Sandstone"
+      ],
       null,
-      "Red Sandstone",
-      "Red Sandstone",
-      "Red Sandstone"
+      [
+        "Red Sandstone",
+        "Cut Red Sandstone",
+        "Chiseled Red Sandstone"
+      ],
+      [
+        "Red Sandstone",
+        "Cut Red Sandstone",
+        "Chiseled Red Sandstone"
+      ],
+      [
+        "Red Sandstone",
+        "Cut Red Sandstone",
+        "Chiseled Red Sandstone"
+      ]
     ]
   },
   {
@@ -11303,20 +12235,6 @@
   {
     "item": "Red Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Red Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Red Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -11326,6 +12244,20 @@
       "Red Stained Glass",
       "Red Stained Glass",
       "Red Stained Glass"
+    ]
+  },
+  {
+    "item": "Red Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Red Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -11441,6 +12373,34 @@
     ]
   },
   {
+    "item": "Rib Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Rib Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Netherrack",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
+    "item": "Saddle",
+    "recipe": [
+      null,
+      "Leather",
+      null,
+      "Leather",
+      "Iron Ingot",
+      "Leather",
+      null,
+      null,
+      null
+    ]
+  },
+  {
     "item": "Sandstone",
     "recipe": [
       null,
@@ -11480,15 +12440,39 @@
   {
     "item": "Sandstone Stairs",
     "recipe": [
-      "Sandstone",
+      [
+        "Sandstone",
+        "Cut Sandstone",
+        "Chiseled Sandstone"
+      ],
       null,
       null,
-      "Sandstone",
-      "Sandstone",
+      [
+        "Sandstone",
+        "Cut Sandstone",
+        "Chiseled Sandstone"
+      ],
+      [
+        "Sandstone",
+        "Cut Sandstone",
+        "Chiseled Sandstone"
+      ],
       null,
-      "Sandstone",
-      "Sandstone",
-      "Sandstone"
+      [
+        "Sandstone",
+        "Cut Sandstone",
+        "Chiseled Sandstone"
+      ],
+      [
+        "Sandstone",
+        "Cut Sandstone",
+        "Chiseled Sandstone"
+      ],
+      [
+        "Sandstone",
+        "Cut Sandstone",
+        "Chiseled Sandstone"
+      ]
     ]
   },
   {
@@ -11534,6 +12518,34 @@
     ]
   },
   {
+    "item": "Sentry Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Sentry Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Cobblestone",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
+    "item": "Shaper Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Shaper Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Terracotta",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
     "item": "Shears",
     "recipe": [
       null,
@@ -11548,17 +12560,17 @@
     ]
   },
   {
-    "item": "Shulker Box",
+    "item": "Silence Armor Trim",
     "recipe": [
-      null,
-      "Shulker Shell",
-      null,
-      null,
-      "Chest",
-      null,
-      null,
-      "Shulker Shell",
-      null
+      "Diamond",
+      "Silence Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Cobbled Deepslate",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
     ]
   },
   {
@@ -11896,6 +12908,20 @@
     ]
   },
   {
+    "item": "Snout Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Snout Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Blackstone",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
     "item": "Snow",
     "recipe": [
       null,
@@ -11930,156 +12956,10 @@
       "Stick",
       null,
       "Stick",
-      "Soul Sand",
-      "Stick",
       [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Crimson Stem",
-        "Warped Stem",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Stripped Crimson Stem",
-        "Stripped Warped Stem",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Crimson Hyphae",
-        "Warped Hyphae",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood",
-        "Stripped Crimson Hyphae",
-        "Stripped Warped Hyphae"
+        "Soul Sand",
+        "Soul Soil"
       ],
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Crimson Stem",
-        "Warped Stem",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Stripped Crimson Stem",
-        "Stripped Warped Stem",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Crimson Hyphae",
-        "Warped Hyphae",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood",
-        "Stripped Crimson Hyphae",
-        "Stripped Warped Hyphae"
-      ],
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Crimson Stem",
-        "Warped Stem",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Stripped Crimson Stem",
-        "Stripped Warped Stem",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Crimson Hyphae",
-        "Warped Hyphae",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood",
-        "Stripped Crimson Hyphae",
-        "Stripped Warped Hyphae"
-      ]
-    ]
-  },
-  {
-    "item": "Soul Campfire",
-    "recipe": [
-      null,
-      "Stick",
-      null,
-      "Stick",
-      "Soul Soil",
       "Stick",
       [
         "Oak Log",
@@ -12270,6 +13150,20 @@
     ]
   },
   {
+    "item": "Spire Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Spire Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Purpur Block",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
     "item": "Spruce Boat",
     "recipe": [
       null,
@@ -12300,9 +13194,9 @@
   {
     "item": "Spruce Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Spruce Log",
       "Stripped Spruce Log",
       "Stripped Spruce Log",
@@ -12312,54 +13206,17 @@
     ]
   },
   {
-    "item": "Spruce Planks",
+    "item": "Spruce Shelf",
     "recipe": [
+      "Stripped Spruce Log",
+      "Stripped Spruce Log",
+      "Stripped Spruce Log",
       null,
       null,
       null,
-      null,
-      [
-        "Oak Log",
-        "Spruce Log",
-        "Birch Log",
-        "Jungle Log",
-        "Acacia Log",
-        "Dark Oak Log",
-        "Mangrove Log",
-        "Cherry Log",
-        "Pale Oak Log",
-        "Stripped Oak Log",
-        "Stripped Spruce Log",
-        "Stripped Birch Log",
-        "Stripped Jungle Log",
-        "Stripped Acacia Log",
-        "Stripped Dark Oak Log",
-        "Stripped Mangrove Log",
-        "Stripped Cherry Log",
-        "Stripped Pale Oak Log",
-        "Oak Wood",
-        "Spruce Wood",
-        "Birch Wood",
-        "Jungle Wood",
-        "Acacia Wood",
-        "Dark Oak Wood",
-        "Mangrove Wood",
-        "Cherry Wood",
-        "Pale Oak Wood",
-        "Stripped Oak Wood",
-        "Stripped Spruce Wood",
-        "Stripped Birch Wood",
-        "Stripped Jungle Wood",
-        "Stripped Acacia Wood",
-        "Stripped Dark Oak Wood",
-        "Stripped Mangrove Wood",
-        "Stripped Cherry Wood",
-        "Stripped Pale Oak Wood"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Spruce Log",
+      "Stripped Spruce Log",
+      "Stripped Spruce Log"
     ]
   },
   {
@@ -12415,6 +13272,32 @@
       null,
       null,
       null,
+      null
+    ]
+  },
+  {
+    "item": "Stone Axe",
+    "recipe": [
+      [
+        "Cobblestone",
+        "Blackstone",
+        "Cobbled Deepslate"
+      ],
+      [
+        "Cobblestone",
+        "Blackstone",
+        "Cobbled Deepslate"
+      ],
+      null,
+      [
+        "Cobblestone",
+        "Blackstone",
+        "Cobbled Deepslate"
+      ],
+      "Stick",
+      null,
+      null,
+      "Stick",
       null
     ]
   },
@@ -12647,6 +13530,24 @@
     ]
   },
   {
+    "item": "Stone Spear",
+    "recipe": [
+      null,
+      null,
+      [
+        "Cobblestone",
+        "Blackstone",
+        "Cobbled Deepslate"
+      ],
+      null,
+      "Stick",
+      null,
+      "Stick",
+      null,
+      null
+    ]
+  },
+  {
     "item": "Stone Stairs",
     "recipe": [
       "Stone",
@@ -12658,28 +13559,6 @@
       "Stone",
       "Stone",
       "Stone"
-    ]
-  },
-  {
-    "item": "Stone Sword",
-    "recipe": [
-      null,
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
-      null,
-      null,
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
-      null,
-      null,
-      "Stick",
-      null
     ]
   },
   {
@@ -12873,7 +13752,7 @@
       null,
       null,
       null,
-      "Honey Bottle",
+      "Sugar Cane",
       null,
       null,
       null,
@@ -12887,7 +13766,7 @@
       null,
       null,
       null,
-      "Sugar Cane",
+      "Honey Bottle",
       null,
       null,
       null,
@@ -12980,6 +13859,20 @@
     ]
   },
   {
+    "item": "Tide Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Tide Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Prismarine",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
     "item": "Tinted Glass",
     "recipe": [
       null,
@@ -13025,6 +13918,104 @@
     ]
   },
   {
+    "item": "Tuff Brick Slab",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "Tuff Bricks",
+      "Tuff Bricks",
+      "Tuff Bricks"
+    ]
+  },
+  {
+    "item": "Tuff Brick Stairs",
+    "recipe": [
+      "Tuff Bricks",
+      null,
+      null,
+      "Tuff Bricks",
+      "Tuff Bricks",
+      null,
+      "Tuff Bricks",
+      "Tuff Bricks",
+      "Tuff Bricks"
+    ]
+  },
+  {
+    "item": "Tuff Brick Wall",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Tuff Bricks",
+      "Tuff Bricks",
+      "Tuff Bricks",
+      "Tuff Bricks",
+      "Tuff Bricks",
+      "Tuff Bricks"
+    ]
+  },
+  {
+    "item": "Tuff Bricks",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Polished Tuff",
+      "Polished Tuff",
+      null,
+      "Polished Tuff",
+      "Polished Tuff",
+      null
+    ]
+  },
+  {
+    "item": "Tuff Slab",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "Tuff",
+      "Tuff",
+      "Tuff"
+    ]
+  },
+  {
+    "item": "Tuff Stairs",
+    "recipe": [
+      "Tuff",
+      null,
+      null,
+      "Tuff",
+      "Tuff",
+      null,
+      "Tuff",
+      "Tuff",
+      "Tuff"
+    ]
+  },
+  {
+    "item": "Tuff Wall",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Tuff",
+      "Tuff",
+      "Tuff",
+      "Tuff",
+      "Tuff",
+      "Tuff"
+    ]
+  },
+  {
     "item": "Turtle Shell",
     "recipe": [
       null,
@@ -13039,11 +14030,56 @@
     ]
   },
   {
+    "item": "Vex Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Vex Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Cobblestone",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
+    "item": "Ward Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Ward Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Cobbled Deepslate",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
+    "item": "Warped Fungus on a Stick",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      [
+        "Fishing Rod",
+        "Fishing Rod"
+      ],
+      null,
+      null,
+      null,
+      "Warped Fungus"
+    ]
+  },
+  {
     "item": "Warped Hanging Sign",
     "recipe": [
-      "Chain",
+      "Iron Chain",
       null,
-      "Chain",
+      "Iron Chain",
       "Stripped Warped Stem",
       "Stripped Warped Stem",
       "Stripped Warped Stem",
@@ -13067,26 +14103,17 @@
     ]
   },
   {
-    "item": "Warped Planks",
+    "item": "Warped Shelf",
     "recipe": [
+      "Stripped Warped Stem",
+      "Stripped Warped Stem",
+      "Stripped Warped Stem",
       null,
       null,
       null,
-      null,
-      [
-        "Crimson Stem",
-        "Warped Stem",
-        "Stripped Crimson Stem",
-        "Stripped Warped Stem",
-        "Crimson Hyphae",
-        "Warped Hyphae",
-        "Stripped Crimson Hyphae",
-        "Stripped Warped Hyphae"
-      ],
-      null,
-      null,
-      null,
-      null
+      "Stripped Warped Stem",
+      "Stripped Warped Stem",
+      "Stripped Warped Stem"
     ]
   },
   {
@@ -13096,6 +14123,188 @@
       null,
       null,
       "Block of Copper",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Waxed Cut Copper Slab",
+      null,
+      null,
+      "Waxed Cut Copper Slab",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Chiseled Copper",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Bars",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Bars",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Bulb",
+    "recipe": [
+      null,
+      "Waxed Block of Copper",
+      null,
+      "Waxed Block of Copper",
+      "Blaze Rod",
+      "Waxed Block of Copper",
+      null,
+      "Redstone Dust",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Bulb",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Bulb",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Chain",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Chain",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Chest",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Chest",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Door",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Door",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Golem Statue",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Golem Statue",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Grate",
+    "recipe": [
+      null,
+      "Waxed Block of Copper",
+      null,
+      "Waxed Block of Copper",
+      null,
+      "Waxed Block of Copper",
+      null,
+      "Waxed Block of Copper",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Grate",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Grate",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Lantern",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Lantern",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Copper Trapdoor",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Copper Trapdoor",
       "Honeycomb",
       null,
       null,
@@ -13188,12 +14397,194 @@
     ]
   },
   {
+    "item": "Waxed Exposed Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Waxed Exposed Cut Copper Slab",
+      null,
+      null,
+      "Waxed Exposed Cut Copper Slab",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Chiseled Copper",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
     "item": "Waxed Exposed Copper",
     "recipe": [
       null,
       null,
       null,
       "Exposed Copper",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Bars",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Copper Bars",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Bulb",
+    "recipe": [
+      null,
+      "Waxed Exposed Copper",
+      null,
+      "Waxed Exposed Copper",
+      "Blaze Rod",
+      "Waxed Exposed Copper",
+      null,
+      "Redstone Dust",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Bulb",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Copper Bulb",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Chain",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Copper Chain",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Chest",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Copper Chest",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Door",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Copper Door",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Golem Statue",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Copper Golem Statue",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Grate",
+    "recipe": [
+      null,
+      "Waxed Exposed Copper",
+      null,
+      "Waxed Exposed Copper",
+      null,
+      "Waxed Exposed Copper",
+      null,
+      "Waxed Exposed Copper",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Grate",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Copper Grate",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Lantern",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Copper Lantern",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Exposed Copper Trapdoor",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Copper Trapdoor",
       "Honeycomb",
       null,
       null,
@@ -13286,12 +14677,222 @@
     ]
   },
   {
+    "item": "Waxed Exposed Lightning Rod",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Exposed Lightning Rod",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Lightning Rod",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Lightning Rod",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Waxed Oxidized Cut Copper Slab",
+      null,
+      null,
+      "Waxed Oxidized Cut Copper Slab",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Chiseled Copper",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
     "item": "Waxed Oxidized Copper",
     "recipe": [
       null,
       null,
       null,
       "Oxidized Copper",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Bars",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Copper Bars",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Bulb",
+    "recipe": [
+      null,
+      "Waxed Oxidized Copper",
+      null,
+      "Waxed Oxidized Copper",
+      "Blaze Rod",
+      "Waxed Oxidized Copper",
+      null,
+      "Redstone Dust",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Bulb",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Copper Bulb",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Chain",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Copper Chain",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Chest",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Copper Chest",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Door",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Copper Door",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Golem Statue",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Copper Golem Statue",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Grate",
+    "recipe": [
+      null,
+      "Waxed Oxidized Copper",
+      null,
+      "Waxed Oxidized Copper",
+      null,
+      "Waxed Oxidized Copper",
+      null,
+      "Waxed Oxidized Copper",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Grate",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Copper Grate",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Lantern",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Copper Lantern",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Oxidized Copper Trapdoor",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Copper Trapdoor",
       "Honeycomb",
       null,
       null,
@@ -13384,12 +14985,208 @@
     ]
   },
   {
+    "item": "Waxed Oxidized Lightning Rod",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Oxidized Lightning Rod",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Waxed Weathered Cut Copper Slab",
+      null,
+      null,
+      "Waxed Weathered Cut Copper Slab",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Chiseled Copper",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
     "item": "Waxed Weathered Copper",
     "recipe": [
       null,
       null,
       null,
       "Weathered Copper",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Bars",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Copper Bars",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Bulb",
+    "recipe": [
+      null,
+      "Waxed Weathered Copper",
+      null,
+      "Waxed Weathered Copper",
+      "Blaze Rod",
+      "Waxed Weathered Copper",
+      null,
+      "Redstone Dust",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Bulb",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Copper Bulb",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Chain",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Copper Chain",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Chest",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Copper Chest",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Door",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Copper Door",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Golem Statue",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Copper Golem Statue",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Grate",
+    "recipe": [
+      null,
+      "Waxed Weathered Copper",
+      null,
+      "Waxed Weathered Copper",
+      null,
+      "Waxed Weathered Copper",
+      null,
+      "Waxed Weathered Copper",
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Grate",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Copper Grate",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Lantern",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Copper Lantern",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Copper Trapdoor",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Copper Trapdoor",
       "Honeycomb",
       null,
       null,
@@ -13478,6 +15275,76 @@
       null,
       null,
       null,
+      null
+    ]
+  },
+  {
+    "item": "Waxed Weathered Lightning Rod",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Weathered Lightning Rod",
+      "Honeycomb",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Wayfinder Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Wayfinder Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Terracotta",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
+    ]
+  },
+  {
+    "item": "Weathered Chiseled Copper",
+    "recipe": [
+      null,
+      null,
+      null,
+      null,
+      "Weathered Cut Copper Slab",
+      null,
+      null,
+      "Weathered Cut Copper Slab",
+      null
+    ]
+  },
+  {
+    "item": "Weathered Copper Bulb",
+    "recipe": [
+      null,
+      "Weathered Copper",
+      null,
+      "Weathered Copper",
+      "Blaze Rod",
+      "Weathered Copper",
+      null,
+      "Redstone Dust",
+      null
+    ]
+  },
+  {
+    "item": "Weathered Copper Grate",
+    "recipe": [
+      null,
+      "Weathered Copper",
+      null,
+      "Weathered Copper",
+      null,
+      "Weathered Copper",
+      null,
+      "Weathered Copper",
       null
     ]
   },
@@ -13664,11 +15531,11 @@
       null,
       null,
       null,
-      "White Carpet",
-      "White Dye",
       null,
       null,
       null,
+      "White Wool",
+      "White Wool",
       null
     ]
   },
@@ -13678,11 +15545,11 @@
       null,
       null,
       null,
+      "White Carpet",
+      "White Dye",
       null,
       null,
       null,
-      "White Wool",
-      "White Wool",
       null
     ]
   },
@@ -13722,6 +15589,34 @@
       null,
       null,
       "Lily of the Valley",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "White Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "White Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "White Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "White Harness",
+      "White Dye",
       null,
       null,
       null,
@@ -13824,20 +15719,6 @@
   {
     "item": "White Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "White Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "White Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -13847,6 +15728,20 @@
       "White Stained Glass",
       "White Stained Glass",
       "White Stained Glass"
+    ]
+  },
+  {
+    "item": "White Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "White Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {
@@ -13869,11 +15764,11 @@
       null,
       null,
       null,
-      "White Wool",
-      "White Dye",
+      "String",
+      "String",
       null,
-      null,
-      null,
+      "String",
+      "String",
       null
     ]
   },
@@ -13883,12 +15778,26 @@
       null,
       null,
       null,
-      "String",
-      "String",
+      "White Wool",
+      "White Dye",
       null,
-      "String",
-      "String",
+      null,
+      null,
       null
+    ]
+  },
+  {
+    "item": "Wild Armor Trim",
+    "recipe": [
+      "Diamond",
+      "Wild Armor Trim",
+      "Diamond",
+      "Diamond",
+      "Mossy Cobblestone",
+      "Diamond",
+      "Diamond",
+      "Diamond",
+      "Diamond"
     ]
   },
   {
@@ -14364,11 +16273,11 @@
       null,
       null,
       null,
-      "Yellow Carpet",
-      "Yellow Dye",
       null,
       null,
       null,
+      "Yellow Wool",
+      "Yellow Wool",
       null
     ]
   },
@@ -14378,11 +16287,11 @@
       null,
       null,
       null,
+      "Yellow Carpet",
+      "Yellow Dye",
       null,
       null,
       null,
-      "Yellow Wool",
-      "Yellow Wool",
       null
     ]
   },
@@ -14407,7 +16316,10 @@
       null,
       null,
       null,
-      "Dandelion",
+      [
+        "Dandelion",
+        "Wildflowers"
+      ],
       null,
       null,
       null,
@@ -14422,6 +16334,34 @@
       null,
       null,
       "Sunflower",
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Yellow Harness",
+    "recipe": [
+      "Leather",
+      "Leather",
+      "Leather",
+      "Glass",
+      "Yellow Wool",
+      "Glass",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "item": "Yellow Harness",
+    "recipe": [
+      null,
+      null,
+      null,
+      "Yellow Harness",
+      "Yellow Dye",
       null,
       null,
       null,
@@ -14524,20 +16464,6 @@
   {
     "item": "Yellow Stained Glass Pane",
     "recipe": [
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Yellow Dye",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane",
-      "Glass Pane"
-    ]
-  },
-  {
-    "item": "Yellow Stained Glass Pane",
-    "recipe": [
       null,
       null,
       null,
@@ -14547,6 +16473,20 @@
       "Yellow Stained Glass",
       "Yellow Stained Glass",
       "Yellow Stained Glass"
+    ]
+  },
+  {
+    "item": "Yellow Stained Glass Pane",
+    "recipe": [
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Yellow Dye",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane",
+      "Glass Pane"
     ]
   },
   {

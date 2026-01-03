@@ -1,0 +1,37 @@
+31 december 2025 - latest update werkzaamheden:
+
+missing block data:
+
+Cave Vines Plant
+Copper Wall Torch
+Potted Azalea
+Potted Flowering Azalea
+Block of Stripped Bamboo
+Twisting Vines Plant
+Weeping Vines Plant
+
+
+todo:
+
+afbeeldingen mobs
+
+The Creaking (1.21.4)
+Breeze (1.21)
+Bogged (1.21)
+Armadillo (1.20.5)
+Sniffer (1.20)
+Camel (1.20)
+Phantom (Classic mob missing from your list)
+
+afbeeldingen biomes:
+deep_dark
+mangrove_swamp
+cherry_grove
+pale_garden
+
+
+refactor enchantment functionality to 'anvil planner'
+
+missing food items:
+glow berries
+omnious bottle (?)
