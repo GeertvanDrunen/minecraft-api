@@ -4628,6 +4628,48 @@
     ]
   },
   {
+    "name": "Block of Stripped Bamboo",
+    "namespacedId": "stripped_bamboo_block",
+    "description": "A block of stripped bamboo is a variant of the block of bamboo made by using an axe on a block of bamboo.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/blocks/stripped_bamboo_block.png",
+    "item": null,
+    "blastResistance": null,
+    "colors": [
+      {
+        "color": [
+          118,
+          105,
+          48
+        ],
+        "amount": 0.711
+      },
+      {
+        "color": [
+          206,
+          184,
+          93
+        ],
+        "amount": 0.145
+      },
+      {
+        "color": [
+          164,
+          146,
+          68
+        ],
+        "amount": 0.128
+      },
+      {
+        "color": [
+          178,
+          164,
+          79
+        ],
+        "amount": 0.015
+      }
+    ]
+  },
+  {
     "name": "Blue Banner",
     "namespacedId": "blue_banner",
     "description": "A banner is a block that can be crafted in 16 different colors, customized in a loom using dyes and banner patterns, and applied to a shield. In Java Edition, banners can also be used to add markers to maps.",

@@ -47,6 +47,9 @@ const getItemPageUrl = async (namespaceId: string) => {
   if (namespaceId === "big_dripleaf_stem") {
     return "https://minecraft.wiki/w/Big_Dripleaf";
   }
+  if (namespaceId === "stripped_bamboo_block") {
+    return "https://minecraft.wiki/w/Block_of_Stripped_Bamboo";
+  }
   if (namespaceId.includes("carpet")) {
     return "https://minecraft.wiki/w/Carpet";
   }

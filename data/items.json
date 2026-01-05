@@ -400,6 +400,14 @@
     "stackSize": 1
   },
   {
+    "name": "Black Shield",
+    "namespacedId": "black_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/black_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Blade Pottery Sherd",
     "namespacedId": "blade_pottery_sherd",
     "description": "A blade pottery sherd is a pottery sherd that depicts a sword. It can be found in cold ocean ruins.",
@@ -460,6 +468,14 @@
     "namespacedId": "blue_harness",
     "description": "A harness is an item that can be equipped on happy ghasts to make them mountable and rideable. Harnesses can be crafted into 16 dyed variants.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/blue_harness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Blue Shield",
+    "namespacedId": "blue_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/blue_shield.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -616,6 +632,14 @@
     "stackSize": 1
   },
   {
+    "name": "Brown Shield",
+    "namespacedId": "brown_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/brown_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Brush",
     "namespacedId": "brush",
     "description": "A brush is a tool used in archaeology to excavate suspicious sand and suspicious gravel for different items. It can also brush armadillos for armadillo scutes.",
@@ -676,6 +700,14 @@
     "namespacedId": "tropical_fish_bucket",
     "description": "A bucket of tropical fish, internally known as a tropical fish bucket, is a living tropical fish inside of a water bucket, in the form of an item.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/tropical_fish_bucket.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Bundle",
+    "namespacedId": "bundle",
+    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items can be individually selected and taken out of the bundle via the inventory menu.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/bundle.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -1112,6 +1144,14 @@
     "stackSize": 1
   },
   {
+    "name": "Cyan Shield",
+    "namespacedId": "cyan_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/cyan_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Danger Pottery Sherd",
     "namespacedId": "danger_pottery_sherd",
     "description": "A danger pottery sherd is a pottery sherd that depicts a creeper. It can be found in trail ruins.",
@@ -1348,6 +1388,14 @@
     "namespacedId": "emerald",
     "description": "Emeralds are minerals that are used primarily as the currency for trading with villagers and wandering traders.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/emerald.png",
+    "renewable": true,
+    "stackSize": 64
+  },
+  {
+    "name": "Empty Locator Map",
+    "namespacedId": "empty_locator_map",
+    "description": "A map is an item used to view explored surface terrain and players. Maps can be cloned, zoomed out and locked using a cartography table.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/empty_locator_map.png",
     "renewable": true,
     "stackSize": 64
   },
@@ -1832,6 +1880,14 @@
     "stackSize": 1
   },
   {
+    "name": "Gray Shield",
+    "namespacedId": "gray_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/gray_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Green Bundle",
     "namespacedId": "green_bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items can be individually selected and taken out of the bundle via the inventory menu.",
@@ -1852,6 +1908,14 @@
     "namespacedId": "green_harness",
     "description": "A harness is an item that can be equipped on happy ghasts to make them mountable and rideable. Harnesses can be crafted into 16 dyed variants.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/green_harness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Green Shield",
+    "namespacedId": "green_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/green_shield.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2240,6 +2304,14 @@
     "stackSize": 1
   },
   {
+    "name": "Light Blue Shield",
+    "namespacedId": "light_blue_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/light_blue_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Light Gray Bundle",
     "namespacedId": "light_gray_bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items can be individually selected and taken out of the bundle via the inventory menu.",
@@ -2264,6 +2336,14 @@
     "stackSize": 1
   },
   {
+    "name": "Light Gray Shield",
+    "namespacedId": "light_gray_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/light_gray_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Lime Bundle",
     "namespacedId": "lime_bundle",
     "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items can be individually selected and taken out of the bundle via the inventory menu.",
@@ -2284,6 +2364,14 @@
     "namespacedId": "lime_harness",
     "description": "A harness is an item that can be equipped on happy ghasts to make them mountable and rideable. Harnesses can be crafted into 16 dyed variants.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/lime_harness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Lime Shield",
+    "namespacedId": "lime_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/lime_shield.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -2508,6 +2596,14 @@
     "namespacedId": "magenta_harness",
     "description": "A harness is an item that can be equipped on happy ghasts to make them mountable and rideable. Harnesses can be crafted into 16 dyed variants.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/magenta_harness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Magenta Shield",
+    "namespacedId": "magenta_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/magenta_shield.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -3080,6 +3176,14 @@
     "stackSize": 64
   },
   {
+    "name": "Ominous Banner",
+    "namespacedId": "ominous_banner",
+    "description": "An ominous banner is a special uncraftable variant of the banner obtained from raid captains and pillager outposts.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/ominous_banner.png",
+    "renewable": true,
+    "stackSize": 16
+  },
+  {
     "name": "Ominous Bottle",
     "namespacedId": "ominous_bottle",
     "description": "An ominous bottle is an item that gives a player the Bad Omen effect for 100 minutes when drunk, which can cause an ominous event to start.",
@@ -3089,7 +3193,7 @@
   },
   {
     "name": "Ominous Shield",
-    "namespacedId": "shield",
+    "namespacedId": "ominous_shield",
     "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/ominous_shield.png",
     "renewable": true,
@@ -3124,6 +3228,14 @@
     "namespacedId": "orange_harness",
     "description": "A harness is an item that can be equipped on happy ghasts to make them mountable and rideable. Harnesses can be crafted into 16 dyed variants.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/orange_harness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Orange Shield",
+    "namespacedId": "orange_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/orange_shield.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -3240,14 +3352,6 @@
     "stackSize": 1
   },
   {
-    "name": "Pink Bundle",
-    "namespacedId": "bundle",
-    "description": "A bundle is an item that can store up to a stack's worth of mixed item types within itself in a single inventory slot. Items can be individually selected and taken out of the bundle via the inventory menu.",
-    "image": "https://mc-cf.geertvandrunen.nl/v1/items/pink_bundle.png",
-    "renewable": true,
-    "stackSize": 1
-  },
-  {
     "name": "Pink Dye",
     "namespacedId": "pink_dye",
     "description": "Pink dye is one of the sixteen available dyes, crafted from various flowers or with a combination of red and white dyes.",
@@ -3260,6 +3364,14 @@
     "namespacedId": "pink_harness",
     "description": "A harness is an item that can be equipped on happy ghasts to make them mountable and rideable. Harnesses can be crafted into 16 dyed variants.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/pink_harness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Pink Shield",
+    "namespacedId": "pink_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/pink_shield.png",
     "renewable": true,
     "stackSize": 1
   },
@@ -3568,6 +3680,14 @@
     "stackSize": 1
   },
   {
+    "name": "Purple Shield",
+    "namespacedId": "purple_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/purple_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Rabbit Hide",
     "namespacedId": "rabbit_hide",
     "description": "Rabbit hide is an item dropped by rabbits.",
@@ -3728,6 +3848,14 @@
     "stackSize": 1
   },
   {
+    "name": "Red Shield",
+    "namespacedId": "red_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/red_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Redstone Dust",
     "namespacedId": "redstone",
     "description": "Redstone dust, internally known as redstone wire in block form and redstone in item form, is a mineral that can transmit redstone power as a wire when placed as a block. It is also used in crafting, brewing and as a trim material.",
@@ -3846,6 +3974,14 @@
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/shelter_pottery_sherd.png",
     "renewable": false,
     "stackSize": 64
+  },
+  {
+    "name": "Shield",
+    "namespacedId": "shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/shield.png",
+    "renewable": true,
+    "stackSize": 1
   },
   {
     "name": "Shulker Shell",
@@ -4664,6 +4800,14 @@
     "stackSize": 1
   },
   {
+    "name": "White Shield",
+    "namespacedId": "white_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/white_shield.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
     "name": "Wild Armor Trim",
     "namespacedId": "wild_armor_trim_smithing_template",
     "description": "Wild armor trim is a type of smithing template used in smithing tables to add a trim to armor. It is consumed when used, but can be duplicated using an existing template, mossy cobblestone, and diamonds.",
@@ -4804,6 +4948,14 @@
     "namespacedId": "yellow_harness",
     "description": "A harness is an item that can be equipped on happy ghasts to make them mountable and rideable. Harnesses can be crafted into 16 dyed variants.",
     "image": "https://mc-cf.geertvandrunen.nl/v1/items/yellow_harness.png",
+    "renewable": true,
+    "stackSize": 1
+  },
+  {
+    "name": "Yellow Shield",
+    "namespacedId": "yellow_shield",
+    "description": "A shield is a defensive tool that can be used to block damage from melee attacks, ranged attacks and explosions. Shields are temporarily disabled when hit by an axe or attacked by a warden while blocking, and certain damage sources ignore a shield's protection. Shields can have ornamental banner designs applied to them.",
+    "image": "https://mc-cf.geertvandrunen.nl/v1/items/yellow_shield.png",
     "renewable": true,
     "stackSize": 1
   },

@@ -21,6 +21,19 @@ const EXCLUDED_ITEMS = [
   "Ominous Shield",
 ];
 
+function parseEnvCsvSet(raw: string | undefined): Set<string> {
+  if (!raw) return new Set();
+  return new Set(
+    raw
+      .split(",")
+      .map((v) => v.trim())
+      .filter(Boolean)
+  );
+}
+
+const ONLY_ITEM_IDS = parseEnvCsvSet(process.env.ITEMS_ONLY_IDS);
+const FORCE_ITEM_IDS = parseEnvCsvSet(process.env.ITEMS_FORCE_IDS);
+
 function slugifyId(input: string): string {
   return input
     .toLowerCase()
@@ -258,14 +271,16 @@ async function populateItemsJson(
   dataPage: Page,
   row: ElementHandle<Element>,
   name: string,
-  browser: Browser
+  browser: Browser,
+  preNamespacedId?: string
 ) {
   let recorded = false;
   let namespacedId = "";
   let url = "";
   try {
     try {
-      namespacedId = await getNamespacedId(dataPage, row);
+      namespacedId = preNamespacedId ?? "";
+      if (!namespacedId) namespacedId = await getNamespacedId(dataPage, row);
     } catch (error) {
       recordItemError({ category: "regular", stage: "getNamespacedId", name, error });
       recorded = true;
@@ -318,8 +333,19 @@ async function processRegularItems(browser: Browser, dataPage: Page): Promise<vo
     itemRows.map((row) =>
       limit(async () => {
         let name: string = await getItemName(dataPage, row);
-        if (!shouldProcessItem(name)) return;
-        await populateItemsJson(dataPage, row, name, browser);
+        if (!name || EXCLUDED_ITEMS.includes(name)) return;
+
+        let namespacedIdForFilter = "";
+        if (ONLY_ITEM_IDS.size > 0 || FORCE_ITEM_IDS.size > 0) {
+          namespacedIdForFilter = await getNamespacedId(dataPage, row);
+          if (ONLY_ITEM_IDS.size > 0 && !ONLY_ITEM_IDS.has(namespacedIdForFilter)) return;
+        }
+
+        const force =
+          (namespacedIdForFilter && FORCE_ITEM_IDS.has(namespacedIdForFilter)) || false;
+        if (!shouldProcessItem(name, force)) return;
+
+        await populateItemsJson(dataPage, row, name, browser, namespacedIdForFilter || undefined);
       })
     )
   );
@@ -329,8 +355,10 @@ async function processRegularItems(browser: Browser, dataPage: Page): Promise<vo
 /**
  * Checks if an item should be processed.
  */
-function shouldProcessItem(name: string): boolean {
-  return name && !names.has(name) && !EXCLUDED_ITEMS.includes(name);
+function shouldProcessItem(name: string, force: boolean): boolean {
+  if (!name || EXCLUDED_ITEMS.includes(name)) return false;
+  if (force) return true;
+  return !names.has(name);
 }
 
 /**
@@ -589,9 +617,41 @@ async function getImageUrl(page: Page, namespaceId: string, name: string): Promi
       };
 
       const lowerCandidates = candidates.map((c) => c.toLowerCase());
+      const wantsBlock = lowerCandidates.some((c) => c.includes("block"));
+
+      const matchText = (img: HTMLImageElement): string => {
+        const alt = img.getAttribute("alt") || "";
+        const title = img.getAttribute("title") || "";
+        const aTitle = img.closest("a")?.getAttribute("title") || "";
+        const wrapperTitle = img.closest("span[title]")?.getAttribute("title") || "";
+        return `${alt} ${title} ${aTitle} ${wrapperTitle}`.toLowerCase();
+      };
+
+      const scoreImage = (img: HTMLImageElement): number => {
+        const text = matchText(img);
+        const wrapperTitle =
+          img.closest("span[title]")?.getAttribute("title")?.toLowerCase() ?? "";
+        const aTitle = img.closest("a")?.getAttribute("title")?.toLowerCase() ?? "";
+        const imgTitle = (img.getAttribute("title") || "").toLowerCase();
+
+        let score = 0;
+        if (lowerCandidates.some((c) => wrapperTitle === c)) score += 1000;
+        if (lowerCandidates.some((c) => aTitle === c)) score += 900;
+        if (lowerCandidates.some((c) => imgTitle === c)) score += 800;
+        if (lowerCandidates.some((c) => text.includes(c))) score += 500;
+
+        const looksLikeInvicon = text.includes("invicon ");
+        if (looksLikeInvicon) score += 25;
+
+        const looksLikeBlock = wrapperTitle.includes("block") || aTitle.includes("block") || text.includes("block of");
+        if (!wantsBlock && looksLikeBlock) score -= 400;
+        return score;
+      };
 
       const infoboxInvslotImgs = Array.from(
-        document.querySelectorAll(".infobox-imagearea .invslot-item img")
+        document.querySelectorAll(
+          ".infobox-invimages .invslot-item img, .infobox-imagearea .invslot-item img"
+        )
       ) as HTMLImageElement[];
       const inviconImgs = Array.from(document.querySelectorAll(".invslot-item img")).filter(
         (el) => {
@@ -616,18 +676,20 @@ async function getImageUrl(page: Page, namespaceId: string, name: string): Promi
           ? infoboxImgs
           : allInvslotImgs;
 
-      const matchText = (img: HTMLImageElement): string => {
-        const alt = img.getAttribute("alt") || "";
-        const title = img.getAttribute("title") || "";
-        const aTitle = img.closest("a")?.getAttribute("title") || "";
-        return `${alt} ${title} ${aTitle}`.toLowerCase();
-      };
-
       let found: HTMLImageElement | undefined;
-      if (pool.length === 1) {
-        found = pool[0];
-      } else {
-        found = pool.find((img) => lowerCandidates.some((c) => matchText(img).includes(c)));
+      if (pool.length === 1) found = pool[0];
+      else {
+        let bestScore = Number.NEGATIVE_INFINITY;
+        for (const img of pool) {
+          const score = scoreImage(img);
+          if (score > bestScore) {
+            bestScore = score;
+            found = img;
+          }
+        }
+        if (bestScore <= 0) {
+          found = pool.find((img) => lowerCandidates.some((c) => matchText(img).includes(c))) ?? found;
+        }
       }
 
       if (found) return pickImageUrl(found);
@@ -878,7 +940,9 @@ async function getDescription(page: Page): Promise<string> {
  */
 async function processSpecialItems(browser: Browser): Promise<void> {
   // These items have NBT-based variants; we emit stable synthetic IDs for variants we care about.
-  items = items.filter((item) => !["map", "filled_map", "empty_map"].includes(item.namespacedId));
+  items = items.filter(
+    (item) => !["map", "filled_map", "empty_map", "empty_locator_map"].includes(item.namespacedId)
+  );
 
   // Clean up historical bad outputs: variant items accidentally stored under base IDs.
   items = items.filter((item) => {
@@ -941,7 +1005,14 @@ async function processSpecialItems(browser: Browser): Promise<void> {
       namespacedId: "filled_map",
       stackSize: 64,
       renewable: () => true,
-      filter: (title: string) => ["Empty Map", "Map"].includes(title),
+      filter: (title: string) => ["Empty Map", "Map", "Empty Locator Map"].includes(title),
+    },
+    {
+      page: "Ominous_Banner",
+      namespacedId: "ominous_banner",
+      stackSize: 16,
+      renewable: () => true,
+      filter: (title: string) => title === "Ominous Banner",
     },
     {
       page: "Explorer_Map",
@@ -1017,8 +1088,12 @@ async function processSpecialItemPage(
 
         if (pageName === "Map") {
           if (name === "Empty Map") updatedNamespacedId = "map";
+          else if (name === "Empty Locator Map") updatedNamespacedId = "empty_locator_map";
           else if (name === "Map") updatedNamespacedId = "filled_map";
           else continue;
+
+          // Prefer Java Edition map sprites when the page shows both JE and BE.
+          if (name === "Map" && imageUrl.includes("Map_BE")) continue;
 
           imageName = updatedNamespacedId;
         }
@@ -1032,7 +1107,17 @@ async function processSpecialItemPage(
 
         // For NBT/variant items (potions, tipped arrows), emit stable synthetic IDs that match the
         // image filenames we publish (e.g. `potion_of_regeneration`, `arrow_of_weakness`).
-        if (["Potion", "Splash_Potion", "Lingering_Potion", "Tipped_Arrow", "Explorer_Map"].includes(pageName)) {
+        if (
+          [
+            "Potion",
+            "Splash_Potion",
+            "Lingering_Potion",
+            "Tipped_Arrow",
+            "Explorer_Map",
+            "Shield",
+            "Bundle",
+          ].includes(pageName)
+        ) {
           updatedNamespacedId = imageName;
         }
 
@@ -1129,30 +1214,54 @@ async function getSpecialItemsData(
 ): Promise<Array<{ name: string; imageUrl: string }>> {
   return page.evaluate((filterFnString: string) => {
     const filter = new Function("title", "index", `return (${filterFnString})(title, index);`);
-    const items = Array.from(document.querySelectorAll(".infobox-imagearea .invslot-item")).map(
-      (item) => {
-        let name;
-        if (item.hasAttribute("data-minetip-title")) name = item.getAttribute("data-minetip-title");
-        if (item.querySelector("span[title]"))
-          name = item.querySelector("span[title]")?.getAttribute("title");
-        if (item.querySelector("a[title]"))
-          name = item.querySelector("a[title]")?.getAttribute("title");
+    const stripFormattingCodes = (raw: string | null | undefined): string => {
+      if (!raw) return "";
+      return raw
+        .replace(/&[0-9a-fk-or]/gi, "")
+        .replace(/\u00a7[0-9a-fk-or]/gi, "")
+        .trim();
+    };
 
-        if (name.endsWith("Music Disc")) {
-          const dataTipText = item.getAttribute("data-minetip-text") || "";
-          name = dataTipText.replace("&7", "");
+    const toAbs = (maybeUrl: string | null | undefined): string | null => {
+      if (!maybeUrl) return null;
+      const url = maybeUrl.trim();
+      if (!url || url.startsWith("data:")) return null;
+      if (url.startsWith("http://") || url.startsWith("https://")) return url;
+      if (url.startsWith("//")) return `https:${url}`;
+      if (url.startsWith("/")) return `${location.origin}${url}`;
+      return url;
+    };
+
+    const items = Array.from(
+      document.querySelectorAll(".infobox-invimages .invslot-item, .infobox-imagearea .invslot-item")
+    ).map((item) => {
+      const candidates = [
+        item.getAttribute("data-minetip-title"),
+        item.querySelector("span[title]")?.getAttribute("title"),
+        item.querySelector("a[title]")?.getAttribute("title"),
+      ];
+
+      let name = "";
+      for (const candidate of candidates) {
+        const cleaned = stripFormattingCodes(candidate);
+        if (cleaned) {
+          name = cleaned;
+          break;
         }
-        if (!name) name = "NO SPECIAL NAME";
-
-        const img = item.querySelector("img") as HTMLImageElement | null;
-        let imageUrl;
-        if (img) {
-          imageUrl = img.getAttribute("data-src") || img.src;
-        }
-
-        return { name, imageUrl };
       }
-    );
+
+      if (name.endsWith("Music Disc")) {
+        const dataTipText = item.getAttribute("data-minetip-text") || "";
+        name = stripFormattingCodes(dataTipText);
+      }
+
+      if (!name) name = "NO SPECIAL NAME";
+
+      const img = item.querySelector("img") as HTMLImageElement | null;
+      const imageUrl = img ? toAbs(img.getAttribute("data-src") || img.src) ?? undefined : undefined;
+
+      return { name, imageUrl };
+    });
 
     return items.filter(({ name }, index) => filter(name, index));
   }, filterFn.toString());

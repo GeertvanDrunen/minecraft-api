@@ -84,6 +84,8 @@ import { error } from "console";
   addTippedArrowRecipes(recipes, effects);
   addWrittenBookRecipes(recipes);
 
+  fixKnownOutputAliases(recipes, itemsJSON as unknown as Item[]);
+
   // const [validRecipes, invalidItems] = filterInvalidItems(recipes, itemsJSON);
 
   // console.log("Writing recipes to file...", validRecipes.length);
@@ -122,6 +124,29 @@ async function scrapeCraftingRecipes(page: Page): Promise<CraftingRecipe[]> {
     );
 
     let notarow = 0;
+
+    const stripFormattingCodes = (raw: string | null | undefined): string => {
+      if (!raw) return "";
+      return raw
+        .replace(/&[0-9a-fk-or]/gi, "")
+        .replace(/\u00a7[0-9a-fk-or]/gi, "")
+        .trim();
+    };
+
+    const getInvName = (slot: Element | null): string | null => {
+      if (!slot) return null;
+      const candidates = [
+        slot.getAttribute?.("data-minetip-title") ?? null,
+        slot.getAttribute?.("title") ?? null,
+        slot.querySelector?.("a[title]")?.getAttribute("title") ?? null,
+        slot.querySelector?.("span[title]")?.getAttribute("title") ?? null,
+      ];
+      for (const candidate of candidates) {
+        const cleaned = stripFormattingCodes(candidate);
+        if (cleaned) return cleaned;
+      }
+      return null;
+    };
 
     const filterRows = (row: HTMLTableRowElement) => {
       if (!row || !("querySelector" in row)) {
@@ -171,11 +196,7 @@ async function scrapeCraftingRecipes(page: Page): Promise<CraftingRecipe[]> {
       const recipeNames = Array.from(row.querySelectorAll(".mcui-output .invslot-item"));
       //first, get the output items
       const recipeNamesWithIndex = recipeNames.map((elem, index) => {
-        const name =
-          elem.hasAttribute("data-minetip-title") &&
-          !elem.getAttribute("data-minetip-title").startsWith("&")
-            ? elem.getAttribute("data-minetip-title")
-            : elem.querySelector("a").getAttribute("title");
+        const name = getInvName(elem) ?? "UNKNOWN";
         return {
           name: name,
           index: index,
@@ -199,19 +220,14 @@ async function scrapeCraftingRecipes(page: Page): Promise<CraftingRecipe[]> {
             return null;
           }
           if (variants.length === 1) {
-            return variants[0].querySelector("a").getAttribute("title");
+            return getInvName(variants[0]);
           }
           if (variants.length === recipeNameWithIndex.totalLength) {
             const variant = variants[recipeNameWithIndex.index];
             if (!variant.hasChildNodes()) return null;
 
-            if (variant.hasAttribute("data-minetip-title")) {
-              return variant.getAttribute("data-minetip-title");
-            }
-
-            if (variant.querySelector("a")) {
-              return variant.querySelector("a").getAttribute("title");
-            }
+            const name = getInvName(variant);
+            if (name) return name;
 
             throw new Error(
               "No title found for variant index:" +
@@ -221,12 +237,9 @@ async function scrapeCraftingRecipes(page: Page): Promise<CraftingRecipe[]> {
             );
           }
 
-          const titles = variants.map((variant) => {
-            if (variant.hasAttribute("data-minetip-title")) {
-              return variant.getAttribute("data-minetip-title");
-            }
-            return variant.querySelector("a").getAttribute("title");
-          });
+          const titles = variants
+            .map((variant) => getInvName(variant))
+            .filter((title) => !!title) as string[];
 
           return titles;
         });
@@ -251,6 +264,21 @@ async function scrapeCraftingRecipes(page: Page): Promise<CraftingRecipe[]> {
 
     return newRecipes;
   });
+}
+
+function fixKnownOutputAliases(recipes: CraftingRecipe[], items: Item[]): void {
+  const disc5Name = items.find((item) => item.namespacedId === "music_disc_5")?.name;
+  if (disc5Name) {
+    for (const recipe of recipes) {
+      if (recipe.item !== "Music Disc") continue;
+      const inputs = (recipe.recipe ?? []).flatMap((tile) =>
+        tile == null ? [] : Array.isArray(tile) ? tile : [tile]
+      );
+      if (inputs.length === 9 && inputs.every((name) => name === "Disc Fragment")) {
+        recipe.item = disc5Name;
+      }
+    }
+  }
 }
 
 function addColoredBedRecipes(recipes: CraftingRecipe[], colors: string[], woodTypes: string[]) {
