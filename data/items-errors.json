@@ -1,111 +1,37 @@
 [
   {
     "category": "regular",
-    "name": "Debug Stick",
+    "name": "Lingering Potion",
+    "namespacedId": "lingering_potion",
+    "url": "https://minecraft.wiki/w/Lingering_Potion",
     "errors": [
       {
         "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+        "message": "Renewable status not found for item: Lingering Potion"
       }
     ]
   },
   {
     "category": "regular",
-    "name": "Enchanted Book",
+    "name": "Potion",
+    "namespacedId": "potion",
+    "url": "https://minecraft.wiki/w/Potion",
     "errors": [
       {
         "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
+        "message": "Renewable status not found for item: Potion"
       }
     ]
   },
   {
     "category": "regular",
-    "name": "Goat Horn",
+    "name": "Splash Potion",
+    "namespacedId": "splash_potion",
+    "url": "https://minecraft.wiki/w/Splash_Potion",
     "errors": [
       {
         "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
-      }
-    ]
-  },
-  {
-    "category": "regular",
-    "name": "Knowledge Book",
-    "errors": [
-      {
-        "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
-      }
-    ]
-  },
-  {
-    "category": "regular",
-    "name": "Name Tag",
-    "errors": [
-      {
-        "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
-      }
-    ]
-  },
-  {
-    "category": "regular",
-    "name": "Ominous Trial Key",
-    "errors": [
-      {
-        "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
-      }
-    ]
-  },
-  {
-    "category": "regular",
-    "name": "Poisonous Potato",
-    "errors": [
-      {
-        "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
-      }
-    ]
-  },
-  {
-    "category": "regular",
-    "name": "Rotten Flesh",
-    "errors": [
-      {
-        "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
-      }
-    ]
-  },
-  {
-    "category": "regular",
-    "name": "Totem of Undying",
-    "errors": [
-      {
-        "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
-      }
-    ]
-  },
-  {
-    "category": "regular",
-    "name": "Trial Key",
-    "errors": [
-      {
-        "stage": "getItemDetails",
-        "message": "waiting for selector `.invslot-item` failed: timeout 30000ms exceeded"
-      }
-    ]
-  },
-  {
-    "category": "regular",
-    "name": "Tropical Fish",
-    "errors": [
-      {
-        "stage": "getItemDetails",
-        "message": "Stack size not found for item: Tropical Fish"
+        "message": "Renewable status not found for item: Splash Potion"
       }
     ]
   }

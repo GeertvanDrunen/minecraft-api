@@ -16,18 +16,57 @@ const ITEMS_ERRORS_JSON_PATH = "data/items-errors.json";
 const ITEMS_ERRORS_TXT_PATH = "data/items-errors.txt";
 const DATA_VALUES_URL = "https://minecraft.wiki/w/Java_Edition_data_values";
 const EXCLUDED_ITEMS = [
-  "Lingering Potion",
-  "Potion",
-  "Splash Potion",
-  "Tipped Arrow",
   "Music Disc",
   "Chorus Plant",
   "Ominous Shield",
 ];
 
-// Initialize items and names arrays
-let items: Item[] = itemsJSON;
-let names: string[] = items.map((item) => item.name);
+function slugifyId(input: string): string {
+  return input
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "")
+    .replace(/_+/g, "_");
+}
+
+function isCanonicalCdnImage(item: Item, namespacedId: string): boolean {
+  const image = item.image ?? "";
+  return (
+    image.endsWith(`/items/${namespacedId}.png`) || image.endsWith(`/items/${namespacedId}.gif`)
+  );
+}
+
+function scoreForDedup(item: Item, namespacedId: string): number {
+  let score = 0;
+  if (isCanonicalCdnImage(item, namespacedId)) score += 100;
+  score += Math.min((item.description ?? "").length, 5000) / 50;
+  if (typeof item.stackSize === "number") score += 1;
+  if (item.renewable === true) score += 2;
+  if (item.renewable === false) score += 1;
+  return score;
+}
+
+function dedupeItemsByNamespacedId(input: Item[]): Item[] {
+  const bestById = new Map<string, Item>();
+  for (const item of input) {
+    const id = item.namespacedId;
+    if (!id) continue;
+    const existing = bestById.get(id);
+    if (!existing) {
+      bestById.set(id, item);
+      continue;
+    }
+    if (scoreForDedup(item, id) > scoreForDedup(existing, id)) {
+      bestById.set(id, item);
+    }
+  }
+  return Array.from(bestById.values());
+}
+
+// Initialize items and names (deduping makes reruns idempotent)
+let items: Item[] = dedupeItemsByNamespacedId(itemsJSON);
+let names = new Set<string>(items.map((item) => item.name));
 
 // Limit concurrent operations
 const limit = pLimit(3);
@@ -124,6 +163,13 @@ function writeErroredItemsReport(): void {
 function writeItems(items: Item[]): void {
   sortByKey(items, "name");
   fs.writeFileSync(ITEMS_JSON_PATH, JSON.stringify(items, null, 2));
+}
+
+function replaceAllByNamespacedId(items: Item[], namespacedId: string, nextItem: Item): void {
+  for (let i = items.length - 1; i >= 0; i -= 1) {
+    if (items[i]?.namespacedId === namespacedId) items.splice(i, 1);
+  }
+  items.push(nextItem);
 }
 
 /**
@@ -237,13 +283,21 @@ async function populateItemsJson(
     const itemData: Item = await getItemDetails(browser, url, name, namespacedId);
 
     if (itemData) {
-      items.push(itemData);
+      replaceAllByNamespacedId(items, itemData.namespacedId, itemData);
+      names.add(itemData.name);
       writeItems(items);
       console.log(`Successfully added item: ${name}`);
     }
   } catch (error) {
     if (!recorded) {
-      recordItemError({ category: "regular", stage: "getItemDetails", name, namespacedId, url, error });
+      recordItemError({
+        category: "regular",
+        stage: "getItemDetails",
+        name,
+        namespacedId,
+        url,
+        error,
+      });
     }
     console.error(chalk.red(`Error processing item: ${name}`), error);
   }
@@ -276,7 +330,7 @@ async function processRegularItems(browser: Browser, dataPage: Page): Promise<vo
  * Checks if an item should be processed.
  */
 function shouldProcessItem(name: string): boolean {
-  return name && !names.includes(name) && !EXCLUDED_ITEMS.includes(name);
+  return name && !names.has(name) && !EXCLUDED_ITEMS.includes(name);
 }
 
 /**
@@ -415,7 +469,7 @@ async function getItemDetails(
       .waitForSelector(".infobox-imagearea img, .infobox-rows", { timeout: 10_000 })
       .catch(() => undefined);
     const imageName: string = name.startsWith("Banner Pattern") ? "banner_pattern" : namespacedId;
-    let image: string = `https://mc.geertvandrunen.nl/_new/items/${imageName}.png`;
+    let image: string = `https://mc-cf.geertvandrunen.nl/v1/items/${imageName}.png`;
 
     const imageUrl = await getImageUrl(itemPage, namespacedId, name);
 
@@ -437,7 +491,7 @@ async function getItemDetails(
         await downloadImagePNG(imageUrl, namespacedId);
 
         // Update the image URL to point to the local image
-        image = `https://mc.geertvandrunen.nl/_new/items/${namespacedId}.png`;
+        image = `https://mc-cf.geertvandrunen.nl/v1/items/${namespacedId}.png`;
       }
     } else {
       console.log("Image URL not found. Handling GIF images.");
@@ -488,7 +542,9 @@ async function getImageUrl(page: Page, namespaceId: string, name: string): Promi
       new Set(
         [
           name,
-          name.startsWith("Banner Pattern") ? name.replace("Banner Pattern (", "").replace(")", "") : null,
+          name.startsWith("Banner Pattern")
+            ? name.replace("Banner Pattern (", "").replace(")", "")
+            : null,
           name.startsWith("Smithing Template")
             ? name.replace("Smithing Template (", "").replace(")", "")
             : null,
@@ -537,22 +593,28 @@ async function getImageUrl(page: Page, namespaceId: string, name: string): Promi
       const infoboxInvslotImgs = Array.from(
         document.querySelectorAll(".infobox-imagearea .invslot-item img")
       ) as HTMLImageElement[];
-      const inviconImgs = Array.from(document.querySelectorAll(".invslot-item img")).filter((el) => {
-        const img = el as HTMLImageElement;
-        const alt = (img.getAttribute("alt") || "").toLowerCase();
-        return alt.startsWith("invicon ") || alt.includes("inventory sprite");
-      }) as HTMLImageElement[];
-      const infoboxImgs = Array.from(document.querySelectorAll(".infobox-imagearea img")) as HTMLImageElement[];
-      const allInvslotImgs = Array.from(document.querySelectorAll(".invslot-item img")) as HTMLImageElement[];
+      const inviconImgs = Array.from(document.querySelectorAll(".invslot-item img")).filter(
+        (el) => {
+          const img = el as HTMLImageElement;
+          const alt = (img.getAttribute("alt") || "").toLowerCase();
+          return alt.startsWith("invicon ") || alt.includes("inventory sprite");
+        }
+      ) as HTMLImageElement[];
+      const infoboxImgs = Array.from(
+        document.querySelectorAll(".infobox-imagearea img")
+      ) as HTMLImageElement[];
+      const allInvslotImgs = Array.from(
+        document.querySelectorAll(".invslot-item img")
+      ) as HTMLImageElement[];
 
       const pool =
         infoboxInvslotImgs.length > 0
           ? infoboxInvslotImgs
           : inviconImgs.length > 0
-            ? inviconImgs
+          ? inviconImgs
           : infoboxImgs.length > 0
-            ? infoboxImgs
-            : allInvslotImgs;
+          ? infoboxImgs
+          : allInvslotImgs;
 
       const matchText = (img: HTMLImageElement): string => {
         const alt = img.getAttribute("alt") || "";
@@ -573,7 +635,9 @@ async function getImageUrl(page: Page, namespaceId: string, name: string): Promi
       const og = document.querySelector("meta[property='og:image']") as HTMLMetaElement | null;
       if (og?.content) return toAbs(og.content);
 
-      const twitter = document.querySelector("meta[name='twitter:image']") as HTMLMetaElement | null;
+      const twitter = document.querySelector(
+        "meta[name='twitter:image']"
+      ) as HTMLMetaElement | null;
       if (twitter?.content) return toAbs(twitter.content);
 
       const imageSrc = document.querySelector("link[rel='image_src']") as HTMLLinkElement | null;
@@ -618,7 +682,12 @@ async function getGifURL(page: Page, name: string): Promise<string | null> {
       const img = el as HTMLImageElement;
       const alt = (img.getAttribute("alt") || "").toLowerCase();
       const title = (img.getAttribute("title") || "").toLowerCase();
-      return alt === lowerName || title === lowerName || alt.includes(lowerName) || title.includes(lowerName);
+      return (
+        alt === lowerName ||
+        title === lowerName ||
+        alt.includes(lowerName) ||
+        title.includes(lowerName)
+      );
     }) as HTMLImageElement | undefined;
 
     if (!img) return null;
@@ -808,6 +877,21 @@ async function getDescription(page: Page): Promise<string> {
  * Processes special items like Potions and Music Discs.
  */
 async function processSpecialItems(browser: Browser): Promise<void> {
+  // These items have NBT-based variants; we emit stable synthetic IDs for variants we care about.
+  items = items.filter((item) => !["map", "filled_map", "empty_map"].includes(item.namespacedId));
+
+  // Clean up historical bad outputs: variant items accidentally stored under base IDs.
+  items = items.filter((item) => {
+    const ns = item.namespacedId;
+    const name = item.name ?? "";
+    if (ns === "potion" && name !== "Potion") return false;
+    if (ns === "splash_potion" && name !== "Splash Potion") return false;
+    if (ns === "lingering_potion" && name !== "Lingering Potion") return false;
+    if (ns === "tipped_arrow" && name !== "Tipped Arrow") return false;
+    return true;
+  });
+  names = new Set<string>(items.map((item) => item.name));
+
   const pages = [
     {
       page: "Tipped_Arrow",
@@ -857,14 +941,15 @@ async function processSpecialItems(browser: Browser): Promise<void> {
       namespacedId: "filled_map",
       stackSize: 64,
       renewable: () => true,
-      filter: (_title: string, i: number) => i < 2,
+      filter: (title: string) => ["Empty Map", "Map"].includes(title),
     },
     {
       page: "Explorer_Map",
-      namespacedId: "filled_map",
+      namespacedId: null,
       stackSize: 64,
       renewable: (title: string) => title !== "Buried Treasure Map",
-      filter: (_title: string, i: number) => i < 3,
+      filter: (title: string) =>
+        title.endsWith("Map") && !["Empty Map", "Map", "Explorer Map"].includes(title),
     },
     {
       page: "Music_Disc",
@@ -875,7 +960,15 @@ async function processSpecialItems(browser: Browser): Promise<void> {
     },
   ];
 
+  const allowedSpecialPages = (() => {
+    const raw = (process.env.ITEMS_SPECIAL_PAGES ?? "").trim();
+    if (!raw) return null;
+    const set = new Set(raw.split(",").map((p) => p.trim()).filter(Boolean));
+    return set.size ? set : null;
+  })();
+
   for (const { page, namespacedId, stackSize, renewable, filter } of pages) {
+    if (allowedSpecialPages && !allowedSpecialPages.has(page)) continue;
     await processSpecialItemPage(browser, page, namespacedId, stackSize, renewable, filter);
   }
   writeItems(items);
@@ -903,20 +996,44 @@ async function processSpecialItemPage(
       itemPage,
       filter
     );
+
+    const uniqueItemsData = (() => {
+      const seen = new Set<string>();
+      return itemsData.filter(({ name, imageUrl }) => {
+        const key = name + "::" + imageUrl;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    })();
     const description: string = await getDescription(itemPage);
 
-    for (const itemData of itemsData) {
+    for (const itemData of uniqueItemsData) {
       try {
         let { name, imageUrl } = itemData;
 
         let updatedNamespacedId: string | null = defaultNamespacedId;
-        let imageName: string = name.toLowerCase().replace(/ /g, "_");
+        let imageName: string = slugifyId(name);
+
+        if (pageName === "Map") {
+          if (name === "Empty Map") updatedNamespacedId = "map";
+          else if (name === "Map") updatedNamespacedId = "filled_map";
+          else continue;
+
+          imageName = updatedNamespacedId;
+        }
 
         if (pageName === "Music_Disc") {
           const discName = name.split(" ").pop()?.toLowerCase().replace(")", "") || "unknown";
           name = `Music Disc (${name})`;
           updatedNamespacedId = `music_disc_${discName}`;
           imageName = updatedNamespacedId;
+        }
+
+        // For NBT/variant items (potions, tipped arrows), emit stable synthetic IDs that match the
+        // image filenames we publish (e.g. `potion_of_regeneration`, `arrow_of_weakness`).
+        if (["Potion", "Splash_Potion", "Lingering_Potion", "Tipped_Arrow", "Explorer_Map"].includes(pageName)) {
+          updatedNamespacedId = imageName;
         }
 
         if (!imageUrl) {
@@ -929,16 +1046,48 @@ async function processSpecialItemPage(
         } else {
           await downloadImagePNG(imageUrl, imageName);
         }
-        const imageTarget = `https://mc.geertvandrunen.nl/_new/items/${imageName}.${imageExt}`;
+        const imageTarget = `https://mc-cf.geertvandrunen.nl/v1/items/${imageName}.${imageExt}`;
 
-        items.push({
+        const nextItem: Item = {
           name,
           namespacedId: updatedNamespacedId || "",
           description,
           image: imageTarget,
           renewable: isRenewable(name),
           stackSize,
-        });
+        };
+
+        if (!nextItem.namespacedId) {
+          throw new Error(`Missing namespacedId for special item: ${name}`);
+        }
+
+        // Make reruns idempotent: always upsert by namespacedId.
+        replaceAllByNamespacedId(items, nextItem.namespacedId, nextItem);
+        names.add(nextItem.name);
+
+        // Provide an alias ID used by some of our datasets.
+        if (pageName === "Map" && name === "Empty Map") {
+          const aliasNamespacedId = "empty_map";
+          const aliasImageName = aliasNamespacedId;
+
+          if (imageExt === "gif") {
+            await downloadGifImage(imageUrl, `${ITEMS_IMAGE_PATH}${aliasImageName}.gif`);
+          } else {
+            await downloadImagePNG(imageUrl, aliasImageName);
+          }
+
+          const aliasImageTarget = `https://mc-cf.geertvandrunen.nl/v1/items/${aliasImageName}.${imageExt}`;
+          const aliasItem: Item = {
+            name,
+            namespacedId: aliasNamespacedId,
+            description,
+            image: aliasImageTarget,
+            renewable: isRenewable(name),
+            stackSize,
+          };
+
+          replaceAllByNamespacedId(items, aliasItem.namespacedId, aliasItem);
+        }
 
         writeItems(items);
         console.log(`Successfully added special item: ${name}`);
@@ -1015,9 +1164,18 @@ async function getSpecialItemsData(
 (async () => {
   const browser = await initBrowser();
   try {
-    const dataPage = await openDataPage(browser);
-    await processRegularItems(browser, dataPage);
-    await processSpecialItems(browser);
+    const truthy = new Set(["1", "true", "yes"]);
+    const skipRegular = truthy.has((process.env.ITEMS_SKIP_REGULAR ?? "").toLowerCase());
+    const skipSpecial = truthy.has((process.env.ITEMS_SKIP_SPECIAL ?? "").toLowerCase());
+
+    if (!skipRegular) {
+      const dataPage = await openDataPage(browser);
+      await processRegularItems(browser, dataPage);
+    }
+
+    if (!skipSpecial) {
+      await processSpecialItems(browser);
+    }
   } catch (error) {
     console.error(chalk.red("An unexpected error occurred:"), error);
   } finally {

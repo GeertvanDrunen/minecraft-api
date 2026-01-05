@@ -195,7 +195,7 @@ const getItemNameForBlock = (name: string) => {
               await downloadImagePNG(wikiImageURL, namespacedId);
             }
           }
-          let image = `https://mc.geertvandrunen.nl/_new/blocks/${imageName}.png`;
+          let image = `https://mc-cf.geertvandrunen.nl/v1/blocks/${imageName}.png`;
 
           let item = null;
           const itemName = getItemNameForBlock(name);

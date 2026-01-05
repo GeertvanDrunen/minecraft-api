@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "items": "nodemon scripts/items.ts",
-    "blocks": "nodemon scripts/blocks.ts",
-    "recipes": "nodemon scripts/recipes.ts",
+    "items": "ts-node scripts/items.ts",
+    "blocks": "ts-node scripts/blocks.ts",
+    "recipes": "ts-node scripts/recipes.ts",
     "upload:r2": "ts-node scripts/upload-r2.ts",
     "upload:r2:extras": "ts-node scripts/upload-r2.ts --include biomes,circles,generatedStructures,mobs,redstone,trades",
-    "prettier": "prettier . -w"
+    "prettier": "prettier . -w",
+    "items:watch": "nodemon scripts/items.ts",
+    "blocks:watch": "nodemon scripts/blocks.ts",
+    "recipes:watch": "nodemon scripts/recipes.ts"
   },
   "repository": {
     "type": "git",
